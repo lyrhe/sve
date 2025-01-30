@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://dbik63wktdm0f"]
+
+[ext_resource type="Texture2D" uid="uid://dx0ou4upt367s" path="res://Assets/card_back.jpg" id="1_1wqmu"]
+[ext_resource type="Texture2D" uid="uid://feftllciexit" path="res://Assets/board.jpg" id="1_xlw27"]
+[ext_resource type="Script" path="res://Scripts/deck.gd" id="2_ivqgv"]
+[ext_resource type="PackedScene" uid="uid://bqirmcfm7x3an" path="res://Scenes/card.tscn" id="3_migld"]
+[ext_resource type="Texture2D" uid="uid://bhrt1wcoyu0mm" path="res://Assets/card_images/BP01-001.png" id="5_ga1rc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1l7dr"]
+size = Vector2(98, 148)
+
+[node name="Board" type="Node2D"]
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(975, 480)
+scale = Vector2(2.17398, 2.24085)
+texture = ExtResource("1_xlw27")
+
+[node name="deck" type="Sprite2D" parent="." node_paths=PackedStringArray("board")]
+position = Vector2(1539, 469)
+scale = Vector2(0.605198, 0.605198)
+texture = ExtResource("1_1wqmu")
+script = ExtResource("2_ivqgv")
+board = NodePath("..")
+
+[node name="Deck2" type="Area2D" parent="deck"]
+position = Vector2(-266, -30)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="deck/Deck2"]
+position = Vector2(133.826, 17.4785)
+shape = SubResource("RectangleShape2D_1l7dr")
+
+[node name="card" parent="." instance=ExtResource("3_migld")]
+position = Vector2(601, 267)
+texture = ExtResource("5_ga1rc")
+
+[connection signal="input_event" from="deck/Deck2" to="deck" method="_on_deck_2_input_event"]
