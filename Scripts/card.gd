@@ -4,6 +4,7 @@ extends TextureRect
 var is_dragging = false
 var state = "stand"
 var original_parent: Node = null
+var zob = "cccv"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
