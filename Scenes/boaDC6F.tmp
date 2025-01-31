@@ -1,0 +1,149 @@
+[gd_scene load_steps=9 format=3 uid="uid://dbik63wktdm0f"]
+
+[ext_resource type="Texture2D" uid="uid://dx0ou4upt367s" path="res://Assets/card_back.jpg" id="1_1wqmu"]
+[ext_resource type="Script" path="res://Scripts/board.gd" id="1_vsmk8"]
+[ext_resource type="Texture2D" uid="uid://feftllciexit" path="res://Assets/board.jpg" id="1_xlw27"]
+[ext_resource type="Script" path="res://Scripts/deck.gd" id="2_ivqgv"]
+[ext_resource type="Script" path="res://Scripts/graveyard.gd" id="5_ahlcc"]
+[ext_resource type="Script" path="res://Scripts/player_hand.gd" id="5_pfvuo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1l7dr"]
+size = Vector2(101.62, 150.364)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5rkd"]
+size = Vector2(204.891, 303.326)
+
+[node name="Board" type="Node2D" node_paths=PackedStringArray("player_hand", "deck")]
+script = ExtResource("1_vsmk8")
+player_hand = NodePath("CanvasPlayerHand/PlayerHand")
+deck = NodePath("Deck")
+metadata/_edit_lock_ = true
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(322, 112)
+scale = Vector2(2.17398, 2.24085)
+texture = ExtResource("1_xlw27")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="LoadDeckButton" type="MenuButton" parent="."]
+offset_left = 88.0
+offset_top = 132.0
+offset_right = 263.0
+offset_bottom = 202.0
+toggle_mode = false
+action_mode = 1
+text = "Load deck"
+flat = false
+
+[node name="FileDialog" type="FileDialog" parent="LoadDeckButton"]
+title = "Open a File"
+size = Vector2i(800, 600)
+ok_button_text = "Open"
+file_mode = 0
+root_subfolder = "res://Test"
+
+[node name="ClearHand" type="Button" parent="."]
+offset_left = 88.0
+offset_top = 208.0
+offset_right = 263.0
+offset_bottom = 278.0
+text = "Clear hand"
+
+[node name="Mulligan" type="Button" parent="."]
+offset_left = 89.0
+offset_top = 283.0
+offset_right = 262.0
+offset_bottom = 351.0
+text = "Mulligan"
+
+[node name="Deck" type="Sprite2D" parent="." node_paths=PackedStringArray("board", "player_hand")]
+position = Vector2(1539, 469)
+scale = Vector2(0.605198, 0.605198)
+texture = ExtResource("1_1wqmu")
+script = ExtResource("2_ivqgv")
+board = NodePath("..")
+player_hand = NodePath("../CanvasPlayerHand/PlayerHand")
+
+[node name="Deck" type="Area2D" parent="Deck"]
+position = Vector2(1.65245, 7.62939e-06)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deck/Deck"]
+position = Vector2(-0.826141, -3.8147e-06)
+shape = SubResource("RectangleShape2D_1l7dr")
+
+[node name="Graveyard" type="Sprite2D" parent="." node_paths=PackedStringArray("board", "player_hand")]
+position = Vector2(1538, 703)
+scale = Vector2(0.589109, 0.592376)
+texture = ExtResource("1_1wqmu")
+script = ExtResource("5_ahlcc")
+board = NodePath("..")
+player_hand = NodePath("../CanvasPlayerHand/PlayerHand")
+
+[node name="Graveyard" type="Area2D" parent="Graveyard"]
+position = Vector2(-6.79016, -5.06436)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Graveyard/Graveyard"]
+position = Vector2(6.19312, 3.64355)
+shape = SubResource("RectangleShape2D_q5rkd")
+
+[node name="CanvasPlayerHand" type="CanvasLayer" parent="."]
+
+[node name="PlayerHand" type="HBoxContainer" parent="CanvasPlayerHand" node_paths=PackedStringArray("player_deck")]
+layout_direction = 2
+anchors_preset = -1
+anchor_left = 0.169
+anchor_top = 1.0
+anchor_right = 0.848
+anchor_bottom = 1.0
+offset_left = -0.480042
+offset_top = -233.0
+offset_right = -0.160156
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 8
+size_flags_vertical = 4
+alignment = 1
+script = ExtResource("5_pfvuo")
+player_deck = NodePath("../../Deck")
+
+[node name="CanvasField" type="CanvasLayer" parent="."]
+
+[node name="Field" type="HBoxContainer" parent="CanvasField"]
+offset_left = 509.0
+offset_top = 225.0
+offset_right = 1407.0
+offset_bottom = 460.0
+
+[node name="CanvasExArea" type="CanvasLayer" parent="."]
+
+[node name="ExArea" type="HBoxContainer" parent="CanvasExArea"]
+offset_left = 512.0
+offset_top = 558.0
+offset_right = 1410.0
+offset_bottom = 793.0
+
+[node name="GraveyardDisplay" type="Label" parent="."]
+offset_left = 1661.0
+offset_top = 107.0
+offset_right = 1830.0
+offset_bottom = 253.0
+
+[node name="CanvasGraveyard" type="CanvasLayer" parent="."]
+
+[node name="GraveyardDisplay" type="VBoxContainer" parent="CanvasGraveyard"]
+anchors_preset = -1
+anchor_left = 0.868
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -36.5601
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -1.0
+
+[connection signal="pressed" from="LoadDeckButton" to="." method="_on_menu_button_pressed"]
+[connection signal="file_selected" from="LoadDeckButton/FileDialog" to="." method="_on_file_dialog_file_selected"]
+[connection signal="pressed" from="ClearHand" to="." method="_on_menu_button_2_pressed"]
+[connection signal="pressed" from="Mulligan" to="CanvasPlayerHand/PlayerHand" method="_on_mulligan_pressed"]
+[connection signal="input_event" from="Deck/Deck" to="Deck" method="_on_deck_2_input_event"]

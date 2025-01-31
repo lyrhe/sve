@@ -1,6 +1,6 @@
 extends HBoxContainer
 
-#
+# Récupère le deck et preload la scène des cartes pour force_draw()
 @export var player_deck : Sprite2D
 const card = preload("res://Scenes/card.tscn")
 
@@ -23,6 +23,7 @@ func force_draw(number):
 		var texture = load(texture_path)
 		if card_instance is TextureRect:
 			card_instance.texture = texture
+		card_instance.card_code = card_code
 		self.add_child(card_instance)
 		card_instance.name = card_code
 		print(card_instance.name)
