@@ -7,11 +7,12 @@
 [ext_resource type="Script" path="res://Scripts/player_hand.gd" id="5_pfvuo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1l7dr"]
-size = Vector2(98, 148)
+size = Vector2(101.62, 150.364)
 
-[node name="Board" type="Node2D" node_paths=PackedStringArray("player_hand")]
+[node name="Board" type="Node2D" node_paths=PackedStringArray("player_hand", "deck")]
 script = ExtResource("1_vsmk8")
 player_hand = NodePath("CanvasPlayerHand/PlayerHand")
+deck = NodePath("Deck")
 metadata/_edit_lock_ = true
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -65,7 +66,7 @@ position = Vector2(-266, -30)
 scale = Vector2(2, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Deck/Deck"]
-position = Vector2(133.826, 17.4785)
+position = Vector2(133.413, 15)
 shape = SubResource("RectangleShape2D_1l7dr")
 
 [node name="CanvasPlayerHand" type="CanvasLayer" parent="."]

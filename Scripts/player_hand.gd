@@ -1,25 +1,20 @@
 extends HBoxContainer
 
+#
 @export var player_deck : Sprite2D
 const card = preload("res://Scenes/card.tscn")
 
-func hand():
-	print(player_deck.player_deck)
-	print(self.get_children())
+# Récupère les codes des cartes de la main, les ajoute au fond du deck, supprime la main, puis pioche quatre.
+func _on_mulligan_pressed() -> void:
 	var a = self.get_children()
 	for n in a:
-		print(n.name)
 		player_deck.player_deck.append(n.name)
-	print(player_deck.player_deck)
 	for n in self.get_children():
 		self.remove_child(n)
 		n.queue_free()
-		
 	force_draw(4)
 
-func _on_mulligan_pressed() -> void:
-	hand() # Replace with function body.
-
+# Pioche un certain nombre de cartes
 func force_draw(number):
 	for n in range(0, number):
 		var card_instance = card.instantiate()
