@@ -140,5 +140,4 @@ grow_vertical = 2
 [connection signal="pressed" from="Mulligan" to="CanvasPlayerHand/PlayerHand" method="_on_mulligan_pressed"]
 [connection signal="input_event" from="Deck/Deck" to="Deck" method="_on_deck_2_input_event"]
 [connection signal="child_exiting_tree" from="CanvasGraveyard/Graveyard" to="." method="_on_graveyard_child_exiting_tree"]
-[connection signal="child_order_changed" from="CanvasGraveyard/Graveyard" to="." method="_on_graveyard_child_order_changed"]
 [connection signal="tree_exited" from="CanvasGraveyard/Graveyard" to="." method="_on_graveyard_tree_exited"]

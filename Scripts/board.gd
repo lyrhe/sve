@@ -5,39 +5,11 @@ var selected_deck: String = ""
 @export var player_hand : HBoxContainer
 @export var deck : Sprite2D
 
-@onready var graveyard = $Graveyard  # Adjust path if needed
-@onready var graveyard_display = $GraveyardDisplay  # Adjust path
-@onready var graveyard_container = $CanvasGraveyard/GraveyardDisplay
+@onready var graveyard_drop_location = get_node("Graveyard")
+@onready var graveyard = get_node("CanvasGraveyard/Graveyard")
+@onready var last_child = ""
 
 var card_scene = preload("res://Scenes/card.tscn")
-
-
-func update_graveyard_display():
-	if not graveyard or not graveyard_container:
-		return
-
-	#for child in graveyard_container.get_children():
-		#graveyard.graveyard.append(child.name)
-	
-	for child in graveyard_container.get_children():
-		graveyard_container.remove_child(child)
-
-	# Get textures and create TextureRects
-	var card_data_list = graveyard.graveyard
-	for card_data in card_data_list:
-		var card_instance = card_scene.instantiate()
-		
-		var texture_path = "res://Assets/card_images/" + card_data + ".png"
-		var texture = load(texture_path)
-			
-		graveyard_container.add_child(card_instance)
-		card_instance.set_texture(texture)
-		card_instance.name = card_data
-		
-		print("Graveyard card added:", card_instance.name)
-		
-	if graveyard_container.get_child_count() == 0:
-		graveyard.texture = null
 
 # Ouvre le menu pour charger un deck - @LoadDeckButton
 func _on_menu_button_pressed() -> void:
@@ -54,6 +26,16 @@ func _on_file_dialog_file_selected(path: String) -> void:
 	selected_deck = path
 	deck.load_deck(path)
 
-#func _on_graveyard_display_child_exiting_tree(node: Node) -> void:
-	#graveyard.graveyard.erase(node.name)
-	#update_graveyard_display()
+func update_graveyard_drop_location_texture():
+	if graveyard.get_child_count() > 0 :
+		last_child = graveyard.get_child(graveyard.get_child_count()-1).name
+	print(graveyard.get_child_count())
+	var texture = load("res://Assets/card_images/%s.png" % last_child)
+	graveyard_drop_location.set_texture(texture)
+	graveyard_drop_location.scale = Vector2(0.3, 0.3)
+	if graveyard.get_child_count() == 0:
+		graveyard_drop_location.set_texture(null)
+
+
+func _on_graveyard_child_order_changed() -> void:
+	update_graveyard_drop_location_texture()

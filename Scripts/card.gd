@@ -10,8 +10,10 @@ var original_parent: Node = null
 @onready var ex_area = get_node("../../../CanvasExArea/ExArea")
 @onready var field = get_node("../../../CanvasField/Field")
 @onready var player_hand = get_node("../../../CanvasPlayerHand/PlayerHand")
-@onready var graveyard = get_node("../../../Graveyard")
+@onready var graveyard_drop_location = get_node("../../../Graveyard")
+@onready var graveyard = get_node("../../../CanvasGraveyard/Graveyard")
 @onready var board = get_node("../../..")
+@onready var last_child = ""
 const card = preload("res://Scenes/card.tscn")
 
 # Gère le déplacement d'une carte, et renvoie la carte à son parent d'origine avec un clic droit
@@ -38,11 +40,6 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 			if ex_area and ex_area.get_rect().has_point(get_global_mouse_position()):
 				if ex_area.get_child_count() < 5:
 					reparent_card(ex_area)
-					print("-------------------")
-					print(self.name)
-					if self.name in graveyard.graveyard:
-						graveyard.graveyard.erase(self.name)
-						print(graveyard.graveyard)
 				elif ex_area.get_child_count() >= 5:
 					self.get_parent().remove_child(self)
 					original_parent.add_child(self)
@@ -56,18 +53,9 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 					is_dragging = false
 			elif player_hand and player_hand.get_rect().has_point(get_global_mouse_position()):
 				reparent_card(player_hand)
-			elif graveyard and graveyard.get_rect().has_point(graveyard.to_local(get_global_mouse_position())):
-				print(self.name)
-				graveyard.graveyard.append(self.name)
-				print(graveyard.graveyard)
-				var texture = load("res://Assets/card_images/%s.png" % self.name)
-				graveyard.set_texture(texture)
-				graveyard.scale = Vector2(0.3, 0.3)
-				var card_instance = card.instantiate()
-				card_instance.texture = texture
-				graveyard.add_child(card_instance)
-				self.get_parent().remove_child(self)
-				board.update_graveyard_display()
+			elif graveyard_drop_location and graveyard_drop_location.get_rect().has_point(graveyard_drop_location.to_local(get_global_mouse_position())):
+				reparent_card(graveyard)
+				board.update_graveyard_drop_location_texture()
 			else:
 				pass
 		# Incline la carte sur un clic droit si elle est stand
@@ -80,12 +68,12 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 			return
 			
 # Attribue un nouveau parent à la carte
-func reparent_card(new_parent: HBoxContainer) -> void:
+func reparent_card(new_parent) -> void:
 	if new_parent:
 		get_parent().remove_child(self)
 		new_parent.add_child(self)
 		self.position = Vector2.ZERO
-
+	
 # Redresse la carte
 func stand():
 	rotation_degrees = 0
