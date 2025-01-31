@@ -7,12 +7,12 @@ var state = "stand"
 var original_parent: Node = null
 
 @export var card_code: String = ""
-@onready var ex_area = get_node("../../../CanvasExArea/ExArea")
-@onready var field = get_node("../../../CanvasField/Field")
-@onready var player_hand = get_node("../../../CanvasPlayerHand/PlayerHand")
-@onready var graveyard_drop_location = get_node("../../../Graveyard")
-@onready var graveyard = get_node("../../../CanvasGraveyard/Graveyard")
-@onready var board = get_node("../../..")
+@onready var ex_area = get_node("../../../../CanvasExArea/ExArea")
+@onready var field = get_node("../../../../CanvasField/Field")
+@onready var player_hand = get_node("../../../../CanvasPlayerHand/PlayerHand")
+@onready var graveyard_drop_location = get_node("../../../../Graveyard")
+@onready var graveyard = get_node("../../../../CanvasGraveyard/Graveyard")
+@onready var board = get_node("../../../..")
 @onready var last_child = ""
 const card = preload("res://Scenes/card.tscn")
 
@@ -47,7 +47,7 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 			elif field and field.get_rect().has_point(get_global_mouse_position()):
 				if field.get_child_count() < 5:
 					reparent_card(field)
-				elif ex_area.get_child_count() >= 5:
+				elif field.get_child_count() >= 5:
 					self.get_parent().remove_child(self)
 					original_parent.add_child(self)
 					is_dragging = false

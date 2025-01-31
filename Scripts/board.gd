@@ -9,8 +9,6 @@ var selected_deck: String = ""
 @onready var graveyard = get_node("CanvasGraveyard/Graveyard")
 @onready var last_child = ""
 
-var card_scene = preload("res://Scenes/card.tscn")
-
 # Ouvre le menu pour charger un deck - @LoadDeckButton
 func _on_menu_button_pressed() -> void:
 	$LoadDeckButton/FileDialog.popup_centered()
@@ -34,8 +32,9 @@ func update_graveyard_drop_location_texture():
 	graveyard_drop_location.set_texture(texture)
 	graveyard_drop_location.scale = Vector2(0.3, 0.3)
 	if graveyard.get_child_count() == 0:
-		graveyard_drop_location.set_texture(null)
-
+		var default_texture = load("res://Assets/card_back.jpg")
+		graveyard_drop_location.set_texture(default_texture)
+		graveyard_drop_location.scale = Vector2(0.7, 0.7)
 
 func _on_graveyard_child_order_changed() -> void:
 	update_graveyard_drop_location_texture()
