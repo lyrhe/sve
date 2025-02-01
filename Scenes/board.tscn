@@ -115,7 +115,7 @@ size_flags_horizontal = 8
 size_flags_vertical = 4
 alignment = 1
 script = ExtResource("5_pfvuo")
-player_deck = NodePath("../../Deck")
+player_deck = NodePath("../../CanvasDeck/ScrollContainer/Deck")
 
 [node name="CanvasField" type="CanvasLayer" parent="."]
 
@@ -162,7 +162,6 @@ offset_right = 1920.0
 offset_bottom = 1078.0
 
 [node name="Deck" type="GridContainer" parent="CanvasDeck/ScrollContainer"]
-visible = false
 layout_mode = 2
 columns = 2
 

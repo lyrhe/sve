@@ -43,7 +43,7 @@ func reparent_card(new_parent) -> void:
 		get_parent().remove_child(self)
 		new_parent.add_child(self)
 		position = Vector2.ZERO
-	
+
 # Stand ou rest le carte
 func stand_rest():
 	if state == "rest":
