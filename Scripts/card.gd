@@ -1,85 +1,54 @@
 class_name Card
 extends TextureRect
 
-# Détermine le statut de base d'une carte qui spawn (immobile, stand)
-var is_dragging = false
-var state = "stand"
-var original_parent: Node = null
+# Détermine le statut de base d'une carte qui spawn (immobile, stand, aucun parent d'origine)
+@onready var is_dragging = false
+@onready var state = "stand"
+@onready var original_parent: Node = null
 
+# Permet d'identifier des cartes avec un nom identique
 @export var card_code: String = ""
-@onready var ex_area = get_node("../../../../CanvasExArea/ExArea")
-@onready var field = get_node("../../../../CanvasField/Field")
-@onready var player_hand = get_node("../../../../CanvasPlayerHand/PlayerHand")
-@onready var graveyard_drop_location = get_node("../../../../Graveyard")
-@onready var graveyard = get_node("../../../../CanvasGraveyard/Graveyard")
-@onready var board = get_node("../../../..")
-@onready var last_child = ""
-const card = preload("res://Scenes/card.tscn")
 
-# Gère le déplacement d'une carte, et renvoie la carte à son parent d'origine avec un clic droit
+# Récupère la node board
+@onready var board = get_tree().get_root().get_node("Board") 
+
+# Gère le déplacement d'une carte et renvoie la carte à son parent d'origine avec un clic droit
 func _process(delta: float) -> void:
 	if is_dragging:
 		global_position = get_global_mouse_position() - size * 0.5
 		if Input.is_action_just_pressed("right_mouse_click"):
-			self.get_parent().remove_child(self)
+			get_parent().remove_child(self)
 			original_parent.add_child(self)
 			is_dragging = false
 
-# Gère les changements de statuts d'une carte
+# Gère les changements de statut d'une carte
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
-		# Démarre le dragging et attribue un parent d'origine
 		if Input.is_action_just_pressed('mouse_click'):
-			stand()
+			if state == "rest":
+				stand_rest()
 			is_dragging = true
 			original_parent = get_parent()
-		# Dépose la carte en l'attribuant à un nouveau parent grâce à sa position
-		# Renvoie la carte à son parent d'origine si la zone est pleine
 		if Input.is_action_just_released('mouse_click') and is_dragging == true :
 			is_dragging = false
-			if ex_area and ex_area.get_rect().has_point(get_global_mouse_position()):
-				if ex_area.get_child_count() < 5:
-					reparent_card(ex_area)
-				elif ex_area.get_child_count() >= 5:
-					self.get_parent().remove_child(self)
-					original_parent.add_child(self)
-					is_dragging = false
-			elif field and field.get_rect().has_point(get_global_mouse_position()):
-				if field.get_child_count() < 5:
-					reparent_card(field)
-				elif field.get_child_count() >= 5:
-					self.get_parent().remove_child(self)
-					original_parent.add_child(self)
-					is_dragging = false
-			elif player_hand and player_hand.get_rect().has_point(get_global_mouse_position()):
-				reparent_card(player_hand)
-			elif graveyard_drop_location and graveyard_drop_location.get_rect().has_point(graveyard_drop_location.to_local(get_global_mouse_position())):
-				reparent_card(graveyard)
-				board.update_graveyard_drop_location_texture()
-			else:
-				pass
-		# Incline la carte sur un clic droit si elle est stand
-		if Input.is_action_just_pressed("right_mouse_click") and state == "stand":
-			rest()
-			return
-		# Redresse la carte sur un clic droit si elle est rest
-		if Input.is_action_just_pressed("right_mouse_click") and state == "rest":
-			stand()
-			return
+			board.check_position(self, original_parent)
+		if Input.is_action_just_pressed("right_mouse_click"):
+			if get_parent().name == "Field" or get_parent().name == "ExArea":
+				stand_rest()
+				return
 			
 # Attribue un nouveau parent à la carte
 func reparent_card(new_parent) -> void:
 	if new_parent:
 		get_parent().remove_child(self)
 		new_parent.add_child(self)
-		self.position = Vector2.ZERO
+		position = Vector2.ZERO
 	
-# Redresse la carte
-func stand():
-	rotation_degrees = 0
-	state = "stand"
-	
-# Incline la carte
-func rest():
-	rotation_degrees = 90
-	state = "rest"
+# Stand ou rest le carte
+func stand_rest():
+	if state == "rest":
+		rotation_degrees = 0
+		state = "stand"
+	elif state == "stand":
+		rotation_degrees = 90
+		state = "rest"

@@ -27,3 +27,9 @@ func force_draw(number):
 		self.add_child(card_instance)
 		card_instance.name = card_code
 		print(card_instance.name)
+
+# Supprime les cartes de la main
+func _on_menu_button_2_pressed() -> void:
+	for card in get_children():
+		remove_child(card)
+		card.queue_free()

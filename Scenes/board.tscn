@@ -13,10 +13,8 @@ size = Vector2(101.62, 150.364)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q5rkd"]
 size = Vector2(204.891, 303.326)
 
-[node name="Board" type="Node2D" node_paths=PackedStringArray("player_hand", "deck")]
+[node name="Board" type="Node2D"]
 script = ExtResource("1_vsmk8")
-player_hand = NodePath("CanvasPlayerHand/PlayerHand")
-deck = NodePath("Deck")
 metadata/_edit_lock_ = true
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -56,13 +54,13 @@ offset_right = 262.0
 offset_bottom = 351.0
 text = "Mulligan"
 
-[node name="Deck" type="Sprite2D" parent="." node_paths=PackedStringArray("board", "player_hand")]
+[node name="Deck" type="Sprite2D" parent="." node_paths=PackedStringArray("player_hand", "deck_grid")]
 position = Vector2(1539, 469)
 scale = Vector2(0.605198, 0.605198)
 texture = ExtResource("1_1wqmu")
 script = ExtResource("2_ivqgv")
-board = NodePath("..")
 player_hand = NodePath("../CanvasPlayerHand/PlayerHand")
+deck_grid = NodePath("../CanvasDeck/ScrollContainer/Deck")
 
 [node name="Deck" type="Area2D" parent="Deck"]
 position = Vector2(1.65245, 7.62939e-06)
@@ -72,14 +70,25 @@ scale = Vector2(2, 2)
 position = Vector2(-0.826141, -3.8147e-06)
 shape = SubResource("RectangleShape2D_1l7dr")
 
-[node name="Graveyard" type="Sprite2D" parent="." node_paths=PackedStringArray("board", "player_hand", "azecazecaze")]
+[node name="EvolveDeck" type="Sprite2D" parent="."]
+position = Vector2(410, 471)
+scale = Vector2(0.605198, 0.605198)
+texture = ExtResource("1_1wqmu")
+
+[node name="EvolveDeck" type="Area2D" parent="EvolveDeck"]
+position = Vector2(-1868.81, 388.303)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EvolveDeck/EvolveDeck"]
+position = Vector2(935.231, -196.63)
+shape = SubResource("RectangleShape2D_1l7dr")
+
+[node name="Graveyard" type="Sprite2D" parent="." node_paths=PackedStringArray("graveyard_container")]
 position = Vector2(1538, 703)
 scale = Vector2(0.589109, 0.592376)
 texture = ExtResource("1_1wqmu")
 script = ExtResource("5_ahlcc")
-board = NodePath("..")
-player_hand = NodePath("../CanvasPlayerHand/PlayerHand")
-azecazecaze = NodePath("../CanvasGraveyard/Graveyard")
+graveyard_container = NodePath("../CanvasGraveyard/ScrollContainer/Graveyard")
 
 [node name="Graveyard" type="Area2D" parent="Graveyard"]
 position = Vector2(-6.79016, -5.06436)
@@ -126,15 +135,20 @@ offset_bottom = 793.0
 
 [node name="CanvasGraveyard" type="CanvasLayer" parent="."]
 
-[node name="Graveyard" type="GridContainer" parent="CanvasGraveyard"]
-visible = false
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasGraveyard"]
+clip_contents = false
+custom_minimum_size = Vector2(20, 20)
 anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -286.0
+offset_left = -290.0
 grow_horizontal = 0
 grow_vertical = 2
+
+[node name="Graveyard" type="GridContainer" parent="CanvasGraveyard/ScrollContainer"]
+visible = false
+layout_mode = 2
 columns = 2
 
 [node name="CanvasDeck" type="CanvasLayer" parent="."]
@@ -144,11 +158,8 @@ clip_contents = false
 custom_minimum_size = Vector2(20, 20)
 offset_left = 1627.0
 offset_top = -2.0
-offset_right = 1922.0
+offset_right = 1920.0
 offset_bottom = 1078.0
-
-[node name="Control" type="Control" parent="CanvasDeck/ScrollContainer"]
-layout_mode = 2
 
 [node name="Deck" type="GridContainer" parent="CanvasDeck/ScrollContainer"]
 visible = false
@@ -156,11 +167,12 @@ layout_mode = 2
 columns = 2
 
 [connection signal="pressed" from="LoadDeckButton" to="." method="_on_menu_button_pressed"]
-[connection signal="file_selected" from="LoadDeckButton/FileDialog" to="." method="_on_file_dialog_file_selected"]
-[connection signal="pressed" from="ClearHand" to="." method="_on_menu_button_2_pressed"]
+[connection signal="file_selected" from="LoadDeckButton/FileDialog" to="Deck" method="_on_file_dialog_file_selected"]
+[connection signal="pressed" from="ClearHand" to="CanvasPlayerHand/PlayerHand" method="_on_menu_button_2_pressed"]
 [connection signal="pressed" from="Mulligan" to="CanvasPlayerHand/PlayerHand" method="_on_mulligan_pressed"]
 [connection signal="input_event" from="Deck/Deck" to="Deck" method="_on_deck_2_input_event"]
+[connection signal="input_event" from="EvolveDeck/EvolveDeck" to="EvolveDeck" method="_on_deck_2_input_event"]
 [connection signal="input_event" from="Graveyard/Graveyard" to="Graveyard" method="_on_graveyard_input_event"]
-[connection signal="child_order_changed" from="CanvasGraveyard/Graveyard" to="." method="_on_graveyard_child_order_changed"]
+[connection signal="child_order_changed" from="CanvasGraveyard/ScrollContainer/Graveyard" to="." method="_on_graveyard_child_order_changed"]
 [connection signal="child_exiting_tree" from="CanvasDeck/ScrollContainer/Deck" to="Deck" method="_on_deck_child_exiting_tree"]
 [connection signal="visibility_changed" from="CanvasDeck/ScrollContainer/Deck" to="Deck" method="_on_deck_visibility_changed"]
