@@ -162,6 +162,7 @@ offset_right = 1920.0
 offset_bottom = 1078.0
 
 [node name="Deck" type="GridContainer" parent="CanvasDeck/ScrollContainer"]
+visible = false
 layout_mode = 2
 columns = 2
 
@@ -173,5 +174,4 @@ columns = 2
 [connection signal="input_event" from="EvolveDeck/EvolveDeck" to="EvolveDeck" method="_on_deck_2_input_event"]
 [connection signal="input_event" from="Graveyard/Graveyard" to="Graveyard" method="_on_graveyard_input_event"]
 [connection signal="child_order_changed" from="CanvasGraveyard/ScrollContainer/Graveyard" to="." method="_on_graveyard_child_order_changed"]
-[connection signal="child_exiting_tree" from="CanvasDeck/ScrollContainer/Deck" to="Deck" method="_on_deck_child_exiting_tree"]
 [connection signal="visibility_changed" from="CanvasDeck/ScrollContainer/Deck" to="Deck" method="_on_deck_visibility_changed"]
