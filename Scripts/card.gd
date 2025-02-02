@@ -13,7 +13,7 @@ extends TextureRect
 @onready var board = get_tree().get_root().get_node("Board") 
 
 # Gère le déplacement d'une carte et renvoie la carte à son parent d'origine avec un clic droit
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if is_dragging:
 		global_position = get_global_mouse_position() - size * 0.5
 		if Input.is_action_just_pressed("right_mouse_click"):
@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 			is_dragging = false
 
 # Gère les changements de statut d'une carte
-func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if Input.is_action_just_pressed('mouse_click'):
 			if state == "rest":

@@ -60,7 +60,7 @@ scale = Vector2(0.605198, 0.605198)
 texture = ExtResource("1_1wqmu")
 script = ExtResource("2_ivqgv")
 player_hand = NodePath("../CanvasPlayerHand/PlayerHand")
-deck_grid = NodePath("../CanvasDeck/ScrollContainer/Deck")
+deck_grid = NodePath("../CanvasSidebarR/ScrollContainer/Deck")
 
 [node name="Deck" type="Area2D" parent="Deck"]
 position = Vector2(1.65245, 7.62939e-06)
@@ -88,7 +88,7 @@ position = Vector2(1538, 703)
 scale = Vector2(0.589109, 0.592376)
 texture = ExtResource("1_1wqmu")
 script = ExtResource("5_ahlcc")
-graveyard_container = NodePath("../CanvasGraveyard/ScrollContainer/Graveyard")
+graveyard_container = NodePath("../CanvasSidebarR/ScrollContainer/Graveyard")
 
 [node name="Graveyard" type="Area2D" parent="Graveyard"]
 position = Vector2(-6.79016, -5.06436)
@@ -115,7 +115,7 @@ size_flags_horizontal = 8
 size_flags_vertical = 4
 alignment = 1
 script = ExtResource("5_pfvuo")
-player_deck = NodePath("../../CanvasDeck/ScrollContainer/Deck")
+player_deck = NodePath("../../CanvasSidebarR/ScrollContainer/Deck")
 
 [node name="CanvasField" type="CanvasLayer" parent="."]
 
@@ -133,9 +133,9 @@ offset_top = 558.0
 offset_right = 1410.0
 offset_bottom = 793.0
 
-[node name="CanvasGraveyard" type="CanvasLayer" parent="."]
+[node name="CanvasSidebarR" type="CanvasLayer" parent="."]
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasGraveyard"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasSidebarR"]
 clip_contents = false
 custom_minimum_size = Vector2(20, 20)
 anchors_preset = 11
@@ -143,25 +143,17 @@ anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -290.0
+offset_right = -1.0
 grow_horizontal = 0
 grow_vertical = 2
+horizontal_scroll_mode = 2
 
-[node name="Graveyard" type="GridContainer" parent="CanvasGraveyard/ScrollContainer"]
+[node name="Graveyard" type="GridContainer" parent="CanvasSidebarR/ScrollContainer"]
 visible = false
 layout_mode = 2
 columns = 2
 
-[node name="CanvasDeck" type="CanvasLayer" parent="."]
-
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasDeck"]
-clip_contents = false
-custom_minimum_size = Vector2(20, 20)
-offset_left = 1627.0
-offset_top = -2.0
-offset_right = 1920.0
-offset_bottom = 1078.0
-
-[node name="Deck" type="GridContainer" parent="CanvasDeck/ScrollContainer"]
+[node name="Deck" type="GridContainer" parent="CanvasSidebarR/ScrollContainer"]
 visible = false
 layout_mode = 2
 columns = 2
@@ -173,5 +165,5 @@ columns = 2
 [connection signal="input_event" from="Deck/Deck" to="Deck" method="_on_deck_2_input_event"]
 [connection signal="input_event" from="EvolveDeck/EvolveDeck" to="EvolveDeck" method="_on_deck_2_input_event"]
 [connection signal="input_event" from="Graveyard/Graveyard" to="Graveyard" method="_on_graveyard_input_event"]
-[connection signal="child_order_changed" from="CanvasGraveyard/ScrollContainer/Graveyard" to="." method="_on_graveyard_child_order_changed"]
-[connection signal="visibility_changed" from="CanvasDeck/ScrollContainer/Deck" to="Deck" method="_on_deck_visibility_changed"]
+[connection signal="child_order_changed" from="CanvasSidebarR/ScrollContainer/Graveyard" to="." method="_on_graveyard_child_order_changed"]
+[connection signal="visibility_changed" from="CanvasSidebarR/ScrollContainer/Deck" to="Deck" method="_on_deck_visibility_changed"]

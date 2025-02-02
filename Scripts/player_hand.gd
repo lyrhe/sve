@@ -2,16 +2,11 @@ extends HBoxContainer
 
 # Récupère le deck et preload la scène des cartes pour force_draw()
 @export var player_deck : GridContainer
-const card = preload("res://Scenes/card.tscn")
 
 # Récupère les codes des cartes de la main, les ajoute au fond du deck, supprime la main, puis pioche quatre.
 func _on_mulligan_pressed() -> void:
-	var a = self.get_children()
-	for n in a:
-		player_deck.player_deck.append(n.name)
 	for n in self.get_children():
-		self.remove_child(n)
-		n.queue_free()
+		n.reparent(player_deck)
 	force_draw(4)
 
 # Pioche un certain nombre de cartes
