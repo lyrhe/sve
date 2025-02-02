@@ -209,7 +209,7 @@ grow_horizontal = 0
 
 [node name="TokensDrawer" type="GridContainer" parent="CanvasSidebarT/ScrollContainer"]
 layout_mode = 2
-columns = 5
+columns = 2
 
 [connection signal="pressed" from="LoadDeckButton" to="." method="_on_menu_button_pressed"]
 [connection signal="file_selected" from="LoadDeckButton/FileDialog" to="Deck" method="_on_file_dialog_file_selected"]

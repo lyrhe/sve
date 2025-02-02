@@ -8,7 +8,6 @@ const card = preload("res://Scenes/card.tscn")
 # TEST - Autoload une decklist
 func _ready() -> void:
 	load_deck("res://Test/decklist.txt")
-	#populate_deck_grid()
 	
 # Récupère le chemin du deck sélectionné pour la charger via la fonction load_deck() de deck.gd
 func _on_file_dialog_file_selected(path: String) -> void:

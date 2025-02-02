@@ -24,4 +24,6 @@ script = ExtResource("2_7vydm")
 position = Vector2(81.0628, 116.436)
 shape = SubResource("RectangleShape2D_p25y7")
 
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

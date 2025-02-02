@@ -5,12 +5,15 @@ extends TextureRect
 @onready var is_dragging = false
 @onready var state = "stand"
 @onready var original_parent: Node = null
+var evolved = "no"
+var token = "no"
 
 # Permet d'identifier des cartes avec un nom identique
 @export var card_code: String = ""
 
 # Récupère la node board
 @onready var board = get_tree().get_root().get_node("Board") 
+@onready var hover_display = get_tree().get_root().find_child("HoverDisplay", true, false)
 
 # Gère le déplacement d'une carte et renvoie la carte à son parent d'origine avec un clic droit
 func _process(_delta: float) -> void:
@@ -38,10 +41,23 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 				return
 			
 # Attribue un nouveau parent à la carte
-func reparent_card(new_parent) -> void:
+func reparent_card(new_parent, x) -> void:
+	print(self.token)
+	if self.token == "yes":
+		var y = self.get_index()
+		print(y)
+		get_parent().remove_child(self)
+		new_parent.add_child(self)
+		x = self.duplicate()
+		x.token = "yes"
+		original_parent.add_child(x)
+		original_parent.move_child(x, y)
+		position = Vector2.ZERO
+		return
 	if new_parent:
 		get_parent().remove_child(self)
 		new_parent.add_child(self)
+		new_parent.get_child(-1).evolved = x
 		position = Vector2.ZERO
 
 # Stand ou rest le carte
@@ -52,3 +68,15 @@ func stand_rest():
 	elif state == "stand":
 		rotation_degrees = 90
 		state = "rest"
+
+func _on_mouse_entered() -> void:
+	if hover_display:
+		hover_display.texture = texture
+		hover_display.size = texture.get_size() * 0.7
+		var viewport_rect = get_viewport_rect()
+		hover_display.position = Vector2(0, 0)
+		hover_display.show()
+
+func _on_mouse_exited() -> void:
+	if hover_display:
+		hover_display.hide()
