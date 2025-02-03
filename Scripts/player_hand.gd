@@ -12,7 +12,7 @@ func _on_mulligan_pressed() -> void:
 # Pioche un certain nombre de cartes
 func force_draw(number):
 	for n in range(0, number):
-		player_deck.get_child(0).reparent_card(self, "no")
+		player_deck.get_child(0).reparent_card(self, false)
 
 # Supprime les cartes de la main
 func _on_menu_button_2_pressed() -> void:

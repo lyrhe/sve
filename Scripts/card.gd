@@ -5,8 +5,8 @@ extends TextureRect
 @onready var is_dragging = false
 @onready var state = "stand"
 @onready var original_parent: Node = null
-var evolved = "no"
-var token = "no"
+var evolved = false
+var token = false
 
 # Permet d'identifier des cartes avec un nom identique
 @export var card_code: String = ""
@@ -41,15 +41,13 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 				return
 			
 # Attribue un nouveau parent à la carte
-func reparent_card(new_parent, x) -> void:
-	print(self.token)
-	if self.token == "yes":
+func reparent_card(new_parent: Node, x) -> void:
+	if self.token:
 		var y = self.get_index()
-		print(y)
 		get_parent().remove_child(self)
 		new_parent.add_child(self)
 		x = self.duplicate()
-		x.token = "yes"
+		x.token = true
 		original_parent.add_child(x)
 		original_parent.move_child(x, y)
 		position = Vector2.ZERO
