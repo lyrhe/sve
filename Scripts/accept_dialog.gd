@@ -16,6 +16,7 @@ func _ready() -> void:
 
 func on_confirmed():
 	on_dialog_confirmed.emit(current_value)
+	self.get_parent().remove_child(self)
 
 func _on_value_changed(new_value: float):
 	current_value = int(new_value)

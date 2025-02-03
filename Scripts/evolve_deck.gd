@@ -2,6 +2,7 @@ extends Sprite2D
 
 @export var evolve_deck_grid : GridContainer
 const card = preload("res://Scenes/card.tscn")
+@export var board : Board
 
 func _ready() -> void:
 	load_evolve_deck("res://Test/evolve_deck_MONO.txt")
@@ -23,6 +24,7 @@ func load_evolve_deck(deck_file_path: String) -> void:
 		card_instance.evolved = true
 		card_instance.texture = card_texture
 		card_instance.card_code = n
+		card_instance.on_drop.connect(board.check_position)
 		evolve_deck_grid.add_child(card_instance, true)
 	for n in range(evolve_deck_grid.get_child_count()):
 		evolve_deck_grid.get_child(n).evolved = true

@@ -4,16 +4,14 @@ extends Sprite2D
 @export var player_hand : HBoxContainer
 @export var deck_grid : GridContainer
 @export var board: Board
-@export var view_top_dialog: TopNAcceptDialog
 
 const card = preload("res://Scenes/card.tscn")
+const zeub = preload("res://Scenes/accept_dialog.tscn")
 
 # TEST - Autoload une decklist
 func _ready() -> void:
 	load_deck("res://Test/decklist.txt")
-	
-	view_top_dialog.on_dialog_confirmed.connect(self.on_top_cards_confirmed)
-	
+
 # Récupère le chemin du deck sélectionné pour la charger via la fonction load_deck() de deck.gd
 func _on_file_dialog_file_selected(path: String) -> void:
 	load_deck(path)
@@ -56,6 +54,7 @@ func shuffle_deck():
 		var card_texture = load(texture_path)
 		card_instance.texture = card_texture
 		card_instance.card_code = n
+		card_instance.on_drop.connect(board.check_position)
 		deck_grid.add_child(card_instance, true)
 
 # Ajoute une carte à la main du joueur avec un clic gauche sur le deck
@@ -66,19 +65,21 @@ func _on_deck_2_input_event(_viewport: Node, event: InputEvent, _shape_idx: int)
 	if Input.is_action_just_pressed("right_mouse_click"):
 		deck_grid.visible = not deck_grid.visible
 	if Input.is_action_just_pressed(("wheel_click")):
-		var zeub = 4
-		deck_grid.visible = not deck_grid.visible
-		for n in zeub:
-			deck_grid.get_child(n).visible = not deck_grid.get_child(n).visible
-		for n in deck_grid.get_children():
-			n.visible = not n.visible
+		var view_top_dialog = zeub.instantiate()
+		board.add_child(view_top_dialog)
+		view_top_dialog.on_dialog_confirmed.connect(self.on_top_cards_confirmed)
 
 # Shuffle à chaque fois que le deck est ouvert
 func _on_deck_visibility_changed() -> void:
 	if deck_grid.visible == true:
 		shuffle_deck()
+	if deck_grid.visible == false:
+		for card_index in range(0, deck_grid.get_child_count()):
+			var child = deck_grid.get_child(card_index)
+			child.visible = (card_index < 40)
 		
 func on_top_cards_confirmed(top_n: int):
+	deck_grid.visible = true
 	for card_index in range(0, deck_grid.get_child_count()):
 		var child = deck_grid.get_child(card_index)
 		child.visible = (card_index < top_n)

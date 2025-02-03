@@ -68,6 +68,7 @@ func token_drawer_populate():
 		card_instance.texture = card_texture
 		card_instance.card_code = n
 		tokens_drawer.add_child(card_instance, true)
+		card_instance.on_drop.connect(self.check_position)
 		card_instance.token = true
 
 func _on_tokens_pressed() -> void:
@@ -86,3 +87,8 @@ func move_into_zone(old_zone: Node, new_zone: Node, card: Card):
 		card.get_parent().remove_child(card)
 		old_zone.add_child(card)
 		card.is_dragging = false
+
+
+func _on_mill_pressed() -> void:
+	var z = $CanvasSidebarR/ScrollContainer/Deck.get_child(0)
+	z.reparent_card($CanvasSidebarR/ScrollContainer/Graveyard, false)	

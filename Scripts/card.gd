@@ -46,17 +46,19 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 			original_parent = get_parent()
 		if Input.is_action_just_released('mouse_click') and is_dragging == true :
 			is_dragging = false
-			if get_parent().get_parent() is not CanvasLayer:
-				get_parent().get_parent().get_parent().layer = 1
-				self.z_index = 1
-			else:
-				get_parent().get_parent().layer = 1
-				self.z_index = 1
 			on_drop.emit(self, original_parent)
+			#if get_parent().get_parent() is not CanvasLayer:
+				#get_parent().get_parent().get_parent().layer = 1
+				#self.z_index = 1
+			#else:
+				#get_parent().get_parent().layer = 1
+				#self.z_index = 1
 		if Input.is_action_just_pressed("right_mouse_click"):
 			if get_parent().name == "Field" or get_parent().name == "ExArea":
 				stand_rest()
 				return
+		if Input.is_action_just_pressed("wheel_click"):
+			get_parent().move_child(self, -1)
 			
 # Attribue un nouveau parent à la carte
 func reparent_card(new_parent: Node, x) -> void:
@@ -68,6 +70,7 @@ func reparent_card(new_parent: Node, x) -> void:
 		x.token = true
 		original_parent.add_child(x)
 		original_parent.move_child(x, y)
+		x.on_drop.connect(x.get_parent().get_parent().get_parent().get_parent().check_position)
 		position = Vector2.ZERO
 		return
 	if new_parent:

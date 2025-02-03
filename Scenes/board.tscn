@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dbik63wktdm0f"]
+[gd_scene load_steps=10 format=3 uid="uid://dbik63wktdm0f"]
 
 [ext_resource type="Texture2D" uid="uid://dx0ou4upt367s" path="res://Assets/card_back.jpg" id="1_1wqmu"]
 [ext_resource type="Script" path="res://Scripts/board.gd" id="1_vsmk8"]
@@ -6,8 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bd420y6l0x3sj" path="res://Assets/board_upscayl_3x_ultramix_balanced.png" id="2_ocle3"]
 [ext_resource type="Script" path="res://Scripts/graveyard.gd" id="5_ahlcc"]
 [ext_resource type="Script" path="res://Scripts/player_hand.gd" id="5_pfvuo"]
-[ext_resource type="Script" path="res://Scenes/evolve_deck.gd" id="5_pkvn5"]
-[ext_resource type="Script" path="res://Scripts/accept_dialog.gd" id="7_npihu"]
+[ext_resource type="Script" path="res://Scripts/evolve_deck.gd" id="5_pkvn5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1l7dr"]
 size = Vector2(101.62, 150.364)
@@ -70,6 +69,13 @@ offset_right = 868.0
 offset_bottom = 86.0
 text = "Mulligan"
 
+[node name="Mill" type="Button" parent="."]
+offset_left = 1054.0
+offset_top = 19.0
+offset_right = 1227.0
+offset_bottom = 87.0
+text = "Mill"
+
 [node name="Tokens" type="Button" parent="."]
 offset_left = 875.0
 offset_top = 18.0
@@ -77,7 +83,7 @@ offset_right = 1048.0
 offset_bottom = 86.0
 text = "Tokens"
 
-[node name="Deck" type="Sprite2D" parent="." node_paths=PackedStringArray("player_hand", "deck_grid", "board", "view_top_dialog")]
+[node name="Deck" type="Sprite2D" parent="." node_paths=PackedStringArray("player_hand", "deck_grid", "board")]
 position = Vector2(1539, 469)
 scale = Vector2(0.605198, 0.605198)
 texture = ExtResource("1_1wqmu")
@@ -85,7 +91,6 @@ script = ExtResource("2_ivqgv")
 player_hand = NodePath("../CanvasPlayerHand/PlayerHand")
 deck_grid = NodePath("../CanvasSidebarR/ScrollContainer/Deck")
 board = NodePath("..")
-view_top_dialog = NodePath("../AcceptDialog")
 
 [node name="Deck" type="Area2D" parent="Deck"]
 position = Vector2(1.65245, 7.62939e-06)
@@ -95,12 +100,13 @@ scale = Vector2(2, 2)
 position = Vector2(-0.826141, -3.8147e-06)
 shape = SubResource("RectangleShape2D_1l7dr")
 
-[node name="EvolveDeck" type="Sprite2D" parent="." node_paths=PackedStringArray("evolve_deck_grid")]
+[node name="EvolveDeck" type="Sprite2D" parent="." node_paths=PackedStringArray("evolve_deck_grid", "board")]
 position = Vector2(410, 471)
 scale = Vector2(0.605198, 0.605198)
 texture = ExtResource("1_1wqmu")
 script = ExtResource("5_pkvn5")
 evolve_deck_grid = NodePath("../CanvasSidebarL/ScrollContainer/EvolveDeck")
+board = NodePath("..")
 
 [node name="EvolveDeck" type="Area2D" parent="EvolveDeck"]
 position = Vector2(-1868.81, 388.303)
@@ -123,17 +129,6 @@ position = Vector2(-6.79016, -5.06436)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Graveyard/Graveyard"]
 position = Vector2(6.19312, 3.64355)
 shape = SubResource("RectangleShape2D_q5rkd")
-
-[node name="AcceptDialog" type="AcceptDialog" parent="."]
-initial_position = 1
-visible = true
-script = ExtResource("7_npihu")
-
-[node name="SpinBox" type="SpinBox" parent="AcceptDialog"]
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 92.0
-offset_bottom = 51.0
 
 [node name="CanvasPlayerHand" type="CanvasLayer" parent="."]
 
@@ -191,6 +186,7 @@ layout_mode = 2
 columns = 2
 
 [node name="Deck" type="GridContainer" parent="CanvasSidebarR/ScrollContainer"]
+visible = false
 layout_mode = 2
 columns = 2
 
@@ -218,6 +214,7 @@ columns = 2
 [connection signal="file_selected" from="LoadDeckButton/FileDialog" to="Deck" method="_on_file_dialog_file_selected"]
 [connection signal="pressed" from="ClearHand" to="CanvasPlayerHand/PlayerHand" method="_on_menu_button_2_pressed"]
 [connection signal="pressed" from="Mulligan" to="CanvasPlayerHand/PlayerHand" method="_on_mulligan_pressed"]
+[connection signal="pressed" from="Mill" to="." method="_on_mill_pressed"]
 [connection signal="pressed" from="Tokens" to="." method="_on_tokens_pressed"]
 [connection signal="input_event" from="Deck/Deck" to="Deck" method="_on_deck_2_input_event"]
 [connection signal="input_event" from="EvolveDeck/EvolveDeck" to="EvolveDeck" method="_on_evolve_deck_input_event"]
