@@ -20,12 +20,12 @@ func load_evolve_deck(deck_file_path: String) -> void:
 		var card_instance = card.instantiate()
 		var texture_path = "res://Assets/card_images/%s.png" % n
 		var card_texture = load(texture_path)
-		card_instance.evolved = "yes"
+		card_instance.evolved = true
 		card_instance.texture = card_texture
 		card_instance.card_code = n
 		evolve_deck_grid.add_child(card_instance, true)
 	for n in range(evolve_deck_grid.get_child_count()):
-		evolve_deck_grid.get_child(n).evolved = "yes"
+		evolve_deck_grid.get_child(n).evolved = true
 
 func _on_evolve_deck_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if Input.is_action_just_pressed("right_mouse_click"):

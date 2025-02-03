@@ -28,30 +28,20 @@ func _on_graveyard_child_order_changed() -> void:
 	update_graveyard_drop_location_texture()
 
 func check_position(card, original_parent):
-	if $CanvasExArea/ExArea and $CanvasExArea/ExArea.get_rect().has_point(get_global_mouse_position()):
-		if $CanvasExArea/ExArea.get_child_count() < 5:
-			card.reparent_card($CanvasExArea/ExArea, card.evolved)
-		elif $CanvasExArea/ExArea.get_child_count() >= 5:
-			card.get_parent().remove_child(card)
-			original_parent.add_child(card)
-			card.is_dragging = false
-	elif $CanvasField/Field and $CanvasField/Field.get_rect().has_point(get_global_mouse_position()):
-		if $CanvasField/Field.get_child_count() < 5:
-			card.reparent_card($CanvasField/Field, card.evolved)
-		elif $CanvasField/Field.get_child_count() >= 5:
-			card.get_parent().remove_child(card)
-			original_parent.add_child(card)
-			card.is_dragging = false
-	elif $CanvasPlayerHand/PlayerHand and $CanvasPlayerHand/PlayerHand.get_rect().has_point(get_global_mouse_position()):
-		if card.token == "yes":
+	if is_dropped_in_zone($CanvasExArea/ExArea):
+		move_into_zone(original_parent, $CanvasExArea/ExArea, card)
+	elif is_dropped_in_zone($CanvasField/Field):
+		move_into_zone(original_parent, $CanvasField/Field, card)
+	elif is_dropped_in_zone($CanvasPlayerHand/PlayerHand):
+		if card.token:
 			card.get_parent().remove_child(card)
 			return
 		card.reparent_card($CanvasPlayerHand/PlayerHand, card.evolved)
-	elif $Graveyard and $Graveyard.get_rect().has_point($Graveyard.to_local(get_global_mouse_position())):
+	elif is_dropped_in_zone($Graveyard):
 		card.reparent_card($CanvasSidebarR/ScrollContainer/Graveyard, card.evolved)
 		update_graveyard_drop_location_texture()
-	elif $EvolveDeck and $EvolveDeck.get_rect().has_point($EvolveDeck.to_local(get_global_mouse_position())):
-		if card.evolved == "yes":
+	elif is_dropped_in_zone($EvolveDeck):
+		if card.evolved:
 			card.reparent_card($CanvasSidebarL/ScrollContainer/EvolveDeck, card.evolved)
 		else:
 			card.get_parent().remove_child(card)
@@ -83,7 +73,17 @@ func token_drawer_populate():
 		tokens_drawer.add_child(card_instance, true)
 		card_instance.token = "yes"
 
-
 func _on_tokens_pressed() -> void:
 	print($CanvasSidebarR/ScrollContainer/TokensDrawer.visible)
 	$CanvasSidebarR/ScrollContainer/TokensDrawer.visible = not $CanvasSidebarR/ScrollContainer/TokensDrawer.visible
+	
+func is_dropped_in_zone(zone: Node):
+	return zone != null and zone.get_rect().has_point(get_global_mouse_position())
+
+func move_into_zone(old_zone: Node, new_zone: Node, card: Card):
+	if new_zone.get_child_count() < 5:
+		card.reparent_card(new_zone, card.evolved)
+	else:
+		card.get_parent().remove_child(card)
+		old_zone.add_child(card)
+		card.is_dragging = false
