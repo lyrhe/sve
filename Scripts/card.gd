@@ -1,6 +1,8 @@
 class_name Card
 extends TextureRect
 
+signal on_drop(card: Card, parent: Node)
+
 # Détermine le statut de base d'une carte qui spawn (immobile, stand, aucun parent d'origine)
 @onready var is_dragging = false
 var state = "stand"
@@ -12,7 +14,6 @@ var token = false
 @export var card_code: String = ""
 
 # Récupère la node board
-@onready var board = get_tree().get_root().get_node("Board") 
 @onready var hover_display = get_tree().get_root().find_child("HoverDisplay", true, false)
 
 # Gère le déplacement d'une carte et renvoie la carte à son parent d'origine avec un clic droit
@@ -45,13 +46,13 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 			original_parent = get_parent()
 		if Input.is_action_just_released('mouse_click') and is_dragging == true :
 			is_dragging = false
-			board.check_position(self, original_parent)
 			if get_parent().get_parent() is not CanvasLayer:
 				get_parent().get_parent().get_parent().layer = 1
 				self.z_index = 1
 			else:
 				get_parent().get_parent().layer = 1
 				self.z_index = 1
+			on_drop.emit(self, original_parent)
 		if Input.is_action_just_pressed("right_mouse_click"):
 			if get_parent().name == "Field" or get_parent().name == "ExArea":
 				stand_rest()

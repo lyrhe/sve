@@ -3,12 +3,16 @@ extends Sprite2D
 # Récupère le board et la main du joueur, preload la classe Card, initialise une liste pour stocker le deck
 @export var player_hand : HBoxContainer
 @export var deck_grid : GridContainer
-@export var board : Node2D
+@export var board: Board
+@export var view_top_dialog: TopNAcceptDialog
+
 const card = preload("res://Scenes/card.tscn")
 
 # TEST - Autoload une decklist
 func _ready() -> void:
 	load_deck("res://Test/decklist.txt")
+	
+	view_top_dialog.on_dialog_confirmed.connect(self.on_top_cards_confirmed)
 	
 # Récupère le chemin du deck sélectionné pour la charger via la fonction load_deck() de deck.gd
 func _on_file_dialog_file_selected(path: String) -> void:
@@ -31,6 +35,7 @@ func load_deck(deck_file_path: String) -> void:
 		var card_texture = load(texture_path)
 		card_instance.texture = card_texture
 		card_instance.card_code = n
+		card_instance.on_drop.connect(board.check_position)
 		cards.append(card_instance)
 	cards.shuffle()
 	for card_instance in cards:
@@ -72,3 +77,8 @@ func _on_deck_2_input_event(_viewport: Node, event: InputEvent, _shape_idx: int)
 func _on_deck_visibility_changed() -> void:
 	if deck_grid.visible == true:
 		shuffle_deck()
+		
+func on_top_cards_confirmed(top_n: int):
+	for card_index in range(0, deck_grid.get_child_count()):
+		var child = deck_grid.get_child(card_index)
+		child.visible = (card_index < top_n)

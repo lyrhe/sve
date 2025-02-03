@@ -1,3 +1,4 @@
+class_name Board
 extends Node2D
 
 const card = preload("res://Scenes/card.tscn")
@@ -27,7 +28,7 @@ func update_graveyard_drop_location_texture():
 func _on_graveyard_child_order_changed() -> void:
 	update_graveyard_drop_location_texture()
 
-func check_position(card, original_parent):
+func check_position(card: Card, original_parent: Node):
 	if is_dropped_in_zone($CanvasExArea/ExArea):
 		move_into_zone(original_parent, $CanvasExArea/ExArea, card)
 	elif is_dropped_in_zone($CanvasField/Field):
@@ -58,15 +59,12 @@ func token_drawer_populate():
 	if file == null:
 		push_error("Failed to open deck file: " + deck_file_path)
 		return
+
 	var lines := file.get_as_text().split("\r", false)
-	var lines2 = []
 	for n in lines:
-		var x = n.strip_edges()
-		lines2.append(x)
-	for n in lines2 :
 		var card_instance = card.instantiate()
-		var texture_path = "res://Assets/tokens/" + n + ".png"
-		var card_texture = load(texture_path)
+		var card_name = n.strip_edges()
+		var card_texture = load("res://Assets/tokens/" + card_name + ".png")
 		card_instance.texture = card_texture
 		card_instance.card_code = n
 		tokens_drawer.add_child(card_instance, true)
