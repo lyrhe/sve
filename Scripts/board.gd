@@ -85,5 +85,5 @@ func token_drawer_populate():
 
 
 func _on_tokens_pressed() -> void:
-	print($CanvasSidebarT/ScrollContainer/TokensDrawer.visible)
-	$CanvasSidebarT/ScrollContainer/TokensDrawer.visible = not $CanvasSidebarT/ScrollContainer/TokensDrawer.visible
+	print($CanvasSidebarR/ScrollContainer/TokensDrawer.visible)
+	$CanvasSidebarR/ScrollContainer/TokensDrawer.visible = not $CanvasSidebarR/ScrollContainer/TokensDrawer.visible
