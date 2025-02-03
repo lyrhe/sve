@@ -7,7 +7,7 @@ Todo:
 - [ ] Mana counter
 - [ ] Faceup/facedown pour l'evolve deck
 - [ ] Send to top/bottom pour le deck
-- [x]~~Check top X pour le deck~~
+- [x] ~~Check top X pour le deck~~
 - [ ] Lien vers la FAQ ?
 - [ ] Compteurs (+x/+x, etc)
 - [ ] Deckbuilder
