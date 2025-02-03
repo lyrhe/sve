@@ -1,5 +1,5 @@
 Bugs :
-- Déplacer une carte dans une zone restand toutes les cartes rest de la zone d'origine et de la nouvelle zone.
+- [x] ~~Déplacer une carte dans une zone restand toutes les cartes rest de la zone d'origine et de la nouvelle zone.~~
 - [x] ~~Déplacer une carte depuis la main la fait disparaître en dessous de celles du Field et de l'Ex Area.~~
 
 Todo:
