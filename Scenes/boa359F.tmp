@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://dbik63wktdm0f"]
+[gd_scene load_steps=11 format=3 uid="uid://dbik63wktdm0f"]
 
 [ext_resource type="Texture2D" uid="uid://dx0ou4upt367s" path="res://Assets/card_back.jpg" id="1_1wqmu"]
 [ext_resource type="Script" path="res://Scripts/board.gd" id="1_vsmk8"]
 [ext_resource type="Script" path="res://Scripts/deck.gd" id="2_ivqgv"]
 [ext_resource type="Texture2D" uid="uid://bd420y6l0x3sj" path="res://Assets/board_upscayl_3x_ultramix_balanced.png" id="2_ocle3"]
+[ext_resource type="Script" path="res://Scenes/line_edit.gd" id="2_qjp05"]
 [ext_resource type="Script" path="res://Scripts/graveyard.gd" id="5_ahlcc"]
 [ext_resource type="Script" path="res://Scripts/player_hand.gd" id="5_pfvuo"]
 [ext_resource type="Script" path="res://Scenes/evolve_deck.gd" id="5_pkvn5"]
@@ -19,16 +20,37 @@ script = ExtResource("1_vsmk8")
 tokens_drawer = NodePath("CanvasSidebarR/ScrollContainer/TokensDrawer")
 metadata/_edit_lock_ = true
 
-[node name="HoverDisplay" type="TextureRect" parent="."]
-anchors_preset = 6
-anchor_left = 1.0
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+initial_position = 1
+dialog_text = "zeub"
+
+[node name="LineEdit" type="LineEdit" parent="AcceptDialog"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -600.0
+offset_left = -42.0
+offset_top = -42.0
+offset_right = 42.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+script = ExtResource("2_qjp05")
+
+[node name="HoverDisplay" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
 offset_top = -450.0
+offset_right = 300.0
 offset_bottom = 450.0
-grow_horizontal = 0
+grow_horizontal = 2
 grow_vertical = 2
 expand_mode = 1
 
@@ -76,14 +98,14 @@ offset_right = 1048.0
 offset_bottom = 86.0
 text = "Tokens"
 
-[node name="Deck" type="Sprite2D" parent="." node_paths=PackedStringArray("player_hand", "deck_grid", "board")]
+[node name="Deck" type="Sprite2D" parent="." node_paths=PackedStringArray("player_hand", "deck_grid", "line_edit")]
 position = Vector2(1539, 469)
 scale = Vector2(0.605198, 0.605198)
 texture = ExtResource("1_1wqmu")
 script = ExtResource("2_ivqgv")
 player_hand = NodePath("../CanvasPlayerHand/PlayerHand")
 deck_grid = NodePath("../CanvasSidebarR/ScrollContainer/Deck")
-board = NodePath("..")
+line_edit = NodePath("../AcceptDialog/LineEdit")
 
 [node name="Deck" type="Area2D" parent="Deck"]
 position = Vector2(1.65245, 7.62939e-06)

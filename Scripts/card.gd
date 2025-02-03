@@ -3,7 +3,7 @@ extends TextureRect
 
 # Détermine le statut de base d'une carte qui spawn (immobile, stand, aucun parent d'origine)
 @onready var is_dragging = false
-@onready var state = "stand"
+var state = "stand"
 @onready var original_parent: Node = null
 var evolved = false
 var token = false
@@ -23,6 +23,11 @@ func _process(_delta: float) -> void:
 			get_parent().remove_child(self)
 			original_parent.add_child(self)
 			is_dragging = false
+	if state == "rest":
+		rotation_degrees = 90
+	else:
+		rotation_degrees == 0
+		
 
 # Gère les changements de statut d'une carte
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
@@ -31,10 +36,22 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 			if state == "rest":
 				stand_rest()
 			is_dragging = true
+			if get_parent().get_parent() is not CanvasLayer:
+				get_parent().get_parent().get_parent().layer = 2
+				self.z_index = 2
+			else:
+				get_parent().get_parent().layer = 2
+				self.z_index = 2
 			original_parent = get_parent()
 		if Input.is_action_just_released('mouse_click') and is_dragging == true :
 			is_dragging = false
 			board.check_position(self, original_parent)
+			if get_parent().get_parent() is not CanvasLayer:
+				get_parent().get_parent().get_parent().layer = 1
+				self.z_index = 1
+			else:
+				get_parent().get_parent().layer = 1
+				self.z_index = 1
 		if Input.is_action_just_pressed("right_mouse_click"):
 			if get_parent().name == "Field" or get_parent().name == "ExArea":
 				stand_rest()
@@ -42,7 +59,7 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 			
 # Attribue un nouveau parent à la carte
 func reparent_card(new_parent: Node, x) -> void:
-	if self.token:
+	if self.token and self.get_parent().name == "TokensDrawer":
 		var y = self.get_index()
 		get_parent().remove_child(self)
 		new_parent.add_child(self)
@@ -64,7 +81,6 @@ func stand_rest():
 		rotation_degrees = 0
 		state = "stand"
 	elif state == "stand":
-		rotation_degrees = 90
 		state = "rest"
 
 func _on_mouse_entered() -> void:

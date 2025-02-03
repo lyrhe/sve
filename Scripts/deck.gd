@@ -3,6 +3,7 @@ extends Sprite2D
 # Récupère le board et la main du joueur, preload la classe Card, initialise une liste pour stocker le deck
 @export var player_hand : HBoxContainer
 @export var deck_grid : GridContainer
+@export var board : Node2D
 const card = preload("res://Scenes/card.tscn")
 
 # TEST - Autoload une decklist
@@ -59,6 +60,13 @@ func _on_deck_2_input_event(_viewport: Node, event: InputEvent, _shape_idx: int)
 			player_hand.force_draw(1)
 	if Input.is_action_just_pressed("right_mouse_click"):
 		deck_grid.visible = not deck_grid.visible
+	if Input.is_action_just_pressed(("wheel_click")):
+		var zeub = 4
+		deck_grid.visible = not deck_grid.visible
+		for n in zeub:
+			deck_grid.get_child(n).visible = not deck_grid.get_child(n).visible
+		for n in deck_grid.get_children():
+			n.visible = not n.visible
 
 # Shuffle à chaque fois que le deck est ouvert
 func _on_deck_visibility_changed() -> void:
