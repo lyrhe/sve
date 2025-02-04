@@ -10,20 +10,20 @@ func _input(event):
 	if event is InputEventMouseButton and event.pressed and self.get_rect().has_point(get_global_mouse_position()):
 		var local_pos = get_local_mouse_position()
 		print(local_pos)
-		var text_half = size.x / 1.33  # Divide text into two clickable halves
+		var text_half = size.x / 1.33 
 		print(text_half)
 
-		if event.button_index == MOUSE_BUTTON_LEFT:  # Increase
+		if event.button_index == MOUSE_BUTTON_LEFT:
 			print(local_pos.x)
 			if local_pos.x < text_half:
 				current_mana += 1
 			else:
 				max_mana += 1
-		elif event.button_index == MOUSE_BUTTON_RIGHT:  # Decrease
+		elif event.button_index == MOUSE_BUTTON_RIGHT:
 			if local_pos.x < text_half:
-				current_mana = max(current_mana - 1, 0)  # Prevent negative values
+				current_mana = max(current_mana - 1, 0)
 			else:
-				max_mana = max(max_mana - 1, 0)  # Prevent max mana from going below 1
+				max_mana = max(max_mana - 1, 0)
 
 		update_text()
 
