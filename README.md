@@ -16,6 +16,7 @@ Todo:
 - [ ] Gérer evolved cards
 - [ ] Lien vers la FAQ ?
 - [ ] Deckbuilder
+- [ ] Points d'evo
 - [ ] Ctrl+click pour dupliquer les tokens
 
 UI:
