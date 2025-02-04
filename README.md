@@ -9,7 +9,7 @@ Todo:
 - [x] ~~Check top X pour le deck~~
 - [x] ~~Life counter~~
 - [x] ~~Mana counter~~
-- [ ] Banish zone
+- [x] ~~Banish zone~~
 - [ ] Disable other containers when opening one
 - [ ] Afficher le nom du container
 - [ ] Compteurs (+x/+x, buffs, damage, etc...)

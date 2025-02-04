@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dbik63wktdm0f"]
+[gd_scene load_steps=14 format=3 uid="uid://dbik63wktdm0f"]
 
 [ext_resource type="Texture2D" uid="uid://dx0ou4upt367s" path="res://Assets/card_back.jpg" id="1_1wqmu"]
 [ext_resource type="Script" path="res://Scripts/board.gd" id="1_vsmk8"]
@@ -9,6 +9,10 @@
 [ext_resource type="Script" path="res://Scripts/graveyard.gd" id="5_ahlcc"]
 [ext_resource type="Script" path="res://Scripts/player_hand.gd" id="5_pfvuo"]
 [ext_resource type="Script" path="res://Scripts/evolve_deck.gd" id="5_pkvn5"]
+[ext_resource type="Script" path="res://Scripts/banish.gd" id="6_tkxmi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wih2a"]
+size = Vector2(192.824, 292.015)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1l7dr"]
 size = Vector2(101.62, 150.364)
@@ -105,6 +109,21 @@ offset_top = 18.0
 offset_right = 1048.0
 offset_bottom = 86.0
 text = "Tokens"
+
+[node name="Banish" type="Sprite2D" parent="." node_paths=PackedStringArray("banish")]
+position = Vector2(414.65, 706)
+scale = Vector2(0.64703, 0.66)
+texture = ExtResource("1_1wqmu")
+script = ExtResource("6_tkxmi")
+banish = NodePath("../CanvasSidebarL/ScrollContainer/Banish")
+
+[node name="Area2D" type="Area2D" parent="Banish"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Banish/Area2D"]
+position = Vector2(-1.59406, 0.962158)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_wih2a")
+debug_color = Color(6.73831e-07, 0.593614, 0.735357, 0.42)
 
 [node name="Deck" type="Sprite2D" parent="." node_paths=PackedStringArray("player_hand", "deck_grid", "board")]
 position = Vector2(1539, 469)
@@ -233,12 +252,18 @@ visible = false
 layout_mode = 2
 columns = 2
 
+[node name="Banish" type="GridContainer" parent="CanvasSidebarL/ScrollContainer"]
+visible = false
+layout_mode = 2
+columns = 2
+
 [connection signal="pressed" from="LoadDeckButton" to="." method="_on_menu_button_pressed"]
 [connection signal="file_selected" from="LoadDeckButton/FileDialog" to="Deck" method="_on_file_dialog_file_selected"]
 [connection signal="pressed" from="ClearHand" to="CanvasPlayerHand/PlayerHand" method="_on_menu_button_2_pressed"]
 [connection signal="pressed" from="Mulligan" to="CanvasPlayerHand/PlayerHand" method="_on_mulligan_pressed"]
 [connection signal="pressed" from="Mill" to="." method="_on_mill_pressed"]
 [connection signal="pressed" from="Tokens" to="." method="_on_tokens_pressed"]
+[connection signal="input_event" from="Banish/Area2D" to="Banish" method="_on_area_2d_input_event"]
 [connection signal="input_event" from="Deck/Deck" to="Deck" method="_on_deck_2_input_event"]
 [connection signal="input_event" from="EvolveDeck/EvolveDeck" to="EvolveDeck" method="_on_evolve_deck_input_event"]
 [connection signal="input_event" from="Graveyard/Graveyard" to="Graveyard" method="_on_graveyard_input_event"]

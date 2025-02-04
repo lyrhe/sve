@@ -60,6 +60,9 @@ func check_position(card: Card, original_parent: Node):
 			card.get_parent().remove_child(card)
 			original_parent.add_child(card)
 			card.is_dragging = false
+	elif is_dropped_in_area2D($Banish):
+		print("zeub")
+		card.reparent_card($CanvasSidebarL/ScrollContainer/Banish, card.evolved)
 	else:
 		card.get_parent().remove_child(card)
 		original_parent.add_child(card)
