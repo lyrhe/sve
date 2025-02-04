@@ -11,4 +11,4 @@ Todo:
 - [ ] Lien vers la FAQ ?
 - [ ] Compteurs (+x/+x, etc)
 - [ ] Deckbuilder
-- [ ] Ctrl+clik pour dupliquer les tokens
+- [ ] Ctrl+click pour dupliquer les tokens
