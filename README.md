@@ -7,8 +7,8 @@ Bugs :
 Todo:
 - [x] ~~Send to top/bottom pour le deck~~
 - [x] ~~Check top X pour le deck~~
-- [x] Life counter
-- [x] Mana counter
+- [x] ~~Life counter~~
+- [x] ~~Mana counter~~
 - [ ] Banish zone
 - [ ] Disable other containers when opening one
 - [ ] Afficher le nom du container
