@@ -87,6 +87,7 @@ func token_drawer_populate():
 		card_instance.token = true
 
 func _on_tokens_pressed() -> void:
+	only_one_container_visible("TokensDrawer")
 	$CanvasSidebarR/ScrollContainer/TokensDrawer.visible = not $CanvasSidebarR/ScrollContainer/TokensDrawer.visible
 	
 func is_dropped_in_zone(zone: Node):
@@ -107,3 +108,17 @@ func move_into_zone(old_zone: Node, new_zone: Node, card: Card):
 func _on_mill_pressed() -> void:
 	var z = $CanvasSidebarR/ScrollContainer/Deck.get_child(0)
 	z.reparent_card($CanvasSidebarR/ScrollContainer/Graveyard, false)	
+
+func only_one_container_visible(namex):
+	print(namex)
+	if namex == "Graveyard" or namex == "Deck" or namex == "TokensDrawer":
+		print("zobR")
+		for n in $CanvasSidebarR/ScrollContainer.get_children():
+			if n.visible == true and n.name != namex:
+				n.visible = false
+				print(namex)
+	if namex == "EvolveDeck" or namex == "Banish":
+		print("zobL")
+		for n in $CanvasSidebarL/ScrollContainer.get_children():
+			if n.visible == true and n.name != namex:
+				n.visible = false

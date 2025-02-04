@@ -63,6 +63,7 @@ func _on_deck_2_input_event(_viewport: Node, event: InputEvent, _shape_idx: int)
 		if event.pressed:
 			player_hand.force_draw(1)
 	if Input.is_action_just_pressed("right_mouse_click"):
+		board.only_one_container_visible(self.name)
 		deck_grid.visible = not deck_grid.visible
 	if Input.is_action_just_pressed(("wheel_click")):
 		var view_top_dialog = zeub.instantiate()

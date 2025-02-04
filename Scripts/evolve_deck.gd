@@ -31,4 +31,5 @@ func load_evolve_deck(deck_file_path: String) -> void:
 
 func _on_evolve_deck_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if Input.is_action_just_pressed("right_mouse_click"):
+		board.only_one_container_visible(self.name)
 		evolve_deck_grid.visible = not evolve_deck_grid.visible
