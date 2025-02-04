@@ -1,8 +1,8 @@
 Bugs :
 - [x] ~~Déplacer une carte dans une zone restand toutes les cartes rest de la zone d'origine et de la nouvelle zone.~~
 - [x] ~~Déplacer une carte depuis la main la fait disparaître en dessous de celles du Field et de l'Ex Area.~~
-- [ ] Token qui refuse de se placer dans une zone avec deux slots libres ou moins
-- [ ] Empêcher les tokens de s'ajouter au deck
+- [x] ~~Token qui refuse de se placer dans une zone avec deux slots libres ou moins~~
+- [x] ~~Empêcher les tokens de s'ajouter au deck~~
 
 Todo:
 - [x] ~~Send to top/bottom pour le deck~~
