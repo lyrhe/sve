@@ -86,7 +86,6 @@ func reparent_card(new_parent: Node, x) -> void:
 			dialog.canceled.connect(dialog_canceled.bind(new_parent))
 			dialog.confirmed.connect(dialog_confirmed.bind(new_parent))
 			dialog.visible = not dialog.visible
-
 		position = Vector2.ZERO
 		
 func dialog_canceled(new_parent):

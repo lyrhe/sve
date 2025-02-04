@@ -37,11 +37,15 @@ func check_position(card: Card, original_parent: Node):
 		if card.token:
 			#card.get_parent().remove_child(card)
 			card.visible = not card.visible
-			return
 		card.reparent_card($CanvasPlayerHand/PlayerHand, card.evolved)
 	elif is_dropped_in_area2D($Graveyard):
-		card.reparent_card($CanvasSidebarR/ScrollContainer/Graveyard, card.evolved)
-		update_graveyard_drop_location_texture()
+		if not card.token:
+			card.reparent_card($CanvasSidebarR/ScrollContainer/Graveyard, card.evolved)
+			update_graveyard_drop_location_texture()
+		else:
+			card.get_parent().remove_child(card)
+			original_parent.add_child(card)
+			card.is_dragging = false
 	elif is_dropped_in_area2D($EvolveDeck):
 		if card.evolved:
 			card.reparent_card($CanvasSidebarL/ScrollContainer/EvolveDeck, card.evolved)
@@ -50,7 +54,12 @@ func check_position(card: Card, original_parent: Node):
 			original_parent.add_child(card)
 			card.is_dragging = false
 	elif is_dropped_in_area2D($Deck):
-		card.reparent_card($CanvasSidebarR/ScrollContainer/Deck, card.evolved)
+		if not card.token:
+			card.reparent_card($CanvasSidebarR/ScrollContainer/Deck, card.evolved)
+		else:
+			card.get_parent().remove_child(card)
+			original_parent.add_child(card)
+			card.is_dragging = false
 	else:
 		card.get_parent().remove_child(card)
 		original_parent.add_child(card)

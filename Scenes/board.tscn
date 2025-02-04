@@ -1,9 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://dbik63wktdm0f"]
+[gd_scene load_steps=12 format=3 uid="uid://dbik63wktdm0f"]
 
 [ext_resource type="Texture2D" uid="uid://dx0ou4upt367s" path="res://Assets/card_back.jpg" id="1_1wqmu"]
 [ext_resource type="Script" path="res://Scripts/board.gd" id="1_vsmk8"]
+[ext_resource type="Script" path="res://Scripts/life.gd" id="2_fqtro"]
 [ext_resource type="Script" path="res://Scripts/deck.gd" id="2_ivqgv"]
 [ext_resource type="Texture2D" uid="uid://bd420y6l0x3sj" path="res://Assets/board_upscayl_3x_ultramix_balanced.png" id="2_ocle3"]
+[ext_resource type="Script" path="res://Scripts/mana.gd" id="3_fpfbf"]
 [ext_resource type="Script" path="res://Scripts/graveyard.gd" id="5_ahlcc"]
 [ext_resource type="Script" path="res://Scripts/player_hand.gd" id="5_pfvuo"]
 [ext_resource type="Script" path="res://Scripts/evolve_deck.gd" id="5_pkvn5"]
@@ -18,6 +20,22 @@ size = Vector2(204.891, 303.326)
 script = ExtResource("1_vsmk8")
 tokens_drawer = NodePath("CanvasSidebarR/ScrollContainer/TokensDrawer")
 metadata/_edit_lock_ = true
+
+[node name="Life" type="Label" parent="."]
+offset_left = 1234.0
+offset_top = 21.0
+offset_right = 1322.0
+offset_bottom = 46.0
+text = "Life :"
+script = ExtResource("2_fqtro")
+
+[node name="Mana" type="Label" parent="."]
+offset_left = 1235.0
+offset_top = 58.0
+offset_right = 1323.0
+offset_bottom = 83.0
+text = "Mana :"
+script = ExtResource("3_fpfbf")
 
 [node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
 initial_position = 1
