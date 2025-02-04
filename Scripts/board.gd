@@ -1,7 +1,7 @@
 class_name Board
 extends Node2D
 
-const card = preload("res://Scenes/card.tscn")
+const CARD = preload("res://Scenes/card.tscn")
 @export var tokens_drawer : GridContainer
 
 func _ready():
@@ -30,15 +30,57 @@ func _on_graveyard_child_order_changed() -> void:
 
 func check_position(card: Card, original_parent: Node):
 	if is_dropped_in_zone($CanvasExArea/ExArea):
+		if card.evolved:
+			print(card.previous_card_code)
+			var card_instance = CARD.instantiate()
+			var card_texture = load("res://Assets/card_images/" + card.previous_card_code + ".png")
+			card_instance.texture = card_texture
+			card_instance.card_code = card.previous_card_code
+			$CanvasExArea/ExArea.add_child(card_instance, true)
+			card_instance.on_drop.connect(self.check_position)
+			card.reparent_card($CanvasSidebarL/ScrollContainer/EvolveDeck, card.evolved)
+			return
 		move_into_zone(original_parent, $CanvasExArea/ExArea, card)
 	elif is_dropped_in_zone($CanvasField/Field):
-		move_into_zone(original_parent, $CanvasField/Field, card)
+		if card.evolved == false:
+			move_into_zone(original_parent, $CanvasField/Field, card)
+		elif card.evolved == true:
+			card.calc_previous_card_code()
+			for n in $CanvasField/Field.get_children():
+				if n.card_code == card.previous_card_code:
+					n.get_parent().remove_child(n)
+					move_into_zone(original_parent, $CanvasField/Field, card)
+					print(card.previous_card_code)
+					return
+			card.get_parent().remove_child(card)
+			original_parent.add_child(card)
+			card.is_dragging = false
 	elif is_dropped_in_zone($CanvasPlayerHand/PlayerHand):
 		if card.token:
 			#card.get_parent().remove_child(card)
 			card.visible = not card.visible
+		if card.evolved:
+			print(card.previous_card_code)
+			var card_instance = CARD.instantiate()
+			var card_texture = load("res://Assets/card_images/" + card.previous_card_code + ".png")
+			card_instance.texture = card_texture
+			card_instance.card_code = card.previous_card_code
+			$CanvasPlayerHand/PlayerHand.add_child(card_instance, true)
+			card_instance.on_drop.connect(self.check_position)
+			card.reparent_card($CanvasSidebarL/ScrollContainer/EvolveDeck, card.evolved)
+			return
 		card.reparent_card($CanvasPlayerHand/PlayerHand, card.evolved)
 	elif is_dropped_in_area2D($Graveyard):
+		if card.evolved:
+			print(card.previous_card_code)
+			var card_instance = CARD.instantiate()
+			var card_texture = load("res://Assets/card_images/" + card.previous_card_code + ".png")
+			card_instance.texture = card_texture
+			card_instance.card_code = card.previous_card_code
+			$Graveyard.add_child(card_instance, true)
+			card_instance.on_drop.connect(self.check_position)
+			card.reparent_card($CanvasSidebarL/ScrollContainer/EvolveDeck, card.evolved)
+			return
 		if not card.token:
 			card.reparent_card($CanvasSidebarR/ScrollContainer/Graveyard, card.evolved)
 			update_graveyard_drop_location_texture()
@@ -61,7 +103,16 @@ func check_position(card: Card, original_parent: Node):
 			original_parent.add_child(card)
 			card.is_dragging = false
 	elif is_dropped_in_area2D($Banish):
-		print("zeub")
+		if card.evolved:
+			print(card.previous_card_code)
+			var card_instance = CARD.instantiate()
+			var card_texture = load("res://Assets/card_images/" + card.previous_card_code + ".png")
+			card_instance.texture = card_texture
+			card_instance.card_code = card.previous_card_code
+			$Banish.add_child(card_instance, true)
+			card_instance.on_drop.connect(self.check_position)
+			card.reparent_card($CanvasSidebarL/ScrollContainer/EvolveDeck, card.evolved)
+			return
 		card.reparent_card($CanvasSidebarL/ScrollContainer/Banish, card.evolved)
 	else:
 		card.get_parent().remove_child(card)
@@ -77,7 +128,7 @@ func token_drawer_populate():
 
 	var lines := file.get_as_text().split("\r", false)
 	for n in lines:
-		var card_instance = card.instantiate()
+		var card_instance = CARD.instantiate()
 		var card_name = n.strip_edges()
 		var card_texture = load("res://Assets/tokens/" + card_name + ".png")
 		card_instance.texture = card_texture

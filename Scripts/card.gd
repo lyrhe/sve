@@ -11,10 +11,18 @@ var state = "stand"
 @onready var original_parent: Node = null
 @onready var dialog = find_parent("Board").find_child("ConfirmationDialog")
 var evolved = false
-var token = false
+@onready var token = false
 
 # Permet d'identifier des cartes avec un nom identique
 @export var card_code: String = ""
+@export var previous_card_code: String = ""
+
+func calc_previous_card_code():
+	var parts = card_code.split("-")
+	if parts.size() == 2:
+		var num = int(parts[1]) - 1
+		var new_num = "%03d" % num
+		self.previous_card_code = parts[0] + '-' + str(new_num)
 
 # Récupère la node board
 @onready var hover_display = get_tree().get_root().find_child("HoverDisplay", true, false)
