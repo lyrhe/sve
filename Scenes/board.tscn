@@ -19,6 +19,11 @@ script = ExtResource("1_vsmk8")
 tokens_drawer = NodePath("CanvasSidebarR/ScrollContainer/TokensDrawer")
 metadata/_edit_lock_ = true
 
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
+initial_position = 1
+ok_button_text = "Top"
+cancel_button_text = "Bottom"
+
 [node name="HoverDisplay" type="TextureRect" parent="."]
 anchors_preset = 6
 anchor_left = 1.0

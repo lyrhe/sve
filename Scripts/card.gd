@@ -3,10 +3,13 @@ extends TextureRect
 
 signal on_drop(card: Card, parent: Node)
 
+var zeub = 0
+
 # Détermine le statut de base d'une carte qui spawn (immobile, stand, aucun parent d'origine)
 @onready var is_dragging = false
 var state = "stand"
 @onready var original_parent: Node = null
+@onready var dialog = find_parent("Board").find_child("ConfirmationDialog")
 var evolved = false
 var token = false
 
@@ -47,12 +50,14 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 		if Input.is_action_just_released('mouse_click') and is_dragging == true :
 			is_dragging = false
 			on_drop.emit(self, original_parent)
-			#if get_parent().get_parent() is not CanvasLayer:
-				#get_parent().get_parent().get_parent().layer = 1
-				#self.z_index = 1
-			#else:
-				#get_parent().get_parent().layer = 1
-				#self.z_index = 1
+			if get_parent().get_parent() is not CanvasLayer:
+				get_parent().get_parent().get_parent().layer = 1
+				self.z_index = 1
+			else:
+				get_parent().get_parent().layer = 1
+				self.z_index = 1
+			if self.token and self.get_parent().name == "PlayerHand":
+				self.get_parent().remove_child(self)
 		if Input.is_action_just_pressed("right_mouse_click"):
 			if get_parent().name == "Field" or get_parent().name == "ExArea":
 				stand_rest()
@@ -77,7 +82,18 @@ func reparent_card(new_parent: Node, x) -> void:
 		get_parent().remove_child(self)
 		new_parent.add_child(self)
 		new_parent.get_child(-1).evolved = x
+		if new_parent.name == "Deck":
+			dialog.canceled.connect(dialog_canceled.bind(new_parent))
+			dialog.confirmed.connect(dialog_confirmed.bind(new_parent))
+			dialog.visible = not dialog.visible
+
 		position = Vector2.ZERO
+		
+func dialog_canceled(new_parent):
+	new_parent.move_child(new_parent.get_child(-1), -1)
+
+func dialog_confirmed(new_parent): 
+	new_parent.move_child(new_parent.get_child(-1), 0)
 
 # Stand ou rest le carte
 func stand_rest():
@@ -98,3 +114,4 @@ func _on_mouse_entered() -> void:
 func _on_mouse_exited() -> void:
 	if hover_display:
 		hover_display.hide()
+		

@@ -35,7 +35,8 @@ func check_position(card: Card, original_parent: Node):
 		move_into_zone(original_parent, $CanvasField/Field, card)
 	elif is_dropped_in_zone($CanvasPlayerHand/PlayerHand):
 		if card.token:
-			card.get_parent().remove_child(card)
+			#card.get_parent().remove_child(card)
+			card.visible = not card.visible
 			return
 		card.reparent_card($CanvasPlayerHand/PlayerHand, card.evolved)
 	elif is_dropped_in_area2D($Graveyard):
@@ -48,6 +49,8 @@ func check_position(card: Card, original_parent: Node):
 			card.get_parent().remove_child(card)
 			original_parent.add_child(card)
 			card.is_dragging = false
+	elif is_dropped_in_area2D($Deck):
+		card.reparent_card($CanvasSidebarR/ScrollContainer/Deck, card.evolved)
 	else:
 		card.get_parent().remove_child(card)
 		original_parent.add_child(card)
