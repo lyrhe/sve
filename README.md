@@ -10,7 +10,7 @@ Todo:
 - [x] ~~Life counter~~
 - [x] ~~Mana counter~~
 - [x] ~~Banish zone~~
-- [ ] Disable other containers when opening one
+- [x] Disable other containers when opening one
 - [ ] Afficher le nom du container
 - [ ] Compteurs (+x/+x, buffs, damage, etc...)
 - [ ] Faceup/facedown pour l'evolve deck
