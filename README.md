@@ -13,7 +13,7 @@ Todo:
 - [x] ~~Disable other containers when opening one~~
 - [ ] Compteurs (+x/+x, buffs, damage, etc...)
 - [ ] Faceup/facedown pour l'evolve deck
-- [ ] Gérer evolved cards
+- [x] ~~Gérer evolved cards~~
 - [ ] Lien vers la FAQ ?
 - [ ] Deckbuilder
 - [ ] Points d'evo
