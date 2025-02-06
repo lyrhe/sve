@@ -3,15 +3,13 @@ extends TextureRect
 
 signal on_drop(card: Card, parent: Node)
 
-var zeub = 0
-
 # Détermine le statut de base d'une carte qui spawn (immobile, stand, aucun parent d'origine)
 @onready var is_dragging = false
-var state = "stand"
 @onready var original_parent: Node = null
 @onready var dialog = find_parent("Board").find_child("ConfirmationDialog")
-var evolved = false
 @onready var token = false
+var state = "stand"
+var evolved = false
 
 # Permet d'identifier des cartes avec un nom identique
 @export var card_code: String = ""
@@ -39,7 +37,6 @@ func _process(_delta: float) -> void:
 		rotation_degrees = 90
 	else:
 		rotation_degrees == 0
-		
 
 # Gère les changements de statut d'une carte
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
@@ -48,22 +45,12 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 			if state == "rest":
 				stand_rest()
 			is_dragging = true
-			if get_parent().get_parent() is not CanvasLayer:
-				get_parent().get_parent().get_parent().layer = 2
-				self.z_index = 2
-			else:
-				get_parent().get_parent().layer = 2
-				self.z_index = 2
+			_z_index(self)
 			original_parent = get_parent()
 		if Input.is_action_just_released('mouse_click') and is_dragging == true :
 			is_dragging = false
 			on_drop.emit(self, original_parent)
-			if get_parent().get_parent() is not CanvasLayer:
-				get_parent().get_parent().get_parent().layer = 1
-				self.z_index = 1
-			else:
-				get_parent().get_parent().layer = 1
-				self.z_index = 1
+			_z_index(self)
 			if self.token and self.get_parent().name == "PlayerHand":
 				self.get_parent().remove_child(self)
 		if Input.is_action_just_pressed("right_mouse_click"):
@@ -122,3 +109,19 @@ func _on_mouse_exited() -> void:
 	if hover_display:
 		hover_display.hide()
 		
+func _z_index(card):
+	if is_dragging == true:
+		if get_parent().get_parent() is not CanvasLayer:
+			get_parent().get_parent().get_parent().layer = 2
+			card.z_index = 2
+		else:
+			get_parent().get_parent().layer = 2
+			card.z_index = 2
+	elif is_dragging == false:
+		if get_parent().get_parent() is not CanvasLayer:
+			get_parent().get_parent().get_parent().layer = 1
+			card.z_index = 1
+		else:
+			get_parent().get_parent().layer = 1
+			card.z_index = 1
+	
