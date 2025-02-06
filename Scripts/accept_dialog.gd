@@ -8,10 +8,7 @@ signal on_dialog_confirmed(top_n: int)
 var current_value: int = 0
 
 func _ready() -> void:
-	# Gestion de l'évènement de changement
 	_spinbox.value_changed.connect(self._on_value_changed)
-	
-	# Customisation du du confirm de la dialog
 	self.confirmed.connect(self.on_confirmed)
 
 func on_confirmed():

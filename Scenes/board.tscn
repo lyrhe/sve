@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dbik63wktdm0f"]
+[gd_scene load_steps=15 format=3 uid="uid://dbik63wktdm0f"]
 
 [ext_resource type="Texture2D" uid="uid://dx0ou4upt367s" path="res://Assets/card_back.jpg" id="1_1wqmu"]
 [ext_resource type="Script" path="res://Scripts/board.gd" id="1_vsmk8"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://Scripts/player_hand.gd" id="5_pfvuo"]
 [ext_resource type="Script" path="res://Scripts/evolve_deck.gd" id="5_pkvn5"]
 [ext_resource type="Script" path="res://Scripts/banish.gd" id="6_tkxmi"]
+[ext_resource type="Texture2D" uid="uid://djj4snyxk55k6" path="res://Assets/1.png" id="11_rualp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wih2a"]
 size = Vector2(192.824, 292.015)
@@ -257,6 +258,12 @@ columns = 2
 visible = false
 layout_mode = 2
 columns = 2
+
+[node name="1" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(959, 540)
+scale = Vector2(0.962, 0.88471)
+texture = ExtResource("11_rualp")
 
 [connection signal="pressed" from="LoadDeckButton" to="." method="_on_menu_button_pressed"]
 [connection signal="file_selected" from="LoadDeckButton/FileDialog" to="Deck" method="_on_file_dialog_file_selected"]

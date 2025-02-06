@@ -31,7 +31,6 @@ func _on_graveyard_child_order_changed() -> void:
 func check_position(card: Card, original_parent: Node):
 	if is_dropped_in_zone($CanvasExArea/ExArea):
 		if card.evolved:
-			print(card.previous_card_code)
 			var card_instance = CARD.instantiate()
 			var card_texture = load("res://Assets/card_images/" + card.previous_card_code + ".png")
 			card_instance.texture = card_texture
@@ -50,7 +49,6 @@ func check_position(card: Card, original_parent: Node):
 				if n.card_code == card.previous_card_code:
 					n.get_parent().remove_child(n)
 					move_into_zone(original_parent, $CanvasField/Field, card)
-					print(card.previous_card_code)
 					return
 			card.get_parent().remove_child(card)
 			original_parent.add_child(card)
@@ -60,7 +58,6 @@ func check_position(card: Card, original_parent: Node):
 			#card.get_parent().remove_child(card)
 			card.visible = not card.visible
 		if card.evolved:
-			print(card.previous_card_code)
 			var card_instance = CARD.instantiate()
 			var card_texture = load("res://Assets/card_images/" + card.previous_card_code + ".png")
 			card_instance.texture = card_texture
@@ -72,7 +69,6 @@ func check_position(card: Card, original_parent: Node):
 		card.reparent_card($CanvasPlayerHand/PlayerHand, card.evolved)
 	elif is_dropped_in_area2D($Graveyard):
 		if card.evolved:
-			print(card.previous_card_code)
 			var card_instance = CARD.instantiate()
 			var card_texture = load("res://Assets/card_images/" + card.previous_card_code + ".png")
 			card_instance.texture = card_texture
@@ -104,7 +100,6 @@ func check_position(card: Card, original_parent: Node):
 			card.is_dragging = false
 	elif is_dropped_in_area2D($Banish):
 		if card.evolved:
-			print(card.previous_card_code)
 			var card_instance = CARD.instantiate()
 			var card_texture = load("res://Assets/card_images/" + card.previous_card_code + ".png")
 			card_instance.texture = card_texture
@@ -161,15 +156,11 @@ func _on_mill_pressed() -> void:
 	z.reparent_card($CanvasSidebarR/ScrollContainer/Graveyard, false)	
 
 func only_one_container_visible(namex):
-	print(namex)
 	if namex == "Graveyard" or namex == "Deck" or namex == "TokensDrawer":
-		print("zobR")
 		for n in $CanvasSidebarR/ScrollContainer.get_children():
 			if n.visible == true and n.name != namex:
 				n.visible = false
-				print(namex)
 	if namex == "EvolveDeck" or namex == "Banish":
-		print("zobL")
 		for n in $CanvasSidebarL/ScrollContainer.get_children():
 			if n.visible == true and n.name != namex:
 				n.visible = false
