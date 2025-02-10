@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://buyj2e04dnx7v"]
+
+[ext_resource type="Script" path="res://scenes/zones/zone.gd" id="1_s8agv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ectkj"]
+size = Vector2(141, 194)
+
+[node name="Zone" type="Control" node_paths=PackedStringArray("cards_container")]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 47.0
+offset_top = 64.0
+offset_right = 47.0
+offset_bottom = 64.0
+script = ExtResource("1_s8agv")
+cards_container = NodePath("CanvasLayer/Cards")
+
+[node name="DropZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropZone"]
+position = Vector2(23.5, 32)
+shape = SubResource("RectangleShape2D_ectkj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="Cards" type="GridContainer" parent="CanvasLayer"]
+custom_minimum_size = Vector2(250, 0)
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+columns = 2

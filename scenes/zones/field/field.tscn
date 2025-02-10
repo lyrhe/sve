@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnnuxmd5j2x66"]
+
+[ext_resource type="Script" path="res://scenes/zones/field/field.gd" id="1_5yll1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ectkj"]
+size = Vector2(922, 213)
+
+[node name="Field" type="Control" node_paths=PackedStringArray("cards_container")]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_5yll1")
+cards_container = NodePath("Cards")
+
+[node name="Cards" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(500, 175)
+layout_direction = 1
+layout_mode = 0
+offset_left = -242.0
+offset_top = -87.0
+offset_right = 258.0
+offset_bottom = 88.0
+alignment = 1
+
+[node name="DropZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropZone"]
+shape = SubResource("RectangleShape2D_ectkj")

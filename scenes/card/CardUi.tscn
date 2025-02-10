@@ -1,0 +1,75 @@
+[gd_scene load_steps=10 format=3 uid="uid://cjqsiond3d27o"]
+
+[ext_resource type="Texture2D" uid="uid://bhrt1wcoyu0mm" path="res://assets/cards/BP01-001.png" id="1_5r8yn"]
+[ext_resource type="Script" path="res://scenes/card/card_ui.gd" id="1_n6tcd"]
+[ext_resource type="Script" path="res://scenes/card/card_state_machine.gd" id="3_dv64i"]
+[ext_resource type="Script" path="res://scenes/card/states/base_stand_state.gd" id="4_qruw2"]
+[ext_resource type="Script" path="res://scenes/card/states/base_rest_state.gd" id="5_2vvak"]
+[ext_resource type="Script" path="res://scenes/card/states/dragging_state.gd" id="5_8jurw"]
+[ext_resource type="Script" path="res://scenes/card/states/clicked_state.gd" id="6_dncvt"]
+[ext_resource type="Script" path="res://scenes/card/states/released_state.gd" id="7_hdmp1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mhcq0"]
+size = Vector2(52, 81)
+
+[node name="CardUi" type="Control"]
+custom_minimum_size = Vector2(118, 167)
+layout_mode = 3
+anchor_left = -0.051
+anchor_top = -0.128
+anchor_right = 0.051
+anchor_bottom = 0.13
+offset_left = -0.248001
+offset_top = 0.944
+offset_right = 0.247993
+offset_bottom = 0.760002
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(59, 83)
+script = ExtResource("1_n6tcd")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 7.168
+offset_top = 10.296
+offset_right = 125.168
+offset_bottom = 176.481
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("1_5r8yn")
+expand_mode = 5
+
+[node name="ZoneDetector" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZoneDetector"]
+position = Vector2(98.168, 137.296)
+shape = SubResource("RectangleShape2D_mhcq0")
+
+[node name="CardStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("3_dv64i")
+initial_state = NodePath("BaseStandState")
+
+[node name="BaseStandState" type="Node" parent="CardStateMachine"]
+script = ExtResource("4_qruw2")
+
+[node name="BaseRestState" type="Node" parent="CardStateMachine"]
+script = ExtResource("5_2vvak")
+state = 1
+
+[node name="DraggingState" type="Node" parent="CardStateMachine"]
+script = ExtResource("5_8jurw")
+state = 3
+
+[node name="ClickedState" type="Node" parent="CardStateMachine"]
+script = ExtResource("6_dncvt")
+state = 2
+
+[node name="ReleasedState" type="Node" parent="CardStateMachine"]
+script = ExtResource("7_hdmp1")
+state = 4
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="area_entered" from="ZoneDetector" to="." method="_on_zone_entered"]
+[connection signal="area_exited" from="ZoneDetector" to="." method="_on_zone_exited"]
+[connection signal="mouse_entered" from="ZoneDetector" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ZoneDetector" to="." method="_on_mouse_exited"]
