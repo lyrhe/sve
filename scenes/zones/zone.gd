@@ -41,4 +41,5 @@ func _on_cards_child_entered_tree(node: Node) -> void:
 	pass
 
 func _on_load_deck_pressed() -> void:
-	var deck_cards = deserializer.load_deck()
+	#var deck_cards = deserializer.load_deck()
+	pass

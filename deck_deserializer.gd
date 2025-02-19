@@ -1,8 +1,8 @@
 class_name DeckDeserializer extends Resource
 
-func load_deck():
-	var deck:= FileAccess.open("res://Test/decklist_BP01.txt", FileAccess.READ)
-	var database := FileAccess.open("res://assets/test_bp01.json", FileAccess.READ)
+func load_deck(deck_path, database_path):
+	var deck:= FileAccess.open(deck_path, FileAccess.READ)
+	var database := FileAccess.open(database_path, FileAccess.READ)
 	var content = database.get_as_text()
 	var json = JSON.parse_string(content)
 	
