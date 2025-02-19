@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bey238eb67ixe"]
+[gd_scene load_steps=11 format=3 uid="uid://bey238eb67ixe"]
 
 [ext_resource type="Texture2D" uid="uid://medvdwl4npyg" path="res://assets/board/1.png" id="1_3jafc"]
 [ext_resource type="Script" path="res://scenes/board/board.gd" id="1_4v4v6"]
@@ -10,12 +10,10 @@
 [ext_resource type="Script" path="res://evolve.gd" id="6_sadg2"]
 [ext_resource type="Script" path="res://banish.gd" id="6_uk5ff"]
 [ext_resource type="Script" path="res://scenes/zones/tokensdrawer.gd" id="6_wkweh"]
-[ext_resource type="Script" path="res://scenes/zones/deck.gd" id="9_xc5jk"]
-[ext_resource type="Script" path="res://scenes/zones/field/exarea.gd" id="11_03pux"]
 
 [node name="Board" type="Node2D" node_paths=PackedStringArray("zones")]
 script = ExtResource("1_4v4v6")
-zones = [NodePath("Graveyard"), NodePath("Banish"), NodePath("Evolve"), NodePath("Deck"), NodePath("TokensDrawer")]
+zones = [NodePath("Graveyard"), NodePath("Banish"), NodePath("Evolve"), NodePath("Deck")]
 
 [node name="Background" type="Sprite2D" parent="."]
 show_behind_parent = true
@@ -61,7 +59,6 @@ offset_left = 1586.0
 offset_top = 445.0
 offset_right = 1586.0
 offset_bottom = 445.0
-script = ExtResource("9_xc5jk")
 
 [node name="Field" parent="." instance=ExtResource("3_jxf1w")]
 offset_left = 998.0
@@ -74,7 +71,6 @@ offset_left = 996.0
 offset_top = 703.0
 offset_right = 996.0
 offset_bottom = 703.0
-script = ExtResource("11_03pux")
 
 [node name="PlayerHandLayer" type="CanvasLayer" parent="."]
 
@@ -90,21 +86,13 @@ grow_vertical = 0
 alignment = 1
 script = ExtResource("4_3r7i8")
 
-[node name="Buttons" type="HBoxContainer" parent="."]
-offset_left = 313.0
-offset_top = 20.0
-offset_right = 377.0
-offset_bottom = 72.0
-
-[node name="Tokens" type="Button" parent="Buttons"]
-layout_mode = 2
+[node name="Tokens" type="Button" parent="."]
+offset_left = 295.0
+offset_top = 24.0
+offset_right = 443.0
+offset_bottom = 73.0
 text = "Tokens"
-
-[node name="LoadDeck" type="Button" parent="Buttons"]
-layout_mode = 2
-text = "Load Deck"
 
 [connection signal="child_entered_tree" from="Graveyard" to="Graveyard" method="_on_child_entered_tree"]
 [connection signal="child_entered_tree" from="TokensDrawer" to="TokensDrawer" method="_on_child_entered_tree"]
-[connection signal="pressed" from="Buttons/Tokens" to="TokensDrawer" method="_on_tokens_pressed"]
-[connection signal="pressed" from="Buttons/LoadDeck" to="Deck" method="_on_load_deck_pressed"]
+[connection signal="pressed" from="Tokens" to="TokensDrawer" method="_on_tokens_pressed"]

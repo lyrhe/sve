@@ -22,6 +22,7 @@ position = Vector2(23.5, 32)
 shape = SubResource("RectangleShape2D_ectkj")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 follow_viewport_enabled = true
 
 [node name="Cards" type="GridContainer" parent="CanvasLayer"]
@@ -33,3 +34,6 @@ anchor_bottom = 1.0
 grow_horizontal = 0
 grow_vertical = 2
 columns = 2
+
+[connection signal="input_event" from="DropZone" to="." method="_on_drop_zone_input_event"]
+[connection signal="child_entered_tree" from="CanvasLayer/Cards" to="." method="_on_cards_child_entered_tree"]

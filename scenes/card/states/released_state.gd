@@ -15,6 +15,6 @@ func exit():
 
 func on_input(event: InputEvent):
 	if change_zone and not card_ui.targets.is_empty():
-		card_ui.targets[0].add_card(card_ui)
+		card_ui.targets[-1].add_card(card_ui)
 		card_ui.queue_free()
 	transition_requested.emit(self, CardState.State.BASE_STAND)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bey238eb67ixe"]
+[gd_scene load_steps=8 format=3 uid="uid://bey238eb67ixe"]
 
 [ext_resource type="Texture2D" uid="uid://medvdwl4npyg" path="res://assets/board/1.png" id="1_3jafc"]
 [ext_resource type="Script" path="res://scenes/board/board.gd" id="1_4v4v6"]
@@ -7,15 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://bnnuxmd5j2x66" path="res://scenes/zones/field/field.tscn" id="3_jxf1w"]
 [ext_resource type="Script" path="res://scenes/hand/hand.gd" id="4_3r7i8"]
 [ext_resource type="Script" path="res://graveyard.gd" id="5_6jc0e"]
-[ext_resource type="Script" path="res://evolve.gd" id="6_sadg2"]
-[ext_resource type="Script" path="res://banish.gd" id="6_uk5ff"]
-[ext_resource type="Script" path="res://scenes/zones/tokensdrawer.gd" id="6_wkweh"]
-[ext_resource type="Script" path="res://scenes/zones/deck.gd" id="9_xc5jk"]
-[ext_resource type="Script" path="res://scenes/zones/field/exarea.gd" id="11_03pux"]
 
 [node name="Board" type="Node2D" node_paths=PackedStringArray("zones")]
 script = ExtResource("1_4v4v6")
-zones = [NodePath("Graveyard"), NodePath("Banish"), NodePath("Evolve"), NodePath("Deck"), NodePath("TokensDrawer")]
+zones = [NodePath("Graveyard"), NodePath("Banish"), NodePath("Evolve"), NodePath("Deck")]
 
 [node name="Background" type="Sprite2D" parent="."]
 show_behind_parent = true
@@ -35,33 +30,23 @@ offset_right = 1588.0
 offset_bottom = 690.0
 script = ExtResource("5_6jc0e")
 
-[node name="TokensDrawer" parent="." instance=ExtResource("3_glxjj")]
-offset_left = 109.0
-offset_top = 151.0
-offset_right = 109.0
-offset_bottom = 151.0
-script = ExtResource("6_wkweh")
-
 [node name="Banish" parent="." instance=ExtResource("3_glxjj")]
 offset_left = 363.0
 offset_top = 690.0
 offset_right = 363.0
 offset_bottom = 690.0
-script = ExtResource("6_uk5ff")
 
 [node name="Evolve" parent="." instance=ExtResource("3_glxjj")]
 offset_left = 365.0
 offset_top = 451.0
 offset_right = 365.0
 offset_bottom = 451.0
-script = ExtResource("6_sadg2")
 
 [node name="Deck" parent="." instance=ExtResource("3_glxjj")]
 offset_left = 1586.0
 offset_top = 445.0
 offset_right = 1586.0
 offset_bottom = 445.0
-script = ExtResource("9_xc5jk")
 
 [node name="Field" parent="." instance=ExtResource("3_jxf1w")]
 offset_left = 998.0
@@ -71,10 +56,9 @@ offset_bottom = 351.0
 
 [node name="ExArea" parent="." instance=ExtResource("3_jxf1w")]
 offset_left = 996.0
-offset_top = 703.0
+offset_top = 714.0
 offset_right = 996.0
-offset_bottom = 703.0
-script = ExtResource("11_03pux")
+offset_bottom = 714.0
 
 [node name="PlayerHandLayer" type="CanvasLayer" parent="."]
 
@@ -84,27 +68,10 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -202.0
+offset_top = -82.0
 grow_horizontal = 2
 grow_vertical = 0
 alignment = 1
 script = ExtResource("4_3r7i8")
 
-[node name="Buttons" type="HBoxContainer" parent="."]
-offset_left = 313.0
-offset_top = 20.0
-offset_right = 377.0
-offset_bottom = 72.0
-
-[node name="Tokens" type="Button" parent="Buttons"]
-layout_mode = 2
-text = "Tokens"
-
-[node name="LoadDeck" type="Button" parent="Buttons"]
-layout_mode = 2
-text = "Load Deck"
-
 [connection signal="child_entered_tree" from="Graveyard" to="Graveyard" method="_on_child_entered_tree"]
-[connection signal="child_entered_tree" from="TokensDrawer" to="TokensDrawer" method="_on_child_entered_tree"]
-[connection signal="pressed" from="Buttons/Tokens" to="TokensDrawer" method="_on_tokens_pressed"]
-[connection signal="pressed" from="Buttons/LoadDeck" to="Deck" method="_on_load_deck_pressed"]

@@ -5,6 +5,7 @@ func enter():
 		await card_ui.ready
 	
 	card_ui._zone_detector.monitoring = true
+	card_ui.previous_parent = card_ui.get_parent()
 
 func exit():
 	card_ui.scale = Vector2(1, 1)
