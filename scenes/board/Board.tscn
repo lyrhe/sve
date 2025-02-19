@@ -1,17 +1,18 @@
-[gd_scene load_steps=13 format=3 uid="uid://bey238eb67ixe"]
+[gd_scene load_steps=14 format=3 uid="uid://bey238eb67ixe"]
 
 [ext_resource type="Texture2D" uid="uid://medvdwl4npyg" path="res://assets/board/1.png" id="1_3jafc"]
 [ext_resource type="Script" path="res://scenes/board/board.gd" id="1_4v4v6"]
 [ext_resource type="Texture2D" uid="uid://cveacjspsppj5" path="res://assets/board/board.jpg" id="1_mcum7"]
 [ext_resource type="PackedScene" uid="uid://buyj2e04dnx7v" path="res://scenes/zones/zone.tscn" id="3_glxjj"]
 [ext_resource type="PackedScene" uid="uid://bnnuxmd5j2x66" path="res://scenes/zones/field/field.tscn" id="3_jxf1w"]
-[ext_resource type="Script" path="res://scenes/hand/hand.gd" id="4_3r7i8"]
 [ext_resource type="Script" path="res://graveyard.gd" id="5_6jc0e"]
 [ext_resource type="Script" path="res://evolve.gd" id="6_sadg2"]
 [ext_resource type="Script" path="res://banish.gd" id="6_uk5ff"]
 [ext_resource type="Script" path="res://scenes/zones/tokensdrawer.gd" id="6_wkweh"]
 [ext_resource type="Script" path="res://scenes/zones/deck.gd" id="9_xc5jk"]
 [ext_resource type="Script" path="res://scenes/zones/field/exarea.gd" id="11_03pux"]
+[ext_resource type="PackedScene" uid="uid://cyjugb5mdjgte" path="res://scenes/hand/player_hand.tscn" id="12_n4sap"]
+[ext_resource type="Script" path="res://scenes/board/load_deck.gd" id="13_pqh3y"]
 
 [node name="Board" type="Node2D" node_paths=PackedStringArray("zones")]
 script = ExtResource("1_4v4v6")
@@ -76,19 +77,7 @@ offset_right = 996.0
 offset_bottom = 703.0
 script = ExtResource("11_03pux")
 
-[node name="PlayerHandLayer" type="CanvasLayer" parent="."]
-
-[node name="PlayerHand" type="HBoxContainer" parent="PlayerHandLayer"]
-custom_minimum_size = Vector2(80, 30)
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -202.0
-grow_horizontal = 2
-grow_vertical = 0
-alignment = 1
-script = ExtResource("4_3r7i8")
+[node name="PlayerHand" parent="." instance=ExtResource("12_n4sap")]
 
 [node name="Buttons" type="HBoxContainer" parent="."]
 offset_left = 313.0
@@ -103,8 +92,17 @@ text = "Tokens"
 [node name="LoadDeck" type="Button" parent="Buttons"]
 layout_mode = 2
 text = "Load Deck"
+script = ExtResource("13_pqh3y")
+
+[node name="FileDialog" type="FileDialog" parent="Buttons/LoadDeck"]
+title = "Open a File"
+position = Vector2i(700, 200)
+size = Vector2i(500, 500)
+ok_button_text = "Open"
+file_mode = 0
 
 [connection signal="child_entered_tree" from="Graveyard" to="Graveyard" method="_on_child_entered_tree"]
 [connection signal="child_entered_tree" from="TokensDrawer" to="TokensDrawer" method="_on_child_entered_tree"]
 [connection signal="pressed" from="Buttons/Tokens" to="TokensDrawer" method="_on_tokens_pressed"]
-[connection signal="pressed" from="Buttons/LoadDeck" to="Deck" method="_on_load_deck_pressed"]
+[connection signal="pressed" from="Buttons/LoadDeck" to="Buttons/LoadDeck" method="_on_pressed"]
+[connection signal="file_selected" from="Buttons/LoadDeck/FileDialog" to="Deck" method="_on_file_dialog_file_selected"]

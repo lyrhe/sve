@@ -29,7 +29,7 @@ func load_deck(deck_path, database_path):
 	return card_list
 
 func load_card(card_id):
-	var database := FileAccess.open("res://assets/test_bp01.json", FileAccess.READ)
+	var database := FileAccess.open("res://assets/cards_database/total.json", FileAccess.READ)
 	var content = database.get_as_text()
 	var json = JSON.parse_string(content)
 	

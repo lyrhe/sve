@@ -7,11 +7,6 @@ func _ready() -> void:
 		new_child.metadata = card
 		new_child.card_id = new_child.metadata.card_id
 		cards_container.add_child(new_child)
-		new_child.get_child(0).texture = load("res://assets/tokens/" + new_child.metadata.card_id + ".png")
-	#var new_child = CARD_UI_SCENE.instantiate();
-	#new_child.card_id = "BP01-T05"
-	#new_child.metadata = deserializer.load_card(new_child.card_id)
-	#cards_container.add_child(new_child)
 
 func _on_tokens_pressed() -> void:
 	self.get_child(1).visible = not self.get_child(1).visible

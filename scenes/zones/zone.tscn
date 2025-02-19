@@ -13,7 +13,7 @@ offset_top = 64.0
 offset_right = 47.0
 offset_bottom = 64.0
 script = ExtResource("1_s8agv")
-cards_container = NodePath("CanvasLayer/Cards")
+cards_container = NodePath("CanvasLayer/ScrollContainer/Cards")
 
 [node name="DropZone" type="Area2D" parent="."]
 
@@ -22,19 +22,23 @@ position = Vector2(23.5, 32)
 shape = SubResource("RectangleShape2D_ectkj")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
+layer = 2
 follow_viewport_enabled = true
 
-[node name="Cards" type="GridContainer" parent="CanvasLayer"]
-custom_minimum_size = Vector2(250, 0)
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer"]
+clip_contents = false
+custom_minimum_size = Vector2(300, 0)
 anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -250.0
 grow_horizontal = 0
 grow_vertical = 2
+
+[node name="Cards" type="GridContainer" parent="CanvasLayer/ScrollContainer"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
 columns = 2
 
 [connection signal="input_event" from="DropZone" to="." method="_on_drop_zone_input_event"]
-[connection signal="child_entered_tree" from="CanvasLayer/Cards" to="." method="_on_cards_child_entered_tree"]
+[connection signal="child_entered_tree" from="CanvasLayer/ScrollContainer/Cards" to="." method="_on_cards_child_entered_tree"]

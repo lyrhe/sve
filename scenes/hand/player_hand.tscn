@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyjugb5mdjgte"]
+
+[ext_resource type="Script" path="res://scenes/zones/zone.gd" id="1_f8jmp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7bjo1"]
+size = Vector2(1922, 215)
+
+[node name="PlayerHand" type="Control" node_paths=PackedStringArray("cards_container")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_f8jmp")
+cards_container = NodePath("PlayerHandLayer/PlayerHand")
+
+[node name="PlayerHandLayer" type="CanvasLayer" parent="."]
+
+[node name="PlayerHand" type="HBoxContainer" parent="PlayerHandLayer"]
+custom_minimum_size = Vector2(80, 30)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -202.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(961, 981.5)
+shape = SubResource("RectangleShape2D_7bjo1")

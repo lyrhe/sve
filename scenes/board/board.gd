@@ -9,4 +9,3 @@ func _ready():
 func _on_zone_toggle(zone: Zone):
 	for board_zone in zones:
 		board_zone.toggle_cards_list(zone == board_zone)
-	
