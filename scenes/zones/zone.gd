@@ -36,3 +36,6 @@ func _on_drop_zone_input_event(_viewport: Node, event: InputEvent, _shape_idx: i
 
 func _on_cards_child_entered_tree(node: Node) -> void:
 	pass
+
+func _on_player_hand_child_entered_tree(node: Node) -> void:
+	pass # Replace with function body.

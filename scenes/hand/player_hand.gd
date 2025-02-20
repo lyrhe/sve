@@ -1,6 +1,6 @@
-class_name ExArea extends Zone
+class_name PlayerHand extends Zone
 
-func _on_cards_child_entered_tree(node: Node) -> void:
+func _on_player_hand_child_entered_tree(node: Node) -> void:
 	if node.metadata.evolved == true:
 		print("Moving to Evolve Deck")
 		var evolved_clone = node.duplicate()

@@ -23,6 +23,7 @@ shape = SubResource("RectangleShape2D_ectkj")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 2
+visible = false
 follow_viewport_enabled = true
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer"]

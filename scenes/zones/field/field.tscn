@@ -25,3 +25,5 @@ alignment = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DropZone"]
 shape = SubResource("RectangleShape2D_ectkj")
+
+[connection signal="child_entered_tree" from="Cards" to="." method="_on_cards_child_entered_tree"]
