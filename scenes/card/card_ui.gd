@@ -5,7 +5,6 @@ const CARDS_GRAPHICS_PATH = "res://assets/cards"
 signal reparent_requested(which_card_ui: CardUi)
 
 @export var metadata: Card
-@export var card_id: String = ""
 @onready var texture_rect: TextureRect = $TextureRect
 @onready var _zone_detector: Area2D = $ZoneDetector
 @onready var state_machine: CardStateMachine = $CardStateMachine
@@ -15,7 +14,7 @@ var targets: Array[Zone] = []
 
 func _ready() -> void:
 	state_machine.init(self)
-	self.get_child(0).texture = load(CARDS_GRAPHICS_PATH + "/" + self.metadata.card_id + ".png")
+	texture_rect.texture = load(CARDS_GRAPHICS_PATH + "/" + metadata.card_id + ".png")
 
 #region Input events
 func _input(event: InputEvent) -> void:

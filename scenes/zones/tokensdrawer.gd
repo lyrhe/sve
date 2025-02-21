@@ -13,7 +13,6 @@ func _ready() -> void:
 	for card in tokens_deck.cards:
 		var new_child = CARD_UI_SCENE.instantiate();
 		new_child.metadata = card
-		new_child.card_id = new_child.metadata.card_id
 		cards_container.add_child(new_child)
 
 func _on_tokens_pressed() -> void:
@@ -35,5 +34,4 @@ func spawn_cards(cards: Array[Card]):
 	for card in cards:
 		var new_child = CARD_UI_SCENE.instantiate();
 		new_child.metadata = card
-		new_child.card_id = new_child.metadata.card_id
-		cards_container.add_child(new_child)
+		cards_container.add_child.call_deferred(new_child)

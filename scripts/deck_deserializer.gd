@@ -13,6 +13,7 @@ func load_cards_list(deck_path, database_path) -> Array[Card]:
 		if card_id in json:
 			var data = json[card_id]
 			var new_card = Card.new()
+			new_card.card_id = card_id
 			new_card.cost = int(data.get("cost", "0"))
 			new_card.attack = int(data.get("attack", "0"))
 			new_card.defense = int(data.get("defense", "0"))
@@ -20,9 +21,7 @@ func load_cards_list(deck_path, database_path) -> Array[Card]:
 			if new_card.evolved:
 				new_card.base = get_base(card_id)
 			new_card.token = data.get("token", false)
-			new_card.card_id = data.get("code", "")
 			card_list.append(new_card)
-			#player_deck.cards.append(new_card)
 
 	deck.close()
 	database.close()
@@ -44,7 +43,7 @@ func load_card(card_id):
 		if new_card.evolved:
 			new_card.base = get_base(card_id)
 		new_card.token = data.get("token", false)
-		new_card.card_id = data.get("code", "")
+		#new_card.card_id = data.get("code", "")
 		return new_card
 		
 func get_base(card_id):

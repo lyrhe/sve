@@ -32,9 +32,8 @@ func _on_deck_changed(cards: Array[Card]):
 
 func spawn_cards(cards: Array[Card]):
 	for card in cards:
-		var new_child = CARD_UI_SCENE.instantiate();
+		var new_child: CardUi = CARD_UI_SCENE.instantiate();
 		new_child.metadata = card
-		new_child.card_id = new_child.metadata.card_id
 		cards_container.add_child(new_child)
 
 func add_card(card: CardUi):
