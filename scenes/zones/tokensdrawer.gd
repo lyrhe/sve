@@ -10,10 +10,7 @@ func _ready() -> void:
 	self.tokens_deck.update_view.connect(_on_deck_changed)
 	
 	$DropZone/CollisionShape2D.disabled = true
-	for card in deserializer.load_deck("res://assets/tokens_list.txt", "res://assets/cards_database/tokens.json"):
-		var new_child = CARD_UI_SCENE.instantiate();
-		new_child.metadata = card
-		cards_container.add_child(new_child)
+	spawn_cards(tokens_cards_list)
 
 func _on_tokens_pressed() -> void:
 	if self.get_child(1).visible:
