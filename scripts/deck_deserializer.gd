@@ -1,15 +1,12 @@
 class_name DeckDeserializer extends Resource
 
 func load_deck(deck_path, database_path):
-	
-	var player_deck = Deck.new()
-	
 	var deck:= FileAccess.open(deck_path, FileAccess.READ)
 	var database := FileAccess.open(database_path, FileAccess.READ)
 	var content = database.get_as_text()
 	var json = JSON.parse_string(content)
 	
-	var card_list: Array = []
+	var card_list: Array[Card] = []
 	
 	while not deck.eof_reached():
 		var card_id = deck.get_line().strip_edges()
@@ -25,12 +22,12 @@ func load_deck(deck_path, database_path):
 			new_card.token = data.get("token", false)
 			new_card.card_id = data.get("code", "")
 			card_list.append(new_card)
-			player_deck.cards.append(new_card)
+			#player_deck.cards.append(new_card)
 
 	deck.close()
 	database.close()
 	
-	return player_deck
+	return card_list
 
 func load_card(card_id):
 	var database := FileAccess.open("res://assets/cards_database/total.json", FileAccess.READ)

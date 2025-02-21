@@ -1,8 +1,12 @@
 class_name TokensDrawer extends Zone
 
-@onready var tokens_deck = deserializer.load_deck("res://assets/tokens_list.txt", "res://assets/cards_database/tokens.json")
+var tokens_deck: Deck
 
 func _ready() -> void:
+	self.tokens_deck = Deck.new()
+	self.tokens_deck.load_cards(deserializer.load_deck("res://assets/tokens_list.txt", "res://assets/cards_database/tokens.json"))
+	self.tokens_deck.update_view.connect(_on_deck_changed)
+	
 	$DropZone/CollisionShape2D.disabled = true
 	for card in tokens_deck.cards:
 		var new_child = CARD_UI_SCENE.instantiate();
@@ -16,3 +20,18 @@ func _on_tokens_pressed() -> void:
 		return
 	self.get_child(1).visible = not self.get_child(1).visible
 	toggle_visibility.emit(self)
+	
+func _on_deck_changed(cards: Array[Card]):
+	# Delete all the nodes in the cards container
+	for child in cards_container.get_children():
+		child.queue_free()
+	
+	# Add all the cards nodes based on the list
+	spawn_cards(cards)
+
+func spawn_cards(cards: Array[Card]):
+	for card in cards:
+		var new_child = CARD_UI_SCENE.instantiate();
+		new_child.metadata = card
+		new_child.card_id = new_child.metadata.card_id
+		cards_container.add_child(new_child)
