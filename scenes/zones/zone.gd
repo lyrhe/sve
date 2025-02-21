@@ -39,3 +39,6 @@ func _on_cards_child_entered_tree(node: Node) -> void:
 
 func _on_player_hand_child_entered_tree(node: Node) -> void:
 	pass # Replace with function body.
+
+func _on_cards_child_exiting_tree(node: Node) -> void:
+	pass # Replace with function body.

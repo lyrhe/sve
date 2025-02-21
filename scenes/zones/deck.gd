@@ -1,9 +1,7 @@
 class_name PlayerDeck extends Zone
 
-@onready var deck = deserializer.load_deck("res://decklists/decklist_BP01.txt", "res://assets/cards_database/total.json")
-
 func _ready() -> void:
-	for card in deck.cards:
+	for card in deserializer.load_deck("res://decklists/decklist_BP01.txt", "res://assets/cards_database/total.json"):
 		var new_child = CARD_UI_SCENE.instantiate();
 		new_child.metadata = card
 		new_child.card_id = new_child.metadata.card_id
@@ -20,9 +18,14 @@ func _on_cards_child_entered_tree(node: Node) -> void:
 		node.queue_free()
 
 func _on_file_dialog_file_selected(path: String) -> void:
-	deck = deserializer.load_deck(path, "res://assets/cards_database/total.json")
-	for card in deck.cards:
+	for preexisting_card in cards_container.get_children():
+		cards_container.remove_child(preexisting_card)
+		preexisting_card.queue_free()
+	for card in deserializer.load_deck(path, "res://assets/cards_database/total.json"):
 		var new_child = CARD_UI_SCENE.instantiate();
 		new_child.metadata = card
 		new_child.card_id = new_child.metadata.card_id
 		cards_container.add_child(new_child)
+
+func _on_player_hand_child_entered_tree(node: Node) -> void:
+	pass # Replace with function body.
