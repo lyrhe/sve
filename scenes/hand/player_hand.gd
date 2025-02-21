@@ -6,7 +6,7 @@ func _on_player_hand_child_entered_tree(node: Node) -> void:
 		var evolved_clone = node.duplicate()
 		$"../Evolve/CanvasLayer/ScrollContainer/Cards".add_child(evolved_clone)
 		node.metadata = deserializer.load_card(node.metadata.base)
-		node.card_id = node.metadata.card_id
+		#node.card_id = node.metadata.card_id
 	if node.metadata.token == true:
 		print("Deleting token")
 		node.queue_free()

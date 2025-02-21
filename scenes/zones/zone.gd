@@ -9,12 +9,10 @@ const CARD_UI_SCENE = preload("res://scenes/card/CardUi.tscn")
 var deserializer = DeckDeserializer.new()
 
 func add_card(card: CardUi):
-	var new_child = CARD_UI_SCENE.instantiate();
+	var new_child = load("res://scenes/card/CardUi.tscn").instantiate();
 	new_child.reparent_requested.connect(_on_card_reparent_requested)
-	new_child.card_id = card.card_id
 	new_child.previous_parent = card.previous_parent
 	new_child.metadata = card.metadata
-	new_child.card_id = card.metadata.card_id
 	cards_container.add_child(new_child)
 
 func _on_card_reparent_requested(card: CardUi):

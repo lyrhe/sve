@@ -104,8 +104,14 @@ ok_button_text = "Open"
 file_mode = 0
 root_subfolder = "decklists"
 
+[node name="Draw" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Draw"
+script = ExtResource("13_pqh3y")
+
 [connection signal="child_entered_tree" from="Graveyard" to="Graveyard" method="_on_child_entered_tree"]
 [connection signal="child_entered_tree" from="TokensDrawer" to="TokensDrawer" method="_on_child_entered_tree"]
 [connection signal="pressed" from="Buttons/Tokens" to="TokensDrawer" method="_on_tokens_pressed"]
 [connection signal="pressed" from="Buttons/LoadDeck" to="Buttons/LoadDeck" method="_on_pressed"]
 [connection signal="file_selected" from="Buttons/LoadDeck/FileDialog" to="Deck" method="_on_file_dialog_file_selected"]
+[connection signal="pressed" from="Buttons/Draw" to="Deck" method="_on_draw_pressed"]
