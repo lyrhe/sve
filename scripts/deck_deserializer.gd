@@ -1,6 +1,6 @@
 class_name DeckDeserializer extends Resource
 
-func load_deck(deck_path, database_path):
+func load_cards_list(deck_path, database_path):
 	var deck:= FileAccess.open(deck_path, FileAccess.READ)
 	var database := FileAccess.open(database_path, FileAccess.READ)
 	var content = database.get_as_text()

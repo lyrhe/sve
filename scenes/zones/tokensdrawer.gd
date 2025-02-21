@@ -3,8 +3,10 @@ class_name TokensDrawer extends Zone
 var tokens_deck: Deck
 
 func _ready() -> void:
+	var tokens_cards_list = deserializer.load_cards_list("res://assets/tokens_list.txt", "res://assets/cards_database/tokens.json")
+	
 	self.tokens_deck = Deck.new()
-	self.tokens_deck.load_cards(deserializer.load_deck("res://assets/tokens_list.txt", "res://assets/cards_database/tokens.json"))
+	self.tokens_deck.load_cards(tokens_cards_list)
 	self.tokens_deck.update_view.connect(_on_deck_changed)
 	
 	$DropZone/CollisionShape2D.disabled = true
