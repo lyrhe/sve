@@ -14,6 +14,10 @@ func get_top(i):
 func draw():
 	cards.pop_front()
 	update_view.emit(self.cards)
+
+func add_card(card: Card):
+	self.cards.append(card)
+	update_view.emit(self.cards)
 	
 func load_cards(new_cards_list: Array[Card]) -> void:
 	self.cards = new_cards_list

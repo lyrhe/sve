@@ -36,3 +36,9 @@ func spawn_cards(cards: Array[Card]):
 		new_child.metadata = card
 		new_child.card_id = new_child.metadata.card_id
 		cards_container.add_child(new_child)
+
+func add_card(card: CardUi):
+	self.deck.add_card(card.metadata)
+
+func _on_draw_pressed() -> void:
+	self.deck.draw()
