@@ -52,7 +52,14 @@ func _on_drop_zone_input_event(_viewport: Node, event: InputEvent, _shape_idx: i
 		else:
 			toggle_visibility.emit(self)
 	if event is InputEventMouseButton and Input.is_action_just_pressed("wheel_click") and $"../Popups/SpinBox".value > 0 :
+		if cards_container.get_parent().get_parent().visible == true:
+			print("zob")
+			cards_container.get_parent().get_parent().visible = not cards_container.get_parent().get_parent().visible
+			return
 		for card_index in range(0, cards_container.get_child_count()):
 			var child = cards_container.get_child(card_index)
 			child.visible = (card_index < $"../Popups/SpinBox".value)
 			self.toggle_cards_list(true)
+
+func _on_shuffle_pressed() -> void:
+	deck.shuffle()

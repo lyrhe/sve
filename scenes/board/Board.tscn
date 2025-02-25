@@ -108,6 +108,10 @@ root_subfolder = "decklists"
 layout_mode = 2
 text = "Draw"
 
+[node name="Shuffle" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Shuffle"
+
 [node name="Popups" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -136,4 +140,5 @@ offset_bottom = 354.0
 [connection signal="pressed" from="Buttons/LoadDeck" to="Buttons/LoadDeck" method="_on_pressed"]
 [connection signal="file_selected" from="Buttons/LoadDeck/FileDialog" to="Deck" method="_on_file_dialog_file_selected"]
 [connection signal="pressed" from="Buttons/Draw" to="Deck" method="_on_draw_pressed"]
+[connection signal="pressed" from="Buttons/Shuffle" to="Deck" method="_on_shuffle_pressed"]
 [connection signal="confirmed" from="Popups/SendTo" to="Deck" method="_on_send_to_confirmed"]
