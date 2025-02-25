@@ -15,6 +15,7 @@ Todo:
 	- [x] ~~Ajouter gestion carte Evolved~~
 	- [ ] Check top X
 - [ ] Spécificités Evolve Deck
+	- [ ] Charger Evolve Deck en même temps que le deck 
 	- [ ] Faceup/facedown
 	- [ ] Une carte Evolved ne peut sortir de l'Evolve Deck que pour aller sur le terrain
 - [ ] Points d'Evo
