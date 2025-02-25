@@ -1,5 +1,7 @@
 class_name PlayerDeck extends Zone
 
+@onready var popup_control: Control = $"../Buttons/PopupControl"
+
 var deck: Deck
 
 func _ready() -> void:
@@ -7,6 +9,8 @@ func _ready() -> void:
 	self.deck.load_cards(deserializer.load_cards_list("res://decklists/decklist_BP01.txt", "res://assets/cards_database/total.json"))
 	self.deck.update_view.connect(_on_deck_changed)
 	spawn_cards(self.deck.cards)
+	
+	popup_control.option_selected.connect(_on_option_selected)
 
 func _on_cards_child_entered_tree(node: Node) -> void:
 	#if node.metadata.evolved == true:
@@ -17,11 +21,15 @@ func _on_cards_child_entered_tree(node: Node) -> void:
 	if node.metadata.token == true:
 		print("Deleting token")
 		node.queue_free()
+		return
+	popup_control.show_options()
 
+# Charge le deck sélectionné
 func _on_file_dialog_file_selected(path: String) -> void:
 	deck.load_cards(deserializer.load_cards_list(path, "res://assets/cards_database/total.json"))
 	spawn_cards(deck.cards)
-		
+
+# Supprime les cartes du deck pour ajouter les nouvelles
 func _on_deck_changed(cards: Array[Card]):
 	# Delete all the nodes in the cards container
 	for child in cards_container.get_children():
@@ -30,6 +38,7 @@ func _on_deck_changed(cards: Array[Card]):
 	# Add all the cards nodes based on the list
 	spawn_cards(cards)
 
+# Ajoute une CardUI à chaque Card du deck
 func spawn_cards(cards: Array[Card]):
 	for card in cards:
 		var new_child: CardUi = CARD_UI_SCENE.instantiate();
@@ -37,4 +46,10 @@ func spawn_cards(cards: Array[Card]):
 		cards_container.add_child(new_child)
 
 func _on_player_hand_child_entered_tree(node: Node) -> void:
-	pass # Replace with function body.
+	pass
+
+func _on_option_selected(option: String) -> void:
+	if option == "top":
+		cards_container.move_child(cards_container.get_child(-1), 0)
+	elif option == "bottom":
+		pass

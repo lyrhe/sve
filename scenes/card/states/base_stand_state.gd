@@ -9,5 +9,9 @@ func on_gui_input(event: InputEvent):
 		card_ui.pivot_offset = card_ui.get_global_mouse_position() - card_ui.global_position
 		transition_requested.emit(self, State.CLICKED)
 	if event.is_action_pressed("right_mouse_click"):
-		card_ui.rotation_degrees = 90
-		transition_requested.emit(self, State.BASE_REST)
+		if card_ui.get_parent().get_parent().name == "Field":
+			card_ui.rotation_degrees = 90
+			transition_requested.emit(self, State.BASE_REST)
+	if event.is_action_pressed("wheel_click") and card_ui.metadata.token == true:
+		var token_replacement = card_ui.duplicate()
+		card_ui.get_parent().add_child.call_deferred(token_replacement)

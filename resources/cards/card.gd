@@ -9,3 +9,5 @@ class_name Card extends Resource
 
 @export var evolved: bool = false
 @export var token: bool = false
+
+@export var type: String = ""

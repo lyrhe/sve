@@ -1,19 +1,20 @@
-[gd_scene load_steps=15 format=3 uid="uid://bey238eb67ixe"]
+[gd_scene load_steps=16 format=3 uid="uid://bey238eb67ixe"]
 
 [ext_resource type="Texture2D" uid="uid://medvdwl4npyg" path="res://assets/board/background.png" id="1_3jafc"]
 [ext_resource type="Script" path="res://scenes/board/board.gd" id="1_4v4v6"]
 [ext_resource type="Texture2D" uid="uid://cveacjspsppj5" path="res://assets/board/board.jpg" id="1_mcum7"]
 [ext_resource type="PackedScene" uid="uid://buyj2e04dnx7v" path="res://scenes/zones/zone.tscn" id="3_glxjj"]
 [ext_resource type="PackedScene" uid="uid://bnnuxmd5j2x66" path="res://scenes/zones/field/field.tscn" id="3_jxf1w"]
-[ext_resource type="Script" path="res://scripts/graveyard.gd" id="5_6jc0e"]
-[ext_resource type="Script" path="res://scripts/evolve.gd" id="6_sadg2"]
-[ext_resource type="Script" path="res://scripts/banish.gd" id="6_uk5ff"]
+[ext_resource type="Script" path="res://scenes/zones/graveyard/graveyard.gd" id="5_6jc0e"]
+[ext_resource type="Script" path="res://scenes/zones/evolve/evolve.gd" id="6_sadg2"]
+[ext_resource type="Script" path="res://scenes/zones/banish/banish.gd" id="6_uk5ff"]
 [ext_resource type="Script" path="res://scenes/zones/tokensdrawer.gd" id="6_wkweh"]
 [ext_resource type="Script" path="res://scenes/zones/deck.gd" id="9_xc5jk"]
 [ext_resource type="Script" path="res://scenes/zones/field/exarea.gd" id="11_03pux"]
 [ext_resource type="PackedScene" uid="uid://cyjugb5mdjgte" path="res://scenes/hand/player_hand.tscn" id="12_n4sap"]
 [ext_resource type="Script" path="res://scenes/hand/player_hand.gd" id="13_nf4ej"]
 [ext_resource type="Script" path="res://scripts/load_deck.gd" id="13_pqh3y"]
+[ext_resource type="Script" path="res://scenes/board/popup_control.gd" id="15_n5lfr"]
 
 [node name="Board" type="Node2D" node_paths=PackedStringArray("zones")]
 script = ExtResource("1_4v4v6")
@@ -29,20 +30,6 @@ texture = ExtResource("1_3jafc")
 position = Vector2(998, 488)
 scale = Vector2(2.35573, 2.35573)
 texture = ExtResource("1_mcum7")
-
-[node name="Graveyard" parent="." instance=ExtResource("3_glxjj")]
-offset_left = 1588.0
-offset_top = 690.0
-offset_right = 1588.0
-offset_bottom = 690.0
-script = ExtResource("5_6jc0e")
-
-[node name="TokensDrawer" parent="." instance=ExtResource("3_glxjj")]
-offset_left = 109.0
-offset_top = 151.0
-offset_right = 109.0
-offset_bottom = 151.0
-script = ExtResource("6_wkweh")
 
 [node name="Banish" parent="." instance=ExtResource("3_glxjj")]
 offset_left = 363.0
@@ -65,12 +52,6 @@ offset_right = 365.0
 offset_bottom = 451.0
 script = ExtResource("6_sadg2")
 
-[node name="Field" parent="." instance=ExtResource("3_jxf1w")]
-offset_left = 998.0
-offset_top = 351.0
-offset_right = 998.0
-offset_bottom = 351.0
-
 [node name="ExArea" parent="." instance=ExtResource("3_jxf1w")]
 offset_left = 996.0
 offset_top = 703.0
@@ -78,8 +59,28 @@ offset_right = 996.0
 offset_bottom = 703.0
 script = ExtResource("11_03pux")
 
+[node name="Field" parent="." instance=ExtResource("3_jxf1w")]
+offset_left = 998.0
+offset_top = 351.0
+offset_right = 998.0
+offset_bottom = 351.0
+
+[node name="Graveyard" parent="." instance=ExtResource("3_glxjj")]
+offset_left = 1588.0
+offset_top = 690.0
+offset_right = 1588.0
+offset_bottom = 690.0
+script = ExtResource("5_6jc0e")
+
 [node name="PlayerHand" parent="." instance=ExtResource("12_n4sap")]
 script = ExtResource("13_nf4ej")
+
+[node name="TokensDrawer" parent="." instance=ExtResource("3_glxjj")]
+offset_left = 2358.0
+offset_top = 252.0
+offset_right = 2358.0
+offset_bottom = 252.0
+script = ExtResource("6_wkweh")
 
 [node name="Buttons" type="HBoxContainer" parent="."]
 offset_left = 313.0
@@ -107,7 +108,27 @@ root_subfolder = "decklists"
 [node name="Draw" type="Button" parent="Buttons"]
 layout_mode = 2
 text = "Draw"
-script = ExtResource("13_pqh3y")
+
+[node name="PopupControl" type="Control" parent="Buttons"]
+visible = false
+layout_mode = 2
+script = ExtResource("15_n5lfr")
+
+[node name="TopButton" type="Button" parent="Buttons/PopupControl"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 460.0
+offset_right = 366.0
+offset_bottom = 506.0
+text = "Top"
+
+[node name="BottomButton" type="Button" parent="Buttons/PopupControl"]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 456.0
+offset_right = 694.0
+offset_bottom = 502.0
+text = "Bottom"
 
 [connection signal="child_entered_tree" from="Graveyard" to="Graveyard" method="_on_child_entered_tree"]
 [connection signal="child_entered_tree" from="TokensDrawer" to="TokensDrawer" method="_on_child_entered_tree"]
