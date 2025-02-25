@@ -5,19 +5,35 @@ Bugs :
 - [x] ~~Empêcher les tokens de s'ajouter au deck~~
 
 Todo:
-- [x] ~~Send to top/bottom pour le deck~~
-- [x] ~~Check top X pour le deck~~
-- [x] ~~Life counter~~
-- [x] ~~Mana counter~~
-- [x] ~~Banish zone~~
-- [x] ~~Disable other containers when opening one~~
+- [x] ~~Une carte ne peut être rest que sur le terrain~~
+- [x] ~~Bug changement de zone Evolved~~
+- [x] ~~Spécificités Field~~
+	- [x] ~~Ne peut pas acueillir de spells~~
+- [x] ~~Clic molette pour dupliquer les tokens~~
+- [ ] Spécificités Deck
+	- [x] ~~Ajouter send to top/bottom~~
+	- [ ] Ajouter gestion carte Evolved
+	- [ ] Check top X
+- [ ] Spécificités Evolve Deck
+	- [ ] Faceup/facedown
+	- [ ] Une carte Evolved ne peut sortir de l'Evolve Deck que pour aller sur le terrain
+- [ ] Points d'Evo
+- [ ] Montrer carte plus grande quand hovered
+- [ ] Agrandir carte dragged
+- [ ] Supprimer hand.gd ?
+- [ ] Necessité d'une scène pour le terrain ? 
+- [ ] Life counter
+- [ ] Mana counter
 - [ ] Compteurs (+x/+x, buffs, damage, etc...)
-- [ ] Faceup/facedown pour l'evolve deck
-- [x] ~~Gérer evolved cards~~
-- [ ] Lien vers la FAQ ?
 - [ ] Deckbuilder
-- [ ] Points d'evo
-- [ ] Ctrl+click pour dupliquer les tokens
+- [ ] Axe Z 
+- [ ] Online
+- [ ] Lien vers la FAQ ?
+- [ ] Distinguer zones et "piles" ?
+	- [ ] Déplacer _on_deck_changed et spawn_cards dans Zone (piles) ?
+- [ ] Simplifier add_child() ? La façon de reparent sur une zone illégale de manière générale ?
+- [ ] Changer la façon dont la CollisionShape du tokens deck est désactivée ?
+- [ ] Supprimer deck autoloaded
 
 UI:
 - [ ] Afficher le nom du container
