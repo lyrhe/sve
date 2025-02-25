@@ -12,7 +12,7 @@ Todo:
 - [x] ~~Clic molette pour dupliquer les tokens~~
 - [ ] Spécificités Deck
 	- [x] ~~Ajouter send to top/bottom~~
-	- [ ] Ajouter gestion carte Evolved
+	- [x] ~~Ajouter gestion carte Evolved~~
 	- [ ] Check top X
 - [ ] Spécificités Evolve Deck
 	- [ ] Faceup/facedown
