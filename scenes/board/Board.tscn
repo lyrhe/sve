@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bey238eb67ixe"]
+[gd_scene load_steps=15 format=3 uid="uid://bey238eb67ixe"]
 
 [ext_resource type="Texture2D" uid="uid://medvdwl4npyg" path="res://assets/board/background.png" id="1_3jafc"]
 [ext_resource type="Script" path="res://scenes/board/board.gd" id="1_4v4v6"]
@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://cyjugb5mdjgte" path="res://scenes/hand/player_hand.tscn" id="12_n4sap"]
 [ext_resource type="Script" path="res://scenes/hand/player_hand.gd" id="13_nf4ej"]
 [ext_resource type="Script" path="res://scripts/load_deck.gd" id="13_pqh3y"]
-[ext_resource type="Script" path="res://scenes/board/popup_control.gd" id="15_n5lfr"]
 
 [node name="Board" type="Node2D" node_paths=PackedStringArray("zones")]
 script = ExtResource("1_4v4v6")
@@ -109,26 +108,19 @@ root_subfolder = "decklists"
 layout_mode = 2
 text = "Draw"
 
-[node name="PopupControl" type="Control" parent="Buttons"]
-visible = false
-layout_mode = 2
-script = ExtResource("15_n5lfr")
+[node name="Popups" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 527.0
+offset_top = 20.0
+offset_right = 527.0
+offset_bottom = 72.0
 
-[node name="TopButton" type="Button" parent="Buttons/PopupControl"]
-layout_mode = 0
-offset_left = 216.0
-offset_top = 460.0
-offset_right = 366.0
-offset_bottom = 506.0
-text = "Top"
-
-[node name="BottomButton" type="Button" parent="Buttons/PopupControl"]
-layout_mode = 0
-offset_left = 540.0
-offset_top = 456.0
-offset_right = 694.0
-offset_bottom = 502.0
-text = "Bottom"
+[node name="SendTo" type="ConfirmationDialog" parent="Popups"]
+initial_position = 1
+size = Vector2i(257, 100)
+ok_button_text = "Send to top"
+cancel_button_text = "Send to bottom"
 
 [connection signal="child_entered_tree" from="Graveyard" to="Graveyard" method="_on_child_entered_tree"]
 [connection signal="child_entered_tree" from="TokensDrawer" to="TokensDrawer" method="_on_child_entered_tree"]
@@ -136,3 +128,4 @@ text = "Bottom"
 [connection signal="pressed" from="Buttons/LoadDeck" to="Buttons/LoadDeck" method="_on_pressed"]
 [connection signal="file_selected" from="Buttons/LoadDeck/FileDialog" to="Deck" method="_on_file_dialog_file_selected"]
 [connection signal="pressed" from="Buttons/Draw" to="Deck" method="_on_draw_pressed"]
+[connection signal="confirmed" from="Popups/SendTo" to="Deck" method="_on_send_to_confirmed"]

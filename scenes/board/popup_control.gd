@@ -1,13 +1,12 @@
 extends Control
 
-signal option_selected(option: String)
-
 @onready var top_button: Button = $TopButton
 @onready var bottom_button: Button = $BottomButton
 
+signal option_selected(option: String)
+
 func _ready():
 	hide_options()
-	
 	top_button.pressed.connect(_on_top_pressed)
 	bottom_button.pressed.connect(_on_bottom_pressed)
 
@@ -21,12 +20,10 @@ func hide_options():
 
 # Handle top button press
 func _on_top_pressed():
-	print("Top selected")
-	option_selected.emit("top")
+	emit_signal("top")
 	hide_options()
 
 # Handle bottom button press
 func _on_bottom_pressed():
-	print("Bottom selected")
-	option_selected.emit("bottom")
+	emit_signal("bottom")
 	hide_options()

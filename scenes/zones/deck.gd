@@ -1,7 +1,5 @@
 class_name PlayerDeck extends Zone
 
-@onready var popup_control: Control = $"../Buttons/PopupControl"
-
 var deck: Deck
 
 func _ready() -> void:
@@ -10,19 +8,17 @@ func _ready() -> void:
 	self.deck.update_view.connect(_on_deck_changed)
 	spawn_cards(self.deck.cards)
 	
-	popup_control.option_selected.connect(_on_option_selected)
-
 func _on_cards_child_entered_tree(node: Node) -> void:
-	#if node.metadata.evolved == true:
-		#var evolved_clone = node.duplicate()
-		#$"../Evolve/CanvasLayer/Cards".add_child(evolved_clone)
-		#node.metadata = deserializer.load_card(node.metadata.base)
-		#node.card_id = node.metadata.card_id
+	if node.metadata.evolved == true:
+		var evolved_clone = node.duplicate()
+		$"../Evolve/CanvasLayer/ScrollContainer/Cards".add_child(evolved_clone)
+		node.metadata = deserializer.load_card(node.metadata.base)
 	if node.metadata.token == true:
 		print("Deleting token")
 		node.queue_free()
 		return
-	popup_control.show_options()
+	else:
+		$"../Popups/SendTo".visible = not $"../Popups/SendTo".visible
 
 # Charge le deck sélectionné
 func _on_file_dialog_file_selected(path: String) -> void:
@@ -44,12 +40,7 @@ func spawn_cards(cards: Array[Card]):
 		var new_child: CardUi = CARD_UI_SCENE.instantiate();
 		new_child.metadata = card
 		cards_container.add_child(new_child)
+		$"../Popups/SendTo".visible = not $"../Popups/SendTo".visible
 
-func _on_player_hand_child_entered_tree(node: Node) -> void:
-	pass
-
-func _on_option_selected(option: String) -> void:
-	if option == "top":
-		cards_container.move_child(cards_container.get_child(-1), 0)
-	elif option == "bottom":
-		pass
+func _on_send_to_confirmed() -> void:
+	self.cards_container.move_child(cards_container.get_child(-1), 0)
