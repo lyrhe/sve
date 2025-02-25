@@ -3,6 +3,7 @@ Bugs :
 - [x] ~~Déplacer une carte depuis la main la fait disparaître en dessous de celles du Field et de l'Ex Area.~~
 - [x] ~~Token qui refuse de se placer dans une zone avec deux slots libres ou moins~~
 - [x] ~~Empêcher les tokens de s'ajouter au deck~~
+- [ ] Shuffle va réinitialiser le deck avant de le shuffle (eg. les cartes sorties du decks seront remplacées)
 
 Todo:
 - [x] ~~Une carte ne peut être rest que sur le terrain~~
