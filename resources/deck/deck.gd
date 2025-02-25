@@ -1,6 +1,7 @@
 class_name Deck extends Resource
 
 signal update_view(cards: Array[Card])
+signal draw_card(card: Card)
 
 @export var cards: Array[Card] = []
 
@@ -12,8 +13,11 @@ func get_top(i):
 	return cards.slice(0, i)
 	
 func draw():
-	cards.pop_front()
-	update_view.emit(self.cards)
+	if not cards.is_empty() :
+		var drawn_card = cards[0]
+		cards.pop_front()
+		update_view.emit(self.cards)
+		draw_card.emit(drawn_card)
 
 func add_card(card: Card):
 	self.cards.append(card)

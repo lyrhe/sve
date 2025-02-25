@@ -7,6 +7,7 @@ func _ready() -> void:
 	self.deck.load_cards(deserializer.load_cards_list("res://decklists/decklist_BP01.txt", "res://assets/cards_database/total.json"))
 	self.deck.update_view.connect(_on_deck_changed)
 	spawn_cards(self.deck.cards)
+	#self.deck.draw_card.connect(_on_card_drawn)
 	
 func _on_cards_child_entered_tree(node: Node) -> void:
 	if node.metadata.evolved == true:
@@ -60,6 +61,14 @@ func _on_drop_zone_input_event(_viewport: Node, event: InputEvent, _shape_idx: i
 			var child = cards_container.get_child(card_index)
 			child.visible = (card_index < $"../Popups/SpinBox".value)
 			self.toggle_cards_list(true)
+	if event is InputEventMouseButton and Input.is_action_just_pressed("mouse_click"):
+		deck.draw()
 
 func _on_shuffle_pressed() -> void:
 	deck.shuffle()
+#
+#func _on_card_drawn(card):
+	#$"../PlayerHand".spawn_card(card)
+
+func _on_draw_pressed() -> void:
+	deck.draw()
