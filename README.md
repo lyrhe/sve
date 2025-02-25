@@ -10,10 +10,10 @@ Todo:
 - [x] ~~Spécificités Field~~
 	- [x] ~~Ne peut pas acueillir de spells~~
 - [x] ~~Clic molette pour dupliquer les tokens~~
-- [ ] Spécificités Deck
+- [x] ~~Spécificités Deck~~
 	- [x] ~~Ajouter send to top/bottom~~
 	- [x] ~~Ajouter gestion carte Evolved~~
-	- [ ] Check top X
+	- [x] ~~Check top X~~
 - [ ] Spécificités Evolve Deck
 	- [ ] Charger Evolve Deck en même temps que le deck 
 	- [ ] Faceup/facedown
