@@ -14,6 +14,7 @@ Todo:
 	- [x] ~~Ajouter send to top/bottom~~
 	- [x] ~~Ajouter gestion carte Evolved~~
 	- [x] ~~Check top X~~
+ 	- [x] ~~Shuffle button~~
 - [ ] Spécificités Evolve Deck
 	- [ ] Charger Evolve Deck en même temps que le deck 
 	- [ ] Faceup/facedown
