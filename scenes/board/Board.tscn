@@ -122,6 +122,14 @@ size = Vector2i(257, 100)
 ok_button_text = "Send to top"
 cancel_button_text = "Send to bottom"
 
+[node name="SpinBox" type="SpinBox" parent="Popups"]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 323.0
+offset_right = 1123.06
+offset_bottom = 354.0
+
+[connection signal="visibility_changed" from="Deck" to="Deck" method="_on_visibility_changed"]
 [connection signal="child_entered_tree" from="Graveyard" to="Graveyard" method="_on_child_entered_tree"]
 [connection signal="child_entered_tree" from="TokensDrawer" to="TokensDrawer" method="_on_child_entered_tree"]
 [connection signal="pressed" from="Buttons/Tokens" to="TokensDrawer" method="_on_tokens_pressed"]

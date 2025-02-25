@@ -44,3 +44,15 @@ func spawn_cards(cards: Array[Card]):
 
 func _on_send_to_confirmed() -> void:
 	self.cards_container.move_child(cards_container.get_child(-1), 0)
+
+func _on_drop_zone_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
+	if event is InputEventMouseButton and Input.is_action_just_pressed("right_mouse_click"):
+		if cards_container.get_parent().get_parent().visible == true:
+			toggle_cards_list(false)
+		else:
+			toggle_visibility.emit(self)
+	if event is InputEventMouseButton and Input.is_action_just_pressed("wheel_click") and $"../Popups/SpinBox".value > 0 :
+		for card_index in range(0, cards_container.get_child_count()):
+			var child = cards_container.get_child(card_index)
+			child.visible = (card_index < $"../Popups/SpinBox".value)
+			self.toggle_cards_list(true)

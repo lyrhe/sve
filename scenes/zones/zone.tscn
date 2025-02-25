@@ -42,5 +42,6 @@ layout_mode = 2
 columns = 2
 
 [connection signal="input_event" from="DropZone" to="." method="_on_drop_zone_input_event"]
+[connection signal="visibility_changed" from="CanvasLayer" to="." method="_on_canvas_layer_visibility_changed"]
 [connection signal="child_entered_tree" from="CanvasLayer/ScrollContainer/Cards" to="." method="_on_cards_child_entered_tree"]
 [connection signal="child_exiting_tree" from="CanvasLayer/ScrollContainer/Cards" to="." method="_on_cards_child_exiting_tree"]
