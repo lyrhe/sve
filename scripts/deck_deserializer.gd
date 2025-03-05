@@ -20,6 +20,7 @@ func load_cards_list(deck_path, database_path) -> Array[Card]:
 			new_card.evolved = data.get("evolved", false)
 			if new_card.evolved:
 				new_card.base = get_base(card_id)
+				new_card.used = false
 			new_card.token = data.get("token", false)
 			new_card.type = data.get("type", "")
 			card_list.append(new_card)

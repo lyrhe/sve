@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bey238eb67ixe"]
+[gd_scene load_steps=17 format=3 uid="uid://bey238eb67ixe"]
 
 [ext_resource type="Texture2D" uid="uid://medvdwl4npyg" path="res://assets/board/background.png" id="1_3jafc"]
 [ext_resource type="Script" path="res://scenes/board/board.gd" id="1_4v4v6"]
@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://cyjugb5mdjgte" path="res://scenes/hand/player_hand.tscn" id="12_n4sap"]
 [ext_resource type="Script" path="res://scenes/hand/player_hand.gd" id="13_nf4ej"]
 [ext_resource type="Script" path="res://scripts/load_deck.gd" id="13_pqh3y"]
+[ext_resource type="Texture2D" uid="uid://bd2bkjlkgo1oh" path="res://assets/zen_QxXO3obEHq.png" id="15_axi0y"]
+[ext_resource type="Texture2D" uid="uid://bl7j7frymc4k5" path="res://assets/zen_P4XymX0QeC.png" id="16_2so13"]
 
 [node name="Board" type="Node2D" node_paths=PackedStringArray("zones")]
 script = ExtResource("1_4v4v6")
@@ -110,7 +112,7 @@ text = "Draw"
 
 [node name="Shuffle" type="Button" parent="Buttons"]
 layout_mode = 2
-text = "S"
+text = "Shuffle"
 
 [node name="Popups" type="Control" parent="."]
 layout_mode = 3
@@ -132,6 +134,31 @@ offset_left = 1040.0
 offset_top = 323.0
 offset_right = 1123.06
 offset_bottom = 354.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 600.0
+offset_top = 20.0
+offset_right = 737.0
+offset_bottom = 149.0
+scale = Vector2(0.5, 0.5)
+
+[node name="EvoPoint1" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("15_axi0y")
+texture_pressed = ExtResource("16_2so13")
+
+[node name="EvoPoint2" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("15_axi0y")
+texture_pressed = ExtResource("16_2so13")
+
+[node name="EvoPoint3" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("15_axi0y")
+texture_pressed = ExtResource("16_2so13")
 
 [connection signal="visibility_changed" from="Deck" to="Deck" method="_on_visibility_changed"]
 [connection signal="child_entered_tree" from="Graveyard" to="Graveyard" method="_on_child_entered_tree"]

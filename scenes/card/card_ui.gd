@@ -15,7 +15,9 @@ var targets: Array[Zone] = []
 func _ready() -> void:
 	state_machine.init(self)
 	texture_rect.texture = load(CARDS_GRAPHICS_PATH + "/" + self.metadata.card_id + ".png")
-
+	if self.metadata.used:
+		texture_rect.set_material(null)
+	
 #region Input events
 func _input(event: InputEvent) -> void:
 	state_machine.on_input(event)

@@ -11,3 +11,5 @@ class_name Card extends Resource
 @export var token: bool = false
 
 @export var type: String = ""
+
+@export var used: bool = false

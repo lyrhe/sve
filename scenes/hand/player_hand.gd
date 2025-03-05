@@ -7,6 +7,12 @@ func _ready() -> void:
 # Ajoute la version de base à la zone appropriée
 # Supprime un token
 func _on_player_hand_child_entered_tree(node: Node) -> void:
+	if node.previous_parent:
+		if node.previous_parent.get_parent().get_parent().get_parent().name == "Evolve":
+			var evolved_clone = node.duplicate()
+			$"../Evolve/CanvasLayer/ScrollContainer/Cards".add_child(evolved_clone)
+			node.queue_free()
+			return
 	if node.metadata.evolved == true:
 		var evolved_clone = node.duplicate()
 		$"../Evolve/CanvasLayer/ScrollContainer/Cards".add_child(evolved_clone)
