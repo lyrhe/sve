@@ -20,6 +20,7 @@ Todo:
 	- [x] ~~Charger Evolve Deck en même temps que le deck~~
 	- [ ] Faceup/facedown
 	- [ ] Une carte Evolved ne peut sortir de l'Evolve Deck que pour aller sur le terrain
+		- [ ] Menu contextuel ? 	
 - [ ] Points d'Evo
 - [ ] Montrer carte plus grande quand hovered
 - [ ] Agrandir carte dragged
