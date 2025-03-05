@@ -3,6 +3,7 @@ Bugs :
 - [x] ~~Déplacer une carte depuis la main la fait disparaître en dessous de celles du Field et de l'Ex Area.~~
 - [x] ~~Token qui refuse de se placer dans une zone avec deux slots libres ou moins~~
 - [x] ~~Empêcher les tokens de s'ajouter au deck~~
+- [ ] Shuffle va réinitialiser le deck avant de le shuffle (eg. les cartes sorties du decks seront remplacées)
 
 Todo:
 - [x] ~~Une carte ne peut être rest que sur le terrain~~
@@ -16,10 +17,11 @@ Todo:
 	- [x] ~~Check top X~~
  	- [x] ~~Shuffle button~~
 - [ ] Spécificités Evolve Deck
-	- [ ] Charger Evolve Deck en même temps que le deck 
+	- [x] ~~Charger Evolve Deck en même temps que le deck~~
 	- [ ] Faceup/facedown
 	- [ ] Une carte Evolved ne peut sortir de l'Evolve Deck que pour aller sur le terrain
-- [ ] Points d'Evo
+		- [ ] Menu contextuel ? 	
+- [x] ~~Points d'Evo~~
 - [ ] Montrer carte plus grande quand hovered
 - [ ] Agrandir carte dragged
 - [ ] Supprimer hand.gd ?
