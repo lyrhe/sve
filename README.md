@@ -24,7 +24,7 @@ Todo:
 - [x] ~~Points d'Evo~~
 - [x] ~~Montrer carte plus grande quand hovered~~
 - [x] ~~Agrandir carte dragged~~
-- [ ] Supprimer hand.gd ?
+- [x] ~~Supprimer hand.gd ?~~
 - [ ] Necessité d'une scène pour le terrain ? 
 - [ ] Life counter
 - [ ] Mana counter
