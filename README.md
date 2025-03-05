@@ -22,8 +22,8 @@ Todo:
 	- [ ] Une carte Evolved ne peut sortir de l'Evolve Deck que pour aller sur le terrain
 		- [ ] Menu contextuel ? 	
 - [x] ~~Points d'Evo~~
-- [ ] Montrer carte plus grande quand hovered
-- [ ] Agrandir carte dragged
+- [x] ~~Montrer carte plus grande quand hovered~~
+- [x] ~~Agrandir carte dragged~~
 - [ ] Supprimer hand.gd ?
 - [ ] Necessité d'une scène pour le terrain ? 
 - [ ] Life counter
