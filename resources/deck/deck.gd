@@ -14,15 +14,19 @@ func get_top(i):
 	
 func draw():
 	if not cards.is_empty() :
-		var drawn_card = cards[0]
-		cards.pop_front()
-		update_view.emit(self.cards)
+		var drawn_card = cards.pop_front()
 		draw_card.emit(drawn_card)
+		update_view.emit(self.cards)
+	print(cards)
 
 func add_card(card: Card):
 	self.cards.append(card)
 	update_view.emit(self.cards)
-	
+
 func load_cards(new_cards_list: Array[Card]) -> void:
 	self.cards = new_cards_list
+	update_view.emit(self.cards)
+
+func remove_card(index: int):
+	self.cards.remove_at(index)
 	update_view.emit(self.cards)

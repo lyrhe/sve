@@ -34,7 +34,6 @@ func _on_mouse_entered():
 	state_machine.on_mouse_entered()
 
 func _on_mouse_exited():
-	print("zob")
 	get_tree().root.get_child(0).get_child(0).visible = false
 	state_machine.on_mouse_exited()
 #endregion

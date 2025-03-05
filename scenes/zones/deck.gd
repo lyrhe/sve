@@ -42,12 +42,10 @@ func spawn_cards(cards: Array[Card]):
 	var evo = $"../Evolve".cards_container.get_children().size()
 	for card in cards:
 		if card.evolved == false:
-			print(card.evolved)
 			var new_child: CardUi = CARD_UI_SCENE.instantiate();
 			new_child.metadata = card
 			cards_container.add_child(new_child)
 		elif card.evolved == true and evo == 0:
-			print(card.evolved)
 			var new_child: CardUi = CARD_UI_SCENE.instantiate();
 			new_child.metadata = card
 			$"../Evolve".cards_container.add_child(new_child)
@@ -64,7 +62,6 @@ func _on_drop_zone_input_event(_viewport: Node, event: InputEvent, _shape_idx: i
 			toggle_visibility.emit(self)
 	if event is InputEventMouseButton and Input.is_action_just_pressed("wheel_click") and $"../Popups/SpinBox".value > 0 :
 		if cards_container.get_parent().get_parent().visible == true:
-			print("zob")
 			cards_container.get_parent().get_parent().visible = not cards_container.get_parent().get_parent().visible
 			return
 		for card_index in range(0, cards_container.get_child_count()):
@@ -76,9 +73,10 @@ func _on_drop_zone_input_event(_viewport: Node, event: InputEvent, _shape_idx: i
 
 func _on_shuffle_pressed() -> void:
 	deck.shuffle()
-#
-#func _on_card_drawn(card):
-	#$"../PlayerHand".spawn_card(card)
 
 func _on_draw_pressed() -> void:
 	deck.draw()
+
+func _on_cards_child_exiting_tree(node: Node) -> void:
+	if node is CardUi:
+		deck.remove_card(node.get_index())
