@@ -21,7 +21,7 @@ Todo:
 	- [ ] Faceup/facedown
 	- [ ] Une carte Evolved ne peut sortir de l'Evolve Deck que pour aller sur le terrain
 		- [ ] Menu contextuel ? 	
-- [ ] Points d'Evo
+- [x] ~~Points d'Evo~~
 - [ ] Montrer carte plus grande quand hovered
 - [ ] Agrandir carte dragged
 - [ ] Supprimer hand.gd ?
