@@ -3,6 +3,7 @@ class_name CardUi extends Control
 const CARDS_GRAPHICS_PATH = "res://assets/cards"
 
 signal reparent_requested(which_card_ui: CardUi)
+signal update_texture()
 
 @export var metadata: Card
 @onready var texture_rect: TextureRect = $TextureRect
@@ -15,9 +16,9 @@ var targets: Array[Zone] = []
 func _ready() -> void:
 	state_machine.init(self)
 	texture_rect.texture = load(CARDS_GRAPHICS_PATH + "/" + self.metadata.card_id + ".png")
-	if self.metadata.used:
+	if not self.metadata.used or self.get_parent() is HBoxContainer:
 		texture_rect.set_material(null)
-	
+
 #region Input events
 func _input(event: InputEvent) -> void:
 	state_machine.on_input(event)
@@ -28,9 +29,13 @@ func _on_gui_input(event: InputEvent) -> void:
 
 #region Mouse events
 func _on_mouse_entered():
+	get_tree().root.get_child(0).get_child(0).visible = true
+	get_tree().root.get_child(0).get_child(0).get_child(0).texture = texture_rect.texture
 	state_machine.on_mouse_entered()
 
 func _on_mouse_exited():
+	print("zob")
+	get_tree().root.get_child(0).get_child(0).visible = false
 	state_machine.on_mouse_exited()
 #endregion
 
