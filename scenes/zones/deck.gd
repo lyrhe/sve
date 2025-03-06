@@ -77,6 +77,6 @@ func _on_shuffle_pressed() -> void:
 func _on_draw_pressed() -> void:
 	deck.draw()
 
-func _on_cards_child_exiting_tree(node: Node) -> void:
-	if node is CardUi:
-		deck.remove_card(node.get_index())
+#func _on_cards_child_exiting_tree(node: Node) -> void:
+	#if node is CardUi:
+		#deck.remove_card(node.get_index())

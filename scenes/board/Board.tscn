@@ -32,8 +32,8 @@ light_mask = 0
 z_index = 1
 offset_left = 2.0
 offset_top = 2.0
-offset_right = 353.0
-offset_bottom = 485.0
+offset_right = 492.0
+offset_bottom = 677.0
 texture = ExtResource("2_g2yfd")
 expand_mode = 1
 

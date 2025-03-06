@@ -10,6 +10,8 @@ signal update_texture()
 @onready var _zone_detector: Area2D = $ZoneDetector
 @onready var state_machine: CardStateMachine = $CardStateMachine
 @onready var previous_parent: Container = self.get_parent()
+@onready var atk: Label = $atk_def/atk
+@onready var def: Label = $atk_def/def
 
 var targets: Array[Zone] = []
 
@@ -18,6 +20,10 @@ func _ready() -> void:
 	texture_rect.texture = load(CARDS_GRAPHICS_PATH + "/" + self.metadata.card_id + ".png")
 	if not self.metadata.used or self.get_parent() is HBoxContainer:
 		texture_rect.set_material(null)
+	if not self.metadata.type == "Follower":
+		$atk_def.visible = false
+	self.atk.text = str(self.metadata.attack)
+	self.def.text = str(self.metadata.defense)
 
 #region Input events
 func _input(event: InputEvent) -> void:
