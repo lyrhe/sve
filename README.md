@@ -25,6 +25,7 @@ Todo:
 - [x] ~~Montrer carte plus grande quand hovered~~
 - [x] ~~Agrandir carte dragged~~
 - [x] ~~Supprimer hand.gd ?~~
+- [ ] Limiter field et EX Area à 5
 - [ ] Necessité d'une scène pour le terrain ? 
 - [ ] Life counter
 - [ ] Mana counter
