@@ -26,7 +26,6 @@ Todo:
 - [x] ~~Agrandir carte dragged~~
 - [x] ~~Supprimer hand.gd ?~~
 - [ ] Limiter field et EX Area à 5
-- [ ] Necessité d'une scène pour le terrain ? 
 - [ ] Life counter
 - [ ] Mana counter
 - [ ] Compteurs (+x/+x, buffs, damage, etc...)
@@ -38,7 +37,9 @@ Todo:
 	- [ ] Déplacer _on_deck_changed et spawn_cards dans Zone (piles) ?
 - [ ] Simplifier add_child() ? La façon de reparent sur une zone illégale de manière générale ?
 - [ ] Changer la façon dont la CollisionShape du tokens deck est désactivée ?
-- [ ] Supprimer deck autoloaded
+- [x] ~~Supprimer deck autoloaded~~
+- [ ] Necessité d'une scène pour le terrain ? 
+
 
 UI:
 - [ ] Afficher le nom du container
