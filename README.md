@@ -29,6 +29,7 @@ Todo:
 - [ ] Life counter
 - [ ] Mana counter
 - [x] ~~Compteurs (+x/+x, buffs, damage, etc...)~~
+- [ ] Comptuers spéciaux (fable, etc)
 - [ ] Deckbuilder
 - [ ] Axe Z 
 - [ ] Online
