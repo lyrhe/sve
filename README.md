@@ -29,6 +29,7 @@ Todo:
 - [ ] Life counter
 - [ ] Mana counter
 - [x] ~~Compteurs (+x/+x, buffs, damage, etc...)~~
+	- [ ] Conserver changements de stats entre Field et Ex Area 
 - [ ] Comptuers spéciaux (fable, etc)
 - [ ] Deckbuilder
 - [ ] Axe Z 
