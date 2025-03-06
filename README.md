@@ -18,7 +18,7 @@ Todo:
  	- [x] ~~Shuffle button~~
 - [ ] Spécificités Evolve Deck
 	- [x] ~~Charger Evolve Deck en même temps que le deck~~
-	- [ ] Faceup/facedown
+	- [x] ~~Faceup/facedown~~
 	- [ ] Une carte Evolved ne peut sortir de l'Evolve Deck que pour aller sur le terrain
 		- [ ] Menu contextuel ? 	
 - [x] ~~Points d'Evo~~
@@ -28,7 +28,7 @@ Todo:
 - [ ] Limiter field et EX Area à 5
 - [ ] Life counter
 - [ ] Mana counter
-- [ ] Compteurs (+x/+x, buffs, damage, etc...)
+- [x] ~~Compteurs (+x/+x, buffs, damage, etc...)~~
 - [ ] Deckbuilder
 - [ ] Axe Z 
 - [ ] Online
