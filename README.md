@@ -26,7 +26,7 @@ Todo:
 - [x] ~~Agrandir carte dragged~~
 - [x] ~~Supprimer hand.gd ?~~
 - [x] ~~Limiter field et EX Area à 5~~
-- [ ] Life counter
+- [x] ~~Life counter~~
 - [ ] Mana counter
 - [x] ~~Compteurs (+x/+x, buffs, damage, etc...)~~
 	- [ ] Conserver changements de stats entre Field et Ex Area 
