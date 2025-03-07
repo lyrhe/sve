@@ -30,7 +30,8 @@ Todo:
 - [ ] Mana counter
 - [x] ~~Compteurs (+x/+x, buffs, damage, etc...)~~
 	- [ ] Conserver changements de stats entre Field et Ex Area 
-- [ ] Comptuers spéciaux (fable, etc)
+- [ ] Compteurs spéciaux (fable, etc)
+	- [ ] Menu contextuel ? 
 - [ ] Deckbuilder
 - [ ] Axe Z 
 - [ ] Online
