@@ -49,10 +49,6 @@ func _on_player_hand_child_entered_tree(node: Node) -> void:
 	pass
 
 func _on_cards_child_exiting_tree(node: Node) -> void:
-	#var id = node.metadata.card_id
-	#var index = node.get_index()
-	#print(node.get_index())
-	#self.deck.cards.pop_at(index)
 	pass
 
 func _on_canvas_layer_visibility_changed() -> void:

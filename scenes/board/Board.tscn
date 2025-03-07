@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bey238eb67ixe"]
+[gd_scene load_steps=20 format=3 uid="uid://bey238eb67ixe"]
 
 [ext_resource type="Texture2D" uid="uid://medvdwl4npyg" path="res://assets/board/background.png" id="1_3jafc"]
 [ext_resource type="Script" path="res://scenes/board/board.gd" id="1_4v4v6"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://scenes/board/bigger_frame.gd" id="2_n2ewi"]
 [ext_resource type="PackedScene" uid="uid://buyj2e04dnx7v" path="res://scenes/zones/zone.tscn" id="3_glxjj"]
 [ext_resource type="PackedScene" uid="uid://bnnuxmd5j2x66" path="res://scenes/zones/field/field.tscn" id="3_jxf1w"]
+[ext_resource type="Script" path="res://scenes/board/leader_defense.gd" id="4_iread"]
 [ext_resource type="Script" path="res://scenes/zones/graveyard/graveyard.gd" id="5_6jc0e"]
 [ext_resource type="Script" path="res://scenes/zones/evolve/evolve.gd" id="6_sadg2"]
 [ext_resource type="Script" path="res://scenes/zones/banish/banish.gd" id="6_uk5ff"]
@@ -36,6 +37,15 @@ offset_right = 492.0
 offset_bottom = 677.0
 texture = ExtResource("2_g2yfd")
 expand_mode = 1
+
+[node name="LeaderDefense" type="Label" parent="."]
+z_index = 1
+offset_left = 1547.0
+offset_top = 106.0
+offset_right = 1619.0
+offset_bottom = 129.0
+text = "Defense : 20"
+script = ExtResource("4_iread")
 
 [node name="Background" type="Sprite2D" parent="."]
 show_behind_parent = true
@@ -151,26 +161,26 @@ offset_top = 323.0
 offset_right = 1123.06
 offset_bottom = 354.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="EvoPoints" type="HBoxContainer" parent="."]
 offset_left = 600.0
 offset_top = 20.0
 offset_right = 737.0
 offset_bottom = 149.0
 scale = Vector2(0.5, 0.5)
 
-[node name="EvoPoint1" type="TextureButton" parent="HBoxContainer"]
+[node name="EvoPoint1" type="TextureButton" parent="EvoPoints"]
 layout_mode = 2
 toggle_mode = true
 texture_normal = ExtResource("15_axi0y")
 texture_pressed = ExtResource("16_2so13")
 
-[node name="EvoPoint2" type="TextureButton" parent="HBoxContainer"]
+[node name="EvoPoint2" type="TextureButton" parent="EvoPoints"]
 layout_mode = 2
 toggle_mode = true
 texture_normal = ExtResource("15_axi0y")
 texture_pressed = ExtResource("16_2so13")
 
-[node name="EvoPoint3" type="TextureButton" parent="HBoxContainer"]
+[node name="EvoPoint3" type="TextureButton" parent="EvoPoints"]
 layout_mode = 2
 toggle_mode = true
 texture_normal = ExtResource("15_axi0y")

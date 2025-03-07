@@ -36,6 +36,7 @@ func _on_deck_changed(cards: Array[Card]):
 
 	# Add all the cards nodes based on the list
 	spawn_cards(cards)
+	pass
 
 # Ajoute une CardUI à chaque Card du deck
 func spawn_cards(cards: Array[Card]):
@@ -80,3 +81,12 @@ func _on_draw_pressed() -> void:
 #func _on_cards_child_exiting_tree(node: Node) -> void:
 	#if node is CardUi:
 		#deck.remove_card(node.get_index())
+	#print(deck.cards[node.get_index()].card_id)
+	#print(node.metadata.card_id)
+	#if node is CardUi and deck.cards[node.get_index()].card_id == node.metadata.card_id:
+	#print(deck.cards.size())
+	#print(cards_container.get_child_count())
+	#if node is CardUi and deck.cards.size() > cards_container.get_child_count():
+
+	#print(deck.cards.size())
+	#print(cards_container.get_child_count())

@@ -17,7 +17,6 @@ func draw():
 		var drawn_card = cards.pop_front()
 		draw_card.emit(drawn_card)
 		update_view.emit(self.cards)
-	print(cards)
 
 func add_card(card: Card):
 	self.cards.append(card)

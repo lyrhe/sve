@@ -12,3 +12,8 @@ func _on_cards_child_entered_tree(node: Node) -> void:
 			node.queue_free()
 		else:
 			node.metadata.used = true
+	if cards_container.get_child_count() > 5:
+		if not node.metadata.token:
+			var clone = node.duplicate()
+			cards_container.get_child(-1).previous_parent.add_child(clone)
+		node.queue_free()
