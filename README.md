@@ -25,14 +25,15 @@ Todo:
 - [x] ~~Montrer carte plus grande quand hovered~~
 - [x] ~~Agrandir carte dragged~~
 - [x] ~~Supprimer hand.gd ?~~
-- [ ] Limiter field et EX Area à 5
-- [ ] Life counter
+- [x] ~~Limiter field et EX Area à 5~~
+- [x] ~~Life counter~~
 - [ ] Mana counter
 - [x] ~~Compteurs (+x/+x, buffs, damage, etc...)~~
 	- [ ] Conserver changements de stats entre Field et Ex Area 
-- [ ] Comptuers spéciaux (fable, etc)
+- [ ] Compteurs spéciaux (fable, etc)
+	- [ ] Menu contextuel ? 
 - [ ] Deckbuilder
-- [ ] Axe Z 
+- [x] ~~Axe Z~~
 - [ ] Online
 - [ ] Lien vers la FAQ ?
 - [ ] Distinguer zones et "piles" ?
