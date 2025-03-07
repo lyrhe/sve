@@ -33,7 +33,7 @@ Todo:
 - [ ] Compteurs spéciaux (fable, etc)
 	- [ ] Menu contextuel ? 
 - [ ] Deckbuilder
-- [ ] Axe Z 
+- [x] ~~Axe Z~~
 - [ ] Online
 - [ ] Lien vers la FAQ ?
 - [ ] Distinguer zones et "piles" ?
