@@ -26,6 +26,7 @@ Todo:
 - [x] ~~Agrandir carte dragged~~
 - [x] ~~Supprimer hand.gd ?~~
 - [x] ~~Limiter field et EX Area à 5~~
+- [ ] Previews banish/cimetière/""""evolve deck""""
 - [x] ~~Life counter~~
 - [ ] Mana counter
 - [x] ~~Compteurs (+x/+x, buffs, damage, etc...)~~
