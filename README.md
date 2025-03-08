@@ -4,6 +4,7 @@ Bugs :
 - [x] ~~Token qui refuse de se placer dans une zone avec deux slots libres ou moins~~
 - [x] ~~Empêcher les tokens de s'ajouter au deck~~
 - [x] ~~Shuffle va réinitialiser le deck avant de le shuffle (eg. les cartes sorties du decks seront remplacées)~~
+- [ ] Reparent ExArea/Field full
 
 Todo:
 - [x] ~~Une carte ne peut être rest que sur le terrain~~
