@@ -4,7 +4,7 @@ Bugs :
 - [x] ~~Token qui refuse de se placer dans une zone avec deux slots libres ou moins~~
 - [x] ~~Empêcher les tokens de s'ajouter au deck~~
 - [x] ~~Shuffle va réinitialiser le deck avant de le shuffle (eg. les cartes sorties du decks seront remplacées)~~
-- [ ] "Invalid call. Nonexistent function 'add_child' in base 'Nil'." quand une carte d'une zone full est déplacée vers la zone d'où elle vient (field vers field, ex area vers ex area)
+- [x] ~~"Invalid call. Nonexistent function 'add_child' in base 'Nil'." quand une carte d'une zone full est déplacée vers la zone d'où elle vient (field vers field, ex area vers ex area)~~
 
 Todo:
 - [x] ~~Une carte ne peut être rest que sur le terrain~~
