@@ -89,3 +89,6 @@ func _on_canvas_layer_visibility_changed() -> void:
 	if cards_container.visible:
 		for child in cards_container.get_children():
 			child.visible = true
+
+func _on_cards_child_order_changed() -> void:
+	pass

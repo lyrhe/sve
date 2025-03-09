@@ -50,6 +50,9 @@ func _on_mouse_exited():
 	state_machine.on_mouse_exited()
 #endregion
 
+func add_counter():
+	pass
+	
 #region Drop zone events
 func _on_zone_entered(area2d: Area2D) -> void:
 	if not targets.has(area2d.get_parent()):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bey238eb67ixe"]
+[gd_scene load_steps=44 format=3 uid="uid://bey238eb67ixe"]
 
 [ext_resource type="Texture2D" uid="uid://medvdwl4npyg" path="res://assets/board/background.png" id="1_3jafc"]
 [ext_resource type="Script" path="res://scenes/board/board.gd" id="1_4v4v6"]
@@ -19,6 +19,30 @@
 [ext_resource type="Script" path="res://scripts/load_deck.gd" id="13_pqh3y"]
 [ext_resource type="Texture2D" uid="uid://bd2bkjlkgo1oh" path="res://assets/zen_QxXO3obEHq.png" id="15_axi0y"]
 [ext_resource type="Texture2D" uid="uid://bl7j7frymc4k5" path="res://assets/zen_P4XymX0QeC.png" id="16_2so13"]
+[ext_resource type="Texture2D" uid="uid://ceufll257mylo" path="res://assets/mana/unpressed/10_unpressed.png" id="20_lyjn4"]
+[ext_resource type="Script" path="res://scenes/board/mana.gd" id="20_yxb0k"]
+[ext_resource type="Texture2D" uid="uid://c2u7wdlxikpx7" path="res://assets/mana/plus.png" id="21_2ffu8"]
+[ext_resource type="Texture2D" uid="uid://dnilaoc6mysa" path="res://assets/mana/pressed/10_pressed.png" id="21_2pmk7"]
+[ext_resource type="Texture2D" uid="uid://yjn6tjthd0hh" path="res://assets/mana/unpressed/9_unpressed.png" id="21_757pq"]
+[ext_resource type="Texture2D" uid="uid://2wbighoc72v5" path="res://assets/mana/unpressed/8_unpressed.png" id="22_fal01"]
+[ext_resource type="Texture2D" uid="uid://dx0ifsb015rcw" path="res://assets/mana/unpressed/7_unpressed.png" id="23_5ba4h"]
+[ext_resource type="Texture2D" uid="uid://doo7j38cfd2gl" path="res://assets/mana/pressed/9_pressed.png" id="23_sgwbp"]
+[ext_resource type="Texture2D" uid="uid://dd54kyl3wyrgv" path="res://assets/mana/disabled.png" id="24_bofaf"]
+[ext_resource type="Texture2D" uid="uid://cf6gce841vxtn" path="res://assets/mana/unpressed/6_unpressed.png" id="24_yoj78"]
+[ext_resource type="Texture2D" uid="uid://u7kv2bdjaqv5" path="res://assets/mana/pressed/8_pressed.png" id="25_46v70"]
+[ext_resource type="Texture2D" uid="uid://d2k8j8nhh2vfs" path="res://assets/mana/unpressed/5_unpressed.png" id="25_hfphi"]
+[ext_resource type="Texture2D" uid="uid://bdu13cuc5w0rw" path="res://assets/mana/unpressed/4_unpressed.png" id="26_m256m"]
+[ext_resource type="Texture2D" uid="uid://dff6nwckhahya" path="res://assets/mana/pressed/7_pressed.png" id="27_5wmy6"]
+[ext_resource type="Texture2D" uid="uid://bngkyjopdfc6c" path="res://assets/mana/unpressed/3_unpressed.png" id="27_748mu"]
+[ext_resource type="Texture2D" uid="uid://jsv5ah4l0den" path="res://assets/mana/unpressed/2_unpressed.png" id="28_8rgm0"]
+[ext_resource type="Texture2D" uid="uid://ctdbrvjpsqhkx" path="res://assets/mana/pressed/6_pressed.png" id="29_0q2sr"]
+[ext_resource type="Texture2D" uid="uid://cva7ljki4uiv8" path="res://assets/mana/unpressed/1_unpressed.png" id="29_krl3l"]
+[ext_resource type="Texture2D" uid="uid://b7if08763n06b" path="res://assets/mana/pressed/5_pressed.png" id="31_crvda"]
+[ext_resource type="Texture2D" uid="uid://y36fnqx3uw11" path="res://assets/mana/pressed/4_pressed.png" id="33_pbs2a"]
+[ext_resource type="Texture2D" uid="uid://ssvdalfoee8m" path="res://assets/mana/pressed/3_pressed.png" id="35_wu3cu"]
+[ext_resource type="Texture2D" uid="uid://cph6ge6ipyjdb" path="res://assets/mana/pressed/2_pressed.png" id="37_wceko"]
+[ext_resource type="Texture2D" uid="uid://c6a7fa42xtltl" path="res://assets/mana/pressed/1_pressed.png" id="39_gmdt7"]
+[ext_resource type="Texture2D" uid="uid://dmpaq0cn8ajup" path="res://assets/mana/minus.png" id="43_wjb5o"]
 
 [node name="Board" type="Node2D" node_paths=PackedStringArray("zones")]
 script = ExtResource("1_4v4v6")
@@ -185,6 +209,92 @@ layout_mode = 2
 toggle_mode = true
 texture_normal = ExtResource("15_axi0y")
 texture_pressed = ExtResource("16_2so13")
+
+[node name="Mana" type="VBoxContainer" parent="."]
+offset_left = 100.0
+offset_top = 78.0
+offset_right = 166.0
+offset_bottom = 832.0
+scale = Vector2(0.7, 0.7)
+script = ExtResource("20_yxb0k")
+
+[node name="Plus" type="TextureButton" parent="Mana"]
+layout_mode = 2
+texture_normal = ExtResource("21_2ffu8")
+
+[node name="PP10" type="TextureButton" parent="Mana"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("20_lyjn4")
+texture_pressed = ExtResource("21_2pmk7")
+texture_disabled = ExtResource("24_bofaf")
+
+[node name="PP9" type="TextureButton" parent="Mana"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("21_757pq")
+texture_pressed = ExtResource("23_sgwbp")
+texture_disabled = ExtResource("24_bofaf")
+
+[node name="PP8" type="TextureButton" parent="Mana"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("22_fal01")
+texture_pressed = ExtResource("25_46v70")
+texture_disabled = ExtResource("24_bofaf")
+
+[node name="PP7" type="TextureButton" parent="Mana"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("23_5ba4h")
+texture_pressed = ExtResource("27_5wmy6")
+texture_disabled = ExtResource("24_bofaf")
+
+[node name="PP6" type="TextureButton" parent="Mana"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("24_yoj78")
+texture_pressed = ExtResource("29_0q2sr")
+texture_disabled = ExtResource("24_bofaf")
+
+[node name="PP5" type="TextureButton" parent="Mana"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("25_hfphi")
+texture_pressed = ExtResource("31_crvda")
+texture_disabled = ExtResource("24_bofaf")
+
+[node name="PP4" type="TextureButton" parent="Mana"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("26_m256m")
+texture_pressed = ExtResource("33_pbs2a")
+texture_disabled = ExtResource("24_bofaf")
+
+[node name="PP3" type="TextureButton" parent="Mana"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("27_748mu")
+texture_pressed = ExtResource("35_wu3cu")
+texture_disabled = ExtResource("24_bofaf")
+
+[node name="PP2" type="TextureButton" parent="Mana"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("28_8rgm0")
+texture_pressed = ExtResource("37_wceko")
+texture_disabled = ExtResource("24_bofaf")
+
+[node name="PP1" type="TextureButton" parent="Mana"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("29_krl3l")
+texture_pressed = ExtResource("39_gmdt7")
+texture_disabled = ExtResource("24_bofaf")
+
+[node name="Minus" type="TextureButton" parent="Mana"]
+layout_mode = 2
+texture_normal = ExtResource("43_wjb5o")
 
 [connection signal="visibility_changed" from="Deck" to="Deck" method="_on_visibility_changed"]
 [connection signal="child_entered_tree" from="Graveyard" to="Graveyard" method="_on_child_entered_tree"]

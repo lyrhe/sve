@@ -23,6 +23,11 @@ func add_card(card: CardUi):
 	new_child.metadata = card.metadata
 	new_child.is_changing_zone.connect(on_card_changing_zone)
 	cards_container.add_child(new_child)
+	if new_child.get_parent().name == "PlayerHand":
+		return
+	if card.atk.text and new_child.get_parent() is HBoxContainer:
+		new_child.atk.text = card.atk.text
+		new_child.def.text = card.def.text
 
 func _on_card_reparent_requested(card: CardUi):
 	print("Reparenting card: " + str(card) + " to " + str(self))
@@ -43,6 +48,19 @@ func _on_drop_zone_input_event(_viewport: Node, event: InputEvent, _shape_idx: i
 			toggle_cards_list(false)
 		else:
 			toggle_visibility.emit(self)
+
+func _update_texture() -> void:
+	if cards_container.get_child_count() > 0:
+		self.get_child(-1).texture = load("res://assets/cards/" + cards_container.get_child(-1).metadata.card_id + ".png")
+	else:
+		self.get_child(-1).texture = load("res://assets/card_back.jpg")
+		
+func _on_cards_child_order_changed() -> void:
+	_update_texture()
+	
+func _exit_tree() -> void:
+	if cards_container:
+		cards_container.child_order_changed.disconnect(_on_cards_child_order_changed)
 
 func _on_cards_child_entered_tree(node: Node) -> void:
 	pass

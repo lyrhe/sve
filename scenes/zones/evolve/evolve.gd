@@ -6,3 +6,7 @@ func _on_cards_child_entered_tree(node: Node) -> void:
 		var evolved_clone = node.duplicate()
 		node.previous_parent.add_child(evolved_clone)
 		node.queue_free()
+
+func _on_cards_child_order_changed() -> void:
+	if cards_container.get_child(-1).metadata.used:
+		_update_texture()

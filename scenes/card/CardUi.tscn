@@ -1,6 +1,5 @@
 [gd_scene load_steps=14 format=3 uid="uid://cjqsiond3d27o"]
 
-[ext_resource type="Texture2D" uid="uid://bhrt1wcoyu0mm" path="res://assets/cards/BP01-001.png" id="1_5r8yn"]
 [ext_resource type="Script" path="res://scenes/card/card_ui.gd" id="1_n6tcd"]
 [ext_resource type="Shader" uid="uid://ba2jmhu3k4sxt" path="res://scenes/card/CardUiVisualShader.tres" id="2_78j77"]
 [ext_resource type="Script" path="res://scenes/card/card_state_machine.gd" id="3_dv64i"]
@@ -9,6 +8,7 @@
 [ext_resource type="Script" path="res://scenes/card/states/base_rest_state.gd" id="5_2vvak"]
 [ext_resource type="Script" path="res://scenes/card/states/dragging_state.gd" id="5_8jurw"]
 [ext_resource type="Script" path="res://scenes/card/label.gd" id="5_cwo1p"]
+[ext_resource type="Script" path="res://scenes/card/counters.gd" id="5_uoxpq"]
 [ext_resource type="Script" path="res://scenes/card/states/clicked_state.gd" id="6_dncvt"]
 [ext_resource type="Script" path="res://scenes/card/states/released_state.gd" id="7_hdmp1"]
 
@@ -42,7 +42,6 @@ offset_top = 10.296
 offset_right = 125.168
 offset_bottom = 176.481
 scale = Vector2(1.52, 1.52)
-texture = ExtResource("1_5r8yn")
 expand_mode = 5
 
 [node name="atk_def" type="TextureRect" parent="."]
@@ -70,6 +69,19 @@ offset_top = 135.0
 offset_right = 142.0
 offset_bottom = 158.0
 script = ExtResource("5_cwo1p")
+
+[node name="counters" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.295
+anchor_top = 0.367
+anchor_right = 0.295
+anchor_bottom = 0.367
+offset_left = 19.065
+offset_top = 17.974
+offset_right = 103.065
+offset_bottom = 40.974
+script = ExtResource("5_uoxpq")
 
 [node name="ZoneDetector" type="Area2D" parent="."]
 monitorable = false
