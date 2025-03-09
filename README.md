@@ -7,7 +7,7 @@ Bugs :
 - [x] ~~"Invalid call. Nonexistent function 'add_child' in base 'Nil'." quand une carte d'une zone full est déplacée vers la zone d'où elle vient (field vers field, ex area vers ex area).~~
 - [x] ~~Conserver compteurs spéciaux entre Field et Ex Area.~~
 - [x] ~~"Invalid assignment of property or key 'texture' with value of type 'CompressedTexture2D' on a base object of type 'Area2D'." à la fermeture du programme.~~
-- [ ] Une carte renvoyée au deck ne sera pas ajoutée à l'array ?
+- [x] ~~Une carte renvoyée au deck ne sera pas ajoutée à l'array ?~~
 - [x] ~~Les decks sont chargés en double.~~
 - [ ] Une carte déplacée depuis le deck vers l'evolve deck ou vers lui-même (du deck vers le deck donc) est supprimée.
 - [ ] Empêcher reparent vers soi-même
