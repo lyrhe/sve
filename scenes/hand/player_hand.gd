@@ -19,6 +19,8 @@ func _on_player_hand_child_entered_tree(node: Node) -> void:
 		node.metadata = deserializer.load_card(node.metadata.base)
 	if node.metadata.token == true:
 		node.queue_free()
+	if node.get_child(2).text:
+		node.get_child(2).text = null
 		
 func spawn_card(card: Card):
 	var new_child: CardUi = CARD_UI_SCENE.instantiate();

@@ -13,3 +13,4 @@ func _on_cards_child_entered_tree(node: Node) -> void:
 			var clone = node.duplicate()
 			node.previous_parent.add_child(clone)
 			node.queue_free()
+	

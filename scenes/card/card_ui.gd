@@ -13,6 +13,7 @@ signal is_changing_zone(card_ui: CardUi)
 @onready var previous_parent: Container = self.get_parent()
 @onready var atk: Label = $atk_def/atk
 @onready var def: Label = $atk_def/def
+@onready var counters: Label = $counters
 
 var targets: Array[Zone] = []
 

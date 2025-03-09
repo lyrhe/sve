@@ -28,6 +28,8 @@ func add_card(card: CardUi):
 	if card.atk.text and new_child.get_parent() is HBoxContainer:
 		new_child.atk.text = card.atk.text
 		new_child.def.text = card.def.text
+	if card.counters.text and new_child.get_parent() is HBoxContainer:
+		new_child.counters.text = card.counters.text
 
 func _on_card_reparent_requested(card: CardUi):
 	print("Reparenting card: " + str(card) + " to " + str(self))
