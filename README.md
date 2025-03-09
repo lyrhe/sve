@@ -9,6 +9,7 @@ Bugs :
 - [x] ~~"Invalid assignment of property or key 'texture' with value of type 'CompressedTexture2D' on a base object of type 'Area2D'." à la fermeture du programme.~~
 - [ ] Une carte renvoyée au deck ne sera pas ajoutée à l'array ?
 - [ ] Les decks sont chargés en double.
+- [ ] Conserver compteurs spéciaux entre Field et Ex Area.
 
 Todo:
 - [x] ~~Une carte ne peut être rest que sur le terrain~~
@@ -33,7 +34,7 @@ Todo:
 - [x] ~~Limiter field et EX Area à 5~~
 - [x] Previews banish/cimetière/""""evolve deck""""
 - [x] ~~Life counter~~
-- [ ] Mana counter
+- [x] ~~Mana counter~~
 - [x] ~~Compteurs (+x/+x, buffs, damage, etc...)~~
 	- [x] ~~Conserver changements de stats entre Field et Ex Area~~
 - [x] ~~Compteurs spéciaux (fable, etc)~~
