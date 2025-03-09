@@ -28,9 +28,9 @@ func _ready() -> void:
 	self.def.text = str(self.metadata.defense)
 	
 func reparent_to_previous_parent(node):
-		var clone = node.duplicate()
-		node.previous_parent.add_child(clone)
-		node.queue_free()
+	var clone = node.duplicate()
+	node.previous_parent.add_child(clone)
+	node.queue_free()
 
 #region Input events
 func _input(event: InputEvent) -> void:

@@ -15,7 +15,7 @@ func _ready():
 	minus_button.pressed.connect(_on_minus_pressed)
 
 func _on_plus_pressed():
-	if enabled_count < 10: 
+	if enabled_count < 11: 
 		var index = 11 - enabled_count 
 		buttons[index].disabled = false
 		enabled_count += 1
