@@ -6,7 +6,7 @@ Bugs :
 - [x] ~~Shuffle va réinitialiser le deck avant de le shuffle (eg. les cartes sorties du decks seront remplacées).~~
 - [x] ~~"Invalid call. Nonexistent function 'add_child' in base 'Nil'." quand une carte d'une zone full est déplacée vers la zone d'où elle vient (field vers field, ex area vers ex area).~~
 - [ ] Une carte déplacée depuis le deck vers l'evolve deck ou vers lui-même (du deck vers le deck donc) est supprimée.
-- [ ] "Invalid assignment of property or key 'texture' with value of type 'CompressedTexture2D' on a base object of type 'Area2D'." à la fermeture du programme.
+- [x] ~~"Invalid assignment of property or key 'texture' with value of type 'CompressedTexture2D' on a base object of type 'Area2D'." à la fermeture du programme.~~
 
 Todo:
 - [x] ~~Une carte ne peut être rest que sur le terrain~~
@@ -33,9 +33,8 @@ Todo:
 - [x] ~~Life counter~~
 - [ ] Mana counter
 - [x] ~~Compteurs (+x/+x, buffs, damage, etc...)~~
-	- [ ] Conserver changements de stats entre Field et Ex Area 
-- [ ] Compteurs spéciaux (fable, etc)
-	- [ ] Ctrl+click?
+	- [x] ~~Conserver changements de stats entre Field et Ex Area~~
+- [x] ~~Compteurs spéciaux (fable, etc)~~
 - [x] ~~Axe Z~~
 
 Features:
