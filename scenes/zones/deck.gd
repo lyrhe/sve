@@ -5,20 +5,23 @@ var deck: Deck
 func _ready() -> void:
 	self.deck = Deck.new()
 	self.deck.update_view.connect(_on_deck_changed)
-	
+
+# Gère les déplacements illégaux
 func _on_cards_child_entered_tree(node: Node) -> void:
 	if node.metadata.evolved == true:
 		var evolved_clone = node.duplicate()
-		$"../Evolve/CanvasLayer/ScrollContainer/Cards".add_child(evolved_clone)
+		evolve_deck.add_child(evolved_clone)
 		node.metadata = deserializer.load_card(node.metadata.base)
 	elif node.metadata.token == true:
 		print("Deleting token")
 		node.queue_free()
 		return
 
+# Update Deck quand une carte est retirée manuellement
 func on_card_changing_zone(card_ui: CardUi):
-	print(card_ui.get_index())
-	deck.remove_card(card_ui.get_index())
+	var index = card_ui.get_index()
+	if index >= 0 and index < deck.cards.size():
+		deck.remove_card(index)
 
 # Charge le deck sélectionné
 func _on_file_dialog_file_selected(path: String) -> void:
@@ -26,11 +29,8 @@ func _on_file_dialog_file_selected(path: String) -> void:
 
 # Supprime les cartes du deck pour ajouter les nouvelles
 func _on_deck_changed(cards: Array[Card]):
-	# Delete all the nodes in the cards container
 	for child in cards_container.get_children():
 		child.queue_free()
-
-	# Add all the cards nodes based on the list
 	spawn_cards(cards)
 	pass
 
@@ -47,12 +47,14 @@ func spawn_cards(cards: Array[Card]):
 		elif card.evolved == true and evo == 0:
 			var new_child: CardUi = CARD_UI_SCENE.instantiate();
 			new_child.metadata = card
-			$"../Evolve".cards_container.add_child(new_child)
+			evolve_deck.add_child(new_child)
 		$"../Popups/SendTo".visible = false
 
 func _on_send_to_confirmed() -> void:
 	self.cards_container.move_child(cards_container.get_child(-1), 0)
-
+	deck.cards.insert(0, deck.cards.pop_back())
+	
+# Gère actions souris
 func _on_drop_zone_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and Input.is_action_just_pressed("right_mouse_click"):
 		if cards_container.get_parent().get_parent().visible == true:
@@ -69,7 +71,8 @@ func _on_drop_zone_input_event(_viewport: Node, event: InputEvent, _shape_idx: i
 			self.toggle_cards_list(true)
 	if event is InputEventMouseButton and Input.is_action_just_pressed("mouse_click"):
 		deck.draw()
-		
+
+# Gère la façon dont les cartes sont ajoutées au deck
 func add_card(card: CardUi):
 	var new_child = load("res://scenes/card/CardUi.tscn").instantiate();
 	new_child.reparent_requested.connect(_on_card_reparent_requested)
@@ -77,13 +80,7 @@ func add_card(card: CardUi):
 	new_child.metadata = card.metadata
 	new_child.is_changing_zone.connect(on_card_changing_zone)
 	cards_container.add_child(new_child)
-	if new_child.get_parent().name == "PlayerHand":
-		return
-	if card.atk.text and new_child.get_parent() is HBoxContainer:
-		new_child.atk.text = card.atk.text
-		new_child.def.text = card.def.text
-	if card.counters.text and new_child.get_parent() is HBoxContainer:
-		new_child.counters.text = card.counters.text
+	deck.add_card(card.metadata, deck.cards.size())
 	$"../Popups/SendTo".visible = not $"../Popups/SendTo".visible
 
 func _on_shuffle_pressed() -> void:
@@ -92,7 +89,6 @@ func _on_shuffle_pressed() -> void:
 func _on_draw_pressed() -> void:
 	deck.draw()
 
-# Reset la visibilité après un check top X
 func _on_canvas_layer_visibility_changed() -> void:
 	if cards_container.visible:
 		for child in cards_container.get_children():

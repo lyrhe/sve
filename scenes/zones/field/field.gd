@@ -2,10 +2,14 @@ class_name Field extends Zone
 
 func _on_cards_child_entered_tree(node: Node) -> void:
 	if node.metadata.type == "Spell" :
-		node.reparent_to_previous_parent(node)
+		var clone = node.duplicate()
+		node.previous_parent.add_child(clone)
+		node.queue_free()
 	elif node.metadata.evolved:
 		if node.metadata.used:
-			node.reparent_to_previous_parent(node)
+			var clone = node.duplicate()
+			evolve_deck.add_child(clone)
+			node.queue_free()
 		else:
 			node.metadata.used = true
 	elif cards_container.get_child_count() > 5:
@@ -13,4 +17,19 @@ func _on_cards_child_entered_tree(node: Node) -> void:
 			var clone = node.duplicate()
 			node.previous_parent.add_child(clone)
 			node.queue_free()
-	
+
+func add_card(card: CardUi):
+	# Instancie une CardUi
+	var new_child = load("res://scenes/card/CardUi.tscn").instantiate();
+	# Connecte les signaux
+	new_child.reparent_requested.connect(_on_card_reparent_requested)
+	new_child.is_changing_zone.connect(on_card_changing_zone)
+	# Transfère previous_parent et les metadata
+	new_child.previous_parent = card.get_parent()
+	new_child.metadata = card.metadata
+	# L'ajoute au container de la zone
+	cards_container.add_child(new_child)
+	# Préserve les changements de stats et les compteurs spéciaux
+	new_child.atk.text = card.atk.text
+	new_child.def.text = card.def.text
+	new_child.counters.text = card.counters.text

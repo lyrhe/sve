@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ectkj"]
 size = Vector2(141, 194)
 
-[node name="Zone" type="Control" node_paths=PackedStringArray("cards_container")]
+[node name="Zone" type="Control" node_paths=PackedStringArray("cards_container", "texture")]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 47.0
@@ -15,6 +15,7 @@ offset_right = 47.0
 offset_bottom = 64.0
 script = ExtResource("1_s8agv")
 cards_container = NodePath("CanvasLayer/ScrollContainer/Cards")
+texture = NodePath("TextureRect")
 
 [node name="DropZone" type="Area2D" parent="."]
 

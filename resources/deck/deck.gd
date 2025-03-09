@@ -14,7 +14,6 @@ func get_top(i):
 	
 func draw():
 	if not cards.is_empty() :
-		print(cards[0].card_id)
 		var drawn_card = cards.pop_front()
 		draw_card.emit(drawn_card)
 		update_view.emit(self.cards)
