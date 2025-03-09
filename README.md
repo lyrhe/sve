@@ -1,10 +1,14 @@
 Bugs :
 - [x] ~~Déplacer une carte dans une zone restand toutes les cartes rest de la zone d'origine et de la nouvelle zone.~~
 - [x] ~~Déplacer une carte depuis la main la fait disparaître en dessous de celles du Field et de l'Ex Area.~~
-- [x] ~~Token qui refuse de se placer dans une zone avec deux slots libres ou moins~~
-- [x] ~~Empêcher les tokens de s'ajouter au deck~~
-- [x] ~~Shuffle va réinitialiser le deck avant de le shuffle (eg. les cartes sorties du decks seront remplacées)~~
-- [ ] "Invalid call. Nonexistent function 'add_child' in base 'Nil'." quand une carte d'une zone full est déplacée vers la zone d'où elle vient (field vers field, ex area vers ex area)
+- [x] ~~Token qui refuse de se placer dans une zone avec deux slots libres ou moins.~~
+- [x] ~~Empêcher les tokens de s'ajouter au deck.~~
+- [x] ~~Shuffle va réinitialiser le deck avant de le shuffle (eg. les cartes sorties du decks seront remplacées).~~
+- [x] ~~"Invalid call. Nonexistent function 'add_child' in base 'Nil'." quand une carte d'une zone full est déplacée vers la zone d'où elle vient (field vers field, ex area vers ex area).~~
+- [ ] Une carte déplacée depuis le deck vers l'evolve deck ou vers lui-même (du deck vers le deck donc) est supprimée.
+- [x] ~~"Invalid assignment of property or key 'texture' with value of type 'CompressedTexture2D' on a base object of type 'Area2D'." à la fermeture du programme.~~
+- [ ] Une carte renvoyée au deck ne sera pas ajoutée à l'array ?
+- [ ] Les decks sont chargés en double.
 
 Todo:
 - [x] ~~Une carte ne peut être rest que sur le terrain~~
@@ -27,13 +31,12 @@ Todo:
 - [x] ~~Agrandir carte dragged~~
 - [x] ~~Supprimer hand.gd ?~~
 - [x] ~~Limiter field et EX Area à 5~~
-- [ ] Previews banish/cimetière/""""evolve deck""""
+- [x] Previews banish/cimetière/""""evolve deck""""
 - [x] ~~Life counter~~
 - [ ] Mana counter
 - [x] ~~Compteurs (+x/+x, buffs, damage, etc...)~~
-	- [ ] Conserver changements de stats entre Field et Ex Area 
-- [ ] Compteurs spéciaux (fable, etc)
-	- [ ] Ctrl+click?
+	- [x] ~~Conserver changements de stats entre Field et Ex Area~~
+- [x] ~~Compteurs spéciaux (fable, etc)~~
 - [x] ~~Axe Z~~
 
 Features:
