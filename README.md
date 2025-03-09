@@ -10,6 +10,7 @@ Bugs :
 - [ ] Une carte renvoyée au deck ne sera pas ajoutée à l'array ?
 - [ ] Les decks sont chargés en double.
 - [ ] Une carte déplacée depuis le deck vers l'evolve deck ou vers lui-même (du deck vers le deck donc) est supprimée.
+- [ ] Empêcher reparent vers soi-même
 
 
 Todo:
