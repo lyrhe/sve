@@ -4,6 +4,7 @@ const CARDS_GRAPHICS_PATH = "res://assets/cards"
 
 signal reparent_requested(which_card_ui: CardUi)
 signal update_texture()
+signal is_changing_zone(card_ui: CardUi)
 
 @export var metadata: Card
 @onready var texture_rect: TextureRect = $TextureRect
@@ -24,6 +25,11 @@ func _ready() -> void:
 		$atk_def.visible = false
 	self.atk.text = str(self.metadata.attack)
 	self.def.text = str(self.metadata.defense)
+	
+func reparent_to_previous_parent(node):
+		var clone = node.duplicate()
+		node.previous_parent.add_child(clone)
+		node.queue_free()
 
 #region Input events
 func _input(event: InputEvent) -> void:

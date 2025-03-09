@@ -23,10 +23,14 @@ func _on_cards_child_entered_tree(node: Node) -> void:
 	else:
 		$"../Popups/SendTo".visible = not $"../Popups/SendTo".visible
 
+func on_card_changing_zone(card_ui: CardUi):
+	deck.remove_card(card_ui.get_index())
+	pass
+
 # Charge le deck sélectionné
 func _on_file_dialog_file_selected(path: String) -> void:
 	deck.load_cards(deserializer.load_cards_list(path, "res://assets/cards_database/total.json"))
-	#spawn_cards(deck.cards)
+	spawn_cards(deck.cards)
 
 # Supprime les cartes du deck pour ajouter les nouvelles
 func _on_deck_changed(cards: Array[Card]):
@@ -43,8 +47,10 @@ func spawn_cards(cards: Array[Card]):
 	var evo = $"../Evolve".cards_container.get_children().size()
 	for card in cards:
 		if card.evolved == false:
-			var new_child: CardUi = CARD_UI_SCENE.instantiate();
+			var new_child = load("res://scenes/card/CardUi.tscn").instantiate();
+			new_child.reparent_requested.connect(_on_card_reparent_requested)
 			new_child.metadata = card
+			new_child.is_changing_zone.connect(on_card_changing_zone)
 			cards_container.add_child(new_child)
 		elif card.evolved == true and evo == 0:
 			var new_child: CardUi = CARD_UI_SCENE.instantiate();
@@ -77,16 +83,9 @@ func _on_shuffle_pressed() -> void:
 
 func _on_draw_pressed() -> void:
 	deck.draw()
-
-#func _on_cards_child_exiting_tree(node: Node) -> void:
-	#if node is CardUi:
-		#deck.remove_card(node.get_index())
-	#print(deck.cards[node.get_index()].card_id)
-	#print(node.metadata.card_id)
-	#if node is CardUi and deck.cards[node.get_index()].card_id == node.metadata.card_id:
-	#print(deck.cards.size())
-	#print(cards_container.get_child_count())
-	#if node is CardUi and deck.cards.size() > cards_container.get_child_count():
-
-	#print(deck.cards.size())
-	#print(cards_container.get_child_count())
+	
+# Reset la visibilité après un check top X
+func _on_canvas_layer_visibility_changed() -> void:
+	if cards_container.visible:
+		for child in cards_container.get_children():
+			child.visible = true

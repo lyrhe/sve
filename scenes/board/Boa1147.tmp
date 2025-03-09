@@ -1,0 +1,197 @@
+[gd_scene load_steps=20 format=3 uid="uid://bey238eb67ixe"]
+
+[ext_resource type="Texture2D" uid="uid://medvdwl4npyg" path="res://assets/board/background.png" id="1_3jafc"]
+[ext_resource type="Script" path="res://scenes/board/board.gd" id="1_4v4v6"]
+[ext_resource type="Texture2D" uid="uid://cveacjspsppj5" path="res://assets/board/board.jpg" id="1_mcum7"]
+[ext_resource type="Texture2D" uid="uid://dfcn3oib1jy3w" path="res://assets/cards/BP01-002.png" id="2_g2yfd"]
+[ext_resource type="Script" path="res://scenes/board/bigger_frame.gd" id="2_n2ewi"]
+[ext_resource type="PackedScene" uid="uid://buyj2e04dnx7v" path="res://scenes/zones/zone.tscn" id="3_glxjj"]
+[ext_resource type="PackedScene" uid="uid://bnnuxmd5j2x66" path="res://scenes/zones/field/field.tscn" id="3_jxf1w"]
+[ext_resource type="Script" path="res://scenes/board/leader_defense.gd" id="4_iread"]
+[ext_resource type="Script" path="res://scenes/zones/graveyard/graveyard.gd" id="5_6jc0e"]
+[ext_resource type="Script" path="res://scenes/zones/evolve/evolve.gd" id="6_sadg2"]
+[ext_resource type="Script" path="res://scenes/zones/banish/banish.gd" id="6_uk5ff"]
+[ext_resource type="Script" path="res://scenes/zones/tokensdrawer.gd" id="6_wkweh"]
+[ext_resource type="Script" path="res://scenes/zones/deck.gd" id="9_xc5jk"]
+[ext_resource type="Script" path="res://scenes/zones/field/exarea.gd" id="11_03pux"]
+[ext_resource type="PackedScene" uid="uid://cyjugb5mdjgte" path="res://scenes/hand/player_hand.tscn" id="12_n4sap"]
+[ext_resource type="Script" path="res://scenes/hand/player_hand.gd" id="13_nf4ej"]
+[ext_resource type="Script" path="res://scripts/load_deck.gd" id="13_pqh3y"]
+[ext_resource type="Texture2D" uid="uid://bd2bkjlkgo1oh" path="res://assets/zen_QxXO3obEHq.png" id="15_axi0y"]
+[ext_resource type="Texture2D" uid="uid://bl7j7frymc4k5" path="res://assets/zen_P4XymX0QeC.png" id="16_2so13"]
+
+[node name="Board" type="Node2D" node_paths=PackedStringArray("zones")]
+script = ExtResource("1_4v4v6")
+zones = [NodePath("Graveyard"), NodePath("Banish"), NodePath("Evolve"), NodePath("Deck"), NodePath("TokensDrawer")]
+
+[node name="BiggerFrame" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("2_n2ewi")
+
+[node name="BiggerFrame" type="TextureRect" parent="BiggerFrame"]
+light_mask = 0
+z_index = 1
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 492.0
+offset_bottom = 677.0
+texture = ExtResource("2_g2yfd")
+expand_mode = 1
+
+[node name="LeaderDefense" type="Label" parent="."]
+z_index = 1
+offset_left = 1547.0
+offset_top = 106.0
+offset_right = 1619.0
+offset_bottom = 129.0
+text = "Defense : 20"
+script = ExtResource("4_iread")
+
+[node name="Background" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(960, 544)
+scale = Vector2(0.962, 0.88471)
+texture = ExtResource("1_3jafc")
+
+[node name="Board" type="Sprite2D" parent="."]
+position = Vector2(998, 488)
+scale = Vector2(2.35573, 2.35573)
+texture = ExtResource("1_mcum7")
+
+[node name="Banish" parent="." instance=ExtResource("3_glxjj")]
+offset_left = 363.0
+offset_top = 690.0
+offset_right = 363.0
+offset_bottom = 690.0
+script = ExtResource("6_uk5ff")
+
+[node name="Deck" parent="." instance=ExtResource("3_glxjj")]
+offset_left = 1586.0
+offset_top = 445.0
+offset_right = 1586.0
+offset_bottom = 445.0
+script = ExtResource("9_xc5jk")
+
+[node name="Evolve" parent="." instance=ExtResource("3_glxjj")]
+offset_left = 365.0
+offset_top = 451.0
+offset_right = 365.0
+offset_bottom = 451.0
+script = ExtResource("6_sadg2")
+
+[node name="ExArea" parent="." instance=ExtResource("3_jxf1w")]
+offset_left = 996.0
+offset_top = 703.0
+offset_right = 996.0
+offset_bottom = 703.0
+script = ExtResource("11_03pux")
+
+[node name="Field" parent="." instance=ExtResource("3_jxf1w")]
+offset_left = 998.0
+offset_top = 351.0
+offset_right = 998.0
+offset_bottom = 351.0
+
+[node name="Graveyard" parent="." instance=ExtResource("3_glxjj")]
+offset_left = 1588.0
+offset_top = 690.0
+offset_right = 1588.0
+offset_bottom = 690.0
+script = ExtResource("5_6jc0e")
+
+[node name="PlayerHand" parent="." instance=ExtResource("12_n4sap")]
+script = ExtResource("13_nf4ej")
+
+[node name="TokensDrawer" parent="." instance=ExtResource("3_glxjj")]
+offset_left = 2358.0
+offset_top = 252.0
+offset_right = 2358.0
+offset_bottom = 252.0
+script = ExtResource("6_wkweh")
+
+[node name="Buttons" type="HBoxContainer" parent="."]
+offset_left = 313.0
+offset_top = 20.0
+offset_right = 377.0
+offset_bottom = 72.0
+
+[node name="Tokens" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Tokens"
+
+[node name="LoadDeck" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Load Deck"
+script = ExtResource("13_pqh3y")
+
+[node name="FileDialog" type="FileDialog" parent="Buttons/LoadDeck"]
+title = "Open a File"
+position = Vector2i(700, 200)
+size = Vector2i(500, 500)
+ok_button_text = "Open"
+file_mode = 0
+root_subfolder = "decklists"
+
+[node name="Draw" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Draw"
+
+[node name="Shuffle" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Shuffle"
+
+[node name="Popups" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 527.0
+offset_top = 20.0
+offset_right = 527.0
+offset_bottom = 72.0
+
+[node name="SendTo" type="ConfirmationDialog" parent="Popups"]
+initial_position = 1
+size = Vector2i(257, 100)
+ok_button_text = "Send to top"
+cancel_button_text = "Send to bottom"
+
+[node name="SpinBox" type="SpinBox" parent="Popups"]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 323.0
+offset_right = 1123.06
+offset_bottom = 354.0
+
+[node name="EvoPoints" type="HBoxContainer" parent="."]
+offset_left = 600.0
+offset_top = 20.0
+offset_right = 737.0
+offset_bottom = 149.0
+scale = Vector2(0.5, 0.5)
+
+[node name="EvoPoint1" type="TextureButton" parent="EvoPoints"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("15_axi0y")
+texture_pressed = ExtResource("16_2so13")
+
+[node name="EvoPoint2" type="TextureButton" parent="EvoPoints"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("15_axi0y")
+texture_pressed = ExtResource("16_2so13")
+
+[node name="EvoPoint3" type="TextureButton" parent="EvoPoints"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("15_axi0y")
+texture_pressed = ExtResource("16_2so13")
+
+[connection signal="visibility_changed" from="Deck" to="Deck" method="_on_visibility_changed"]
+[connection signal="child_entered_tree" from="Graveyard" to="Graveyard" method="_on_child_entered_tree"]
+[connection signal="child_entered_tree" from="TokensDrawer" to="TokensDrawer" method="_on_child_entered_tree"]
+[connection signal="pressed" from="Buttons/Tokens" to="TokensDrawer" method="_on_tokens_pressed"]
+[connection signal="pressed" from="Buttons/LoadDeck" to="Buttons/LoadDeck" method="_on_pressed"]
+[connection signal="file_selected" from="Buttons/LoadDeck/FileDialog" to="Deck" method="_on_file_dialog_file_selected"]
+[connection signal="pressed" from="Buttons/Draw" to="Deck" method="_on_draw_pressed"]
+[connection signal="pressed" from="Buttons/Shuffle" to="Deck" method="_on_shuffle_pressed"]
+[connection signal="confirmed" from="Popups/SendTo" to="Deck" method="_on_send_to_confirmed"]
