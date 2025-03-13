@@ -1,56 +1,52 @@
 class_name PlayerDeck extends Zone
 
 var deck: Deck
+@export var player_hand: Zone
 
 func _ready() -> void:
-	self.deck = Deck.new()
-	self.deck.update_view.connect(_on_deck_changed)
+	deck = Deck.new()
+	deck.update_view.connect(_update_deck_ui)
 
 # Gère les déplacements illégaux
 func _on_cards_child_entered_tree(node: Node) -> void:
-	if node.metadata.evolved == true:
-		var evolved_clone = node.duplicate()
-		evolve_deck.add_child(evolved_clone)
-		node.metadata = deserializer.load_card(node.metadata.base)
-	elif node.metadata.token == true:
+	#if node.metadata.evolved == true:
+		#var evolved_clone = node.duplicate()
+		#evolve_deck.add_child(evolved_clone)
+		#node.metadata = deserializer.load_card(node.metadata.base)
+	if node.metadata.token == true:
 		print("Deleting token")
 		node.queue_free()
 		return
+		
+func _update_deck_ui() -> void:
+	var evo = evolve_deck.get_children().size()
+	for child in cards_container.get_children():
+		child.queue_free()
+	for card in deck.cards:
+		if not card.evolved:
+			_spawn_card_ui(card, cards_container)
+		elif card.evolved and evo == 0:
+			_spawn_card_ui(card, evolve_deck)
+	print(deck.cards)
+	for child in evolve_deck.get_children():
+		print(child)
+		
+func _on_card_drawn(card: Card) -> void:
+	_spawn_card_ui(card, player_hand.cards_container)
+		
+func _spawn_card_ui(card: Card, parent: Node) -> void:
+	var card_ui = load("res://scenes/card/CardUi.tscn").instantiate()
+	card_ui.metadata = card
+	card_ui.reparent_requested.connect(_on_card_reparent_requested)
+	card_ui.is_changing_zone.connect(on_card_changing_zone)
+	parent.add_child(card_ui)
 
 # Update Deck quand une carte est retirée manuellement
-func on_card_changing_zone(card_ui: CardUi):
+func on_card_changing_zone(card_ui: CardUi) -> void:
 	var index = card_ui.get_index()
 	if index >= 0 and index < deck.cards.size():
 		deck.remove_card(index)
 
-# Supprime les cartes du deck pour ajouter les nouvelles
-func _on_deck_changed(cards: Array[Card]):
-	for child in cards_container.get_children():
-		child.queue_free()
-	spawn_cards(cards)
-	pass
-
-# Ajoute une CardUI à chaque Card du deck
-func spawn_cards(cards: Array[Card]):
-	var evo = $"../Evolve".cards_container.get_children().size()
-	for card in cards:
-		if card.evolved == false:
-			var new_child = load("res://scenes/card/CardUi.tscn").instantiate();
-			new_child.reparent_requested.connect(_on_card_reparent_requested)
-			new_child.metadata = card
-			new_child.is_changing_zone.connect(on_card_changing_zone)
-			cards_container.add_child(new_child)
-		elif card.evolved == true and evo == 0:
-			var new_child: CardUi = CARD_UI_SCENE.instantiate();
-			new_child.metadata = card
-			evolve_deck.add_child(new_child)
-		$"../Popups/SendTo".visible = false
-
-func _on_send_to_confirmed() -> void:
-	self.cards_container.move_child(cards_container.get_child(-1), 0)
-	deck.cards.insert(0, deck.cards.pop_back())
-	
-# Gère actions souris
 func _on_drop_zone_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and Input.is_action_just_pressed("right_mouse_click"):
 		if cards_container.get_parent().get_parent().visible == true:
@@ -68,16 +64,12 @@ func _on_drop_zone_input_event(_viewport: Node, event: InputEvent, _shape_idx: i
 	if event is InputEventMouseButton and Input.is_action_just_pressed("mouse_click"):
 		deck.draw()
 
-# Gère la façon dont les cartes sont ajoutées au deck
-func add_card(card: CardUi):
-	var new_child = load("res://scenes/card/CardUi.tscn").instantiate();
-	new_child.reparent_requested.connect(_on_card_reparent_requested)
-	new_child.previous_parent = card.get_parent()
-	new_child.metadata = card.metadata
-	new_child.is_changing_zone.connect(on_card_changing_zone)
-	cards_container.add_child(new_child)
-	deck.add_card(card.metadata, deck.cards.size())
-	$"../Popups/SendTo".visible = not $"../Popups/SendTo".visible
+func _on_mulligan_pressed() -> void:
+	for card in player_hand.cards_container.get_children():
+		deck.bottom_card(card.metadata)
+		card.queue_free()
+	for i in range(4):
+		deck.draw()
 
 func _on_shuffle_pressed() -> void:
 	deck.shuffle()

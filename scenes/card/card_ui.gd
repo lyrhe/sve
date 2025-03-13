@@ -16,6 +16,11 @@ signal on_spawn_menu(card_ui: CardUi)
 @onready var def: Label = $atk_def/def
 @onready var counters: Label = $counters
 
+# ajouts evolve
+@onready var deserializer = DeckDeserializer.new()
+var evolve_deck = null
+var field = null
+
 var targets: Array[Zone] = []
 
 func _ready() -> void:
@@ -27,6 +32,18 @@ func _ready() -> void:
 		$atk_def.visible = false
 	self.atk.text = str(self.metadata.attack)
 	self.def.text = str(self.metadata.defense)
+	
+func update_atk_def():
+	print(self.metadata.attack)
+	self.atk.text = str(self.metadata.attack)
+	print(self.metadata.defense)
+	self.def.text = str(self.metadata.defense)
+	
+func update_shader():
+	if self.metadata.used:
+		texture_rect.set_material(load("res://scenes/card/CardUiVisualShader.tres"))
+	else:
+		texture_rect.set_material(null)
 	
 func reparent_to_previous_parent(node):
 	var clone = node.duplicate()
@@ -65,7 +82,14 @@ func _on_zone_exited(area2d: Area2D) -> void:
 #endregion
 
 func _on_card_collision_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	print("zeub")
 	if event is InputEventMouseButton and Input.is_action_just_pressed("wheel_click"):
-		print("zob")
 		on_spawn_menu.emit(self)
+		
+func evolve():
+	var evolve_code = (deserializer.get_evolve(self.metadata.card_id))
+	if self.metadata.type == "Follower":
+		for child in evolve_deck.get_children():
+			if child.metadata.card_id == evolve_code and not child.metadata.used:
+				child.reparent(field)
+				self.queue_free()
+				return

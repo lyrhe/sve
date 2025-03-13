@@ -55,3 +55,10 @@ func get_base(card_id):
 		var num = int(parts[1]) - 1
 		var new_num = "%03d" % num
 		return parts[0] + '-' + str(new_num)
+
+func get_evolve(card_id):
+	var parts = card_id.split("-")
+	if parts.size() == 2:
+		var num = int(parts[1]) + 1
+		var new_num = "%03d" % num
+		return parts[0] + '-' + str(new_num)

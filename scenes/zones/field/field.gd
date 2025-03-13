@@ -19,6 +19,9 @@ func _on_cards_child_entered_tree(node: Node) -> void:
 			var clone = node.duplicate()
 			node.previous_parent.add_child(clone)
 			node.queue_free()
+	elif node.metadata.type == "Follower":
+		node.evolve_deck = evolve_deck
+		node.field = self.cards_container
 
 func add_card(card: CardUi):
 	# Instancie une CardUi

@@ -2,6 +2,7 @@ class_name ExArea extends Zone
 
 func _on_cards_child_entered_tree(node: Node) -> void:
 	if node.metadata.evolved:
+		print("evolved card sent to ex area")
 		var evolved_clone = node.duplicate()
 		evolve_deck.add_child(evolved_clone)
 		node.metadata = deserializer.load_card(node.metadata.base)
@@ -23,6 +24,7 @@ func add_card(card: CardUi):
 	# L'ajoute au container de la zone
 	cards_container.add_child(new_child)
 	# Préserve les changements de stats et les compteurs spéciaux
-	new_child.atk.text = card.atk.text
-	new_child.def.text = card.def.text
+	if not card.metadata.evolved:
+		new_child.atk.text = card.atk.text
+		new_child.def.text = card.def.text
 	new_child.counters.text = card.counters.text
