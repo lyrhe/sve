@@ -15,6 +15,6 @@ func _on_zone_toggle(zone: Zone):
 		board_zone.toggle_cards_list(zone == board_zone)
 
 func _on_spawn_menu(card_ui: CardUi):
-	$CardMenu.popup(card_ui)
+	$CardMenu.popup()
 	
 	

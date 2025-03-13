@@ -97,13 +97,11 @@ position = Vector2(98.168, 137.296)
 shape = SubResource("RectangleShape2D_mhcq0")
 
 [node name="CardCollision" type="Area2D" parent="."]
-visible = false
 z_index = 10
 collision_layer = 3
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CardCollision"]
-visible = false
 position = Vector2(95, 140.5)
 shape = SubResource("RectangleShape2D_x8uyx")
 debug_color = Color(0.955517, 0, 0.5428, 0.42)

@@ -8,6 +8,7 @@ size = Vector2(922, 213)
 [node name="Field" type="Control" node_paths=PackedStringArray("cards_container")]
 layout_mode = 3
 anchors_preset = 0
+mouse_filter = 1
 script = ExtResource("1_5yll1")
 cards_container = NodePath("Cards")
 
