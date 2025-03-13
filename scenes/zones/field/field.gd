@@ -1,5 +1,7 @@
 class_name Field extends Zone
 
+@export var board: Board
+
 func _on_cards_child_entered_tree(node: Node) -> void:
 	if node.metadata.type == "Spell" :
 		var clone = node.duplicate()
@@ -24,6 +26,7 @@ func add_card(card: CardUi):
 	# Connecte les signaux
 	new_child.reparent_requested.connect(_on_card_reparent_requested)
 	new_child.is_changing_zone.connect(on_card_changing_zone)
+	new_child.on_spawn_menu.connect(board._on_spawn_menu)
 	# Transfère previous_parent et les metadata
 	new_child.previous_parent = card.get_parent()
 	new_child.metadata = card.metadata

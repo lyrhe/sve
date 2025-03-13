@@ -5,6 +5,7 @@ const CARDS_GRAPHICS_PATH = "res://assets/cards"
 signal reparent_requested(which_card_ui: CardUi)
 signal update_texture()
 signal is_changing_zone(card_ui: CardUi)
+signal on_spawn_menu(card_ui: CardUi)
 
 @export var metadata: Card
 @onready var texture_rect: TextureRect = $TextureRect
@@ -62,3 +63,9 @@ func _on_zone_entered(area2d: Area2D) -> void:
 func _on_zone_exited(area2d: Area2D) -> void:
 	targets.erase(area2d.get_parent())
 #endregion
+
+func _on_card_collision_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	print("zeub")
+	if event is InputEventMouseButton and Input.is_action_just_pressed("wheel_click"):
+		print("zob")
+		on_spawn_menu.emit(self)

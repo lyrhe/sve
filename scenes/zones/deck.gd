@@ -23,10 +23,6 @@ func on_card_changing_zone(card_ui: CardUi):
 	if index >= 0 and index < deck.cards.size():
 		deck.remove_card(index)
 
-# Charge le deck sélectionné
-func _on_file_dialog_file_selected(path: String) -> void:
-	deck.load_cards(deserializer.load_cards_list(path, "res://assets/cards_database/total.json"))
-
 # Supprime les cartes du deck pour ajouter les nouvelles
 func _on_deck_changed(cards: Array[Card]):
 	for child in cards_container.get_children():
@@ -96,3 +92,6 @@ func _on_canvas_layer_visibility_changed() -> void:
 
 func _on_cards_child_order_changed() -> void:
 	pass
+
+func _on_file_dialog_file_selected(path: String) -> void:
+	deck.load_cards(deserializer.load_cards_list(path, "res://assets/cards_database/total.json"))

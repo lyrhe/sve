@@ -1,4 +1,4 @@
-extends Node2D
+class_name Board extends Node2D
 
 # Récupère la liste des piles du jeu.
 @export var zones: Array[Zone] = []
@@ -13,3 +13,8 @@ func _ready():
 func _on_zone_toggle(zone: Zone):
 	for board_zone in zones:
 		board_zone.toggle_cards_list(zone == board_zone)
+
+func _on_spawn_menu(card_ui: CardUi):
+	$CardMenu.popup(card_ui)
+	
+	

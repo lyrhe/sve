@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://bey238eb67ixe"]
+[gd_scene load_steps=44 format=3 uid="uid://bey238eb67ixe"]
 
 [ext_resource type="Texture2D" uid="uid://medvdwl4npyg" path="res://assets/board/background.png" id="1_3jafc"]
 [ext_resource type="Script" path="res://scenes/board/board.gd" id="1_4v4v6"]
@@ -41,7 +41,6 @@
 [ext_resource type="Texture2D" uid="uid://ssvdalfoee8m" path="res://assets/mana/pressed/3_pressed.png" id="35_wu3cu"]
 [ext_resource type="Texture2D" uid="uid://cph6ge6ipyjdb" path="res://assets/mana/pressed/2_pressed.png" id="37_wceko"]
 [ext_resource type="Texture2D" uid="uid://c6a7fa42xtltl" path="res://assets/mana/pressed/1_pressed.png" id="39_gmdt7"]
-[ext_resource type="PackedScene" uid="uid://dg3i31xqlvfnb" path="res://cardmenu.tscn" id="43_l0abi"]
 [ext_resource type="Texture2D" uid="uid://dmpaq0cn8ajup" path="res://assets/mana/minus.png" id="43_wjb5o"]
 
 [sub_resource type="GDScript" id="GDScript_280n0"]
@@ -117,12 +116,11 @@ offset_right = 996.0
 offset_bottom = 703.0
 script = ExtResource("11_03pux")
 
-[node name="Field" parent="." node_paths=PackedStringArray("board") instance=ExtResource("3_jxf1w")]
+[node name="Field" parent="." instance=ExtResource("3_jxf1w")]
 offset_left = 998.0
 offset_top = 351.0
 offset_right = 998.0
 offset_bottom = 351.0
-board = NodePath("..")
 
 [node name="Graveyard" parent="." instance=ExtResource("3_glxjj")]
 offset_left = 1588.0
@@ -303,8 +301,6 @@ texture_disabled = ExtResource("24_bofaf")
 [node name="Minus" type="TextureButton" parent="Mana"]
 layout_mode = 2
 texture_normal = ExtResource("43_wjb5o")
-
-[node name="CardMenu" parent="." instance=ExtResource("43_l0abi")]
 
 [connection signal="visibility_changed" from="Deck" to="Deck" method="_on_visibility_changed"]
 [connection signal="child_entered_tree" from="Graveyard" to="Graveyard" method="_on_child_entered_tree"]

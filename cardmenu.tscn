@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dg3i31xqlvfnb"]
+
+[ext_resource type="Script" path="res://card_menu.gd" id="1_2nf5v"]
+
+[node name="CardMenu" type="Node2D"]
+script = ExtResource("1_2nf5v")
+
+[node name="PopupMenu" type="PopupMenu" parent="."]
+auto_translate_mode = 1
+item_count = 1
+item_0/text = "Evolve"
