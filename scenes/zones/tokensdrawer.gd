@@ -10,7 +10,7 @@ var tokens_deck: Deck = Deck.new()
 # Deserialize la liste de tokens, instancie un Deck, ajoute les Cards,
 # désactive la zone de colision, ajoute une CardUI à chaque Card
 func _ready() -> void:
-	tokens_deck.load_cards(deserializer.load_cards_list("res://assets/tokens_list.txt", "res://assets/cards_database/tokens.json"))
+	tokens_deck.load_cards(deserializer.load_cards_list("res://assets/tokens_list.txt", "res://assets/cards_database/tokens.json")[0])
 	drop_zone.disabled = true
 	spawn_cards(tokens_deck.cards)
 

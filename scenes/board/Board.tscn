@@ -111,12 +111,13 @@ offset_right = 365.0
 offset_bottom = 451.0
 script = ExtResource("6_sadg2")
 
-[node name="ExArea" parent="." instance=ExtResource("3_jxf1w")]
+[node name="ExArea" parent="." node_paths=PackedStringArray("evolve") instance=ExtResource("3_jxf1w")]
 offset_left = 996.0
 offset_top = 703.0
 offset_right = 996.0
 offset_bottom = 703.0
 script = ExtResource("11_03pux")
+evolve = NodePath("../Evolve")
 
 [node name="Field" parent="." node_paths=PackedStringArray("board") instance=ExtResource("3_jxf1w")]
 offset_left = 998.0

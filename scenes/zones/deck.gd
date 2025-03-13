@@ -38,7 +38,8 @@ func _spawn_card_ui(card: Card, parent: Node) -> void:
 	var card_ui = load("res://scenes/card/CardUi.tscn").instantiate()
 	card_ui.metadata = card
 	card_ui.reparent_requested.connect(_on_card_reparent_requested)
-	card_ui.is_changing_zone.connect(on_card_changing_zone)
+	if not card.evolved:
+		card_ui.is_changing_zone.connect(on_card_changing_zone)
 	parent.add_child(card_ui)
 
 # Update Deck quand une carte est retirée manuellement
@@ -86,4 +87,7 @@ func _on_cards_child_order_changed() -> void:
 	pass
 
 func _on_file_dialog_file_selected(path: String) -> void:
-	deck.load_cards(deserializer.load_cards_list(path, "res://assets/cards_database/total.json"))
+	var decklist = deserializer.load_cards_list(path, "res://assets/cards_database/total.json")
+	deck.load_cards(decklist[0])
+	for card in decklist[1]:
+		_spawn_card_ui(card, evolve_deck)
