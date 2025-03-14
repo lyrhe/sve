@@ -5,5 +5,5 @@ Todo:
 - [ ] Online
 - [ ] Lien vers la FAQ ?
 - [ ] Afficher le nom du container
-
+- [ ] Trier tokens
 
