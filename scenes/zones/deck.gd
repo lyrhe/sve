@@ -1,7 +1,9 @@
 class_name PlayerDeck extends Zone
 
 var deck: Deck
+var card_to_move: Card = null
 @export var player_hand: Zone
+@export var graveyard: Zone
 
 func _ready() -> void:
 	deck = Deck.new()
@@ -9,14 +11,16 @@ func _ready() -> void:
 
 # Gère les déplacements illégaux
 func _on_cards_child_entered_tree(node: Node) -> void:
-	#if node.metadata.evolved == true:
-		#var evolved_clone = node.duplicate()
-		#evolve_deck.add_child(evolved_clone)
-		#node.metadata = deserializer.load_card(node.metadata.base)
 	if node.metadata.token == true:
 		print("Deleting token")
 		node.queue_free()
 		return
+	if node.previous_parent:
+		var index = node.get_index()
+		deck.top_card(node.metadata)
+		print("deck contents:")
+		for card in deck.cards:
+			print(card.card_id)
 		
 func _update_deck_ui() -> void:
 	var evo = evolve_deck.get_children().size()
@@ -27,9 +31,6 @@ func _update_deck_ui() -> void:
 			_spawn_card_ui(card, cards_container)
 		elif card.evolved and evo == 0:
 			_spawn_card_ui(card, evolve_deck)
-	print(deck.cards)
-	for child in evolve_deck.get_children():
-		print(child)
 		
 func _on_card_drawn(card: Card) -> void:
 	_spawn_card_ui(card, player_hand.cards_container)
@@ -55,15 +56,22 @@ func _on_drop_zone_input_event(_viewport: Node, event: InputEvent, _shape_idx: i
 		else:
 			toggle_visibility.emit(self)
 	if event is InputEventMouseButton and Input.is_action_just_pressed("wheel_click") and $"../Popups/SpinBox".value > 0 :
-		if cards_container.get_parent().get_parent().visible == true:
-			cards_container.get_parent().get_parent().visible = not cards_container.get_parent().get_parent().visible
+		var max_visible = $"../Popups/SpinBox".value
+		if max_visible <= 0:
 			return
-		for card_index in range(0, cards_container.get_child_count()):
-			var child = cards_container.get_child(card_index)
-			child.visible = (card_index < $"../Popups/SpinBox".value)
-			self.toggle_cards_list(true)
+		var deck_ui_parent = cards_container.get_parent().get_parent()
+		if deck_ui_parent.visible:
+			deck_ui_parent.visible = false
+			return
+		deck_ui_parent.visible = true
+		_update_visible_cards(max_visible)
 	if event is InputEventMouseButton and Input.is_action_just_pressed("mouse_click"):
 		deck.draw()
+		
+func _update_visible_cards(max_visible: int) -> void:
+	for card_index in range(cards_container.get_child_count()):
+		var child = cards_container.get_child(card_index)
+		child.visible = (card_index < max_visible)
 
 func _on_mulligan_pressed() -> void:
 	for card in player_hand.cards_container.get_children():
@@ -91,3 +99,22 @@ func _on_file_dialog_file_selected(path: String) -> void:
 	deck.load_cards(decklist[0])
 	for card in decklist[1]:
 		_spawn_card_ui(card, evolve_deck)
+
+func add_card(card_ui: CardUi) -> void:
+	card_to_move = card_ui.metadata
+	$"../Popups/SendTo".popup()
+
+func mill() -> void:
+	graveyard.add_card(cards_container.get_child(0))
+	deck.cards.pop_front()
+	deck.update_view.emit()
+	pass
+
+func _on_send_to_canceled() -> void:
+	deck.bottom_card(card_to_move)
+
+func _on_send_to_confirmed() -> void:
+	deck.top_card(card_to_move)
+
+func _on_mill_pressed() -> void:
+	mill()

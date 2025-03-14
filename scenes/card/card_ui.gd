@@ -2,6 +2,8 @@ class_name CardUi extends Control
 
 const CARDS_GRAPHICS_PATH = "res://assets/cards"
 
+# test github 
+
 signal reparent_requested(which_card_ui: CardUi)
 signal update_texture()
 signal is_changing_zone(card_ui: CardUi)
@@ -87,9 +89,12 @@ func _on_card_collision_input_event(viewport: Node, event: InputEvent, shape_idx
 		
 func evolve():
 	var evolve_code = (deserializer.get_evolve(self.metadata.card_id))
+	print(self.get_index())
+	var index = self.get_index()
 	if self.metadata.type == "Follower":
 		for child in evolve_deck.get_children():
 			if child.metadata.card_id == evolve_code and not child.metadata.used:
 				child.reparent(field)
+				field.move_child(child, index)
 				self.queue_free()
 				return

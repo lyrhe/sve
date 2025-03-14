@@ -20,16 +20,17 @@ func draw():
 
 func add_card(card: Card, pos):
 	self.cards.insert(pos, card)
-	update_view.emit()
 	
 func bottom_card(card):
 	self.cards.append(card)
-	update_view.emit
+	update_view.emit()
+	
+func top_card(card):
+	self.cards.insert(0, card)
+	update_view.emit()
 
 func load_cards(new_cards_list: Array[Card]) -> void:
 	self.cards = new_cards_list
-	for card in cards:
-		print(card.card_id)
 	update_view.emit()
 
 func remove_card(index: int):

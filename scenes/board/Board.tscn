@@ -96,13 +96,14 @@ offset_right = 363.0
 offset_bottom = 690.0
 script = ExtResource("6_uk5ff")
 
-[node name="Deck" parent="." node_paths=PackedStringArray("player_hand") instance=ExtResource("3_glxjj")]
+[node name="Deck" parent="." node_paths=PackedStringArray("player_hand", "graveyard") instance=ExtResource("3_glxjj")]
 offset_left = 1586.0
 offset_top = 445.0
 offset_right = 1586.0
 offset_bottom = 445.0
 script = ExtResource("9_xc5jk")
 player_hand = NodePath("../PlayerHand")
+graveyard = NodePath("../Graveyard")
 
 [node name="Evolve" parent="." instance=ExtResource("3_glxjj")]
 offset_left = 365.0
@@ -146,7 +147,7 @@ script = ExtResource("6_wkweh")
 [node name="Buttons" type="HBoxContainer" parent="."]
 offset_left = 313.0
 offset_top = 20.0
-offset_right = 377.0
+offset_right = 801.0
 offset_bottom = 72.0
 
 [node name="Tokens" type="Button" parent="Buttons"]
@@ -178,6 +179,15 @@ text = "Draw"
 layout_mode = 2
 text = "Shuffle"
 
+[node name="Mill" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Mill
+"
+
+[node name="StartTurn" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Start Turn"
+
 [node name="Popups" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -200,10 +210,10 @@ offset_right = 1123.06
 offset_bottom = 354.0
 
 [node name="EvoPoints" type="HBoxContainer" parent="."]
-offset_left = 674.0
-offset_top = 18.0
-offset_right = 1093.0
-offset_bottom = 147.0
+offset_left = 813.0
+offset_top = 17.0
+offset_right = 1232.0
+offset_bottom = 146.0
 scale = Vector2(0.5, 0.5)
 
 [node name="EvoPoint1" type="TextureButton" parent="EvoPoints"]
@@ -321,4 +331,9 @@ texture_normal = ExtResource("43_wjb5o")
 [connection signal="file_selected" from="Buttons/LoadDeck/FileDialog" to="Deck" method="_on_file_dialog_file_selected"]
 [connection signal="pressed" from="Buttons/Draw" to="Deck" method="_on_draw_pressed"]
 [connection signal="pressed" from="Buttons/Shuffle" to="Deck" method="_on_shuffle_pressed"]
+[connection signal="pressed" from="Buttons/Mill" to="Deck" method="_on_mill_pressed"]
+[connection signal="pressed" from="Buttons/StartTurn" to="Mana" method="_on_start_turn_pressed"]
+[connection signal="canceled" from="Popups/SendTo" to="Deck" method="_on_send_to_canceled"]
 [connection signal="confirmed" from="Popups/SendTo" to="Deck" method="_on_send_to_confirmed"]
+[connection signal="pressed" from="Mana/Plus" to="Mana" method="_on_plus_pressed"]
+[connection signal="pressed" from="Mana/Minus" to="Mana" method="_on_minus_pressed"]
