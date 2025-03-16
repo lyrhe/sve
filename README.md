@@ -7,7 +7,7 @@ Board:
 
 Deckbuilder:
 - [ ] Optimiser le chargement de 1000+ cartes mdr
-- [ ] Filtre BP
+- [x] ~~Filtre BP~~
 - [ ] Filtre cost
 - [ ] Filtre cartes déjà présentes dans le deck
 - [ ] Sort cost/alphabetical/sets
