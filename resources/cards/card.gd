@@ -18,3 +18,4 @@ class_name Card extends Resource
 @export var rarity: String = ""
 @export var universe: String = ""
 @export var card_trait: String = ""
+@export var card_name: String = ""

@@ -131,7 +131,7 @@ custom_minimum_size = Vector2(350, 0)
 layout_mode = 2
 columns = 2
 
-[node name="Filters" type="HBoxContainer" parent="." node_paths=PackedStringArray("grid_container", "type_filter", "class_filter", "universe_filter", "rarity_filter", "evolved_filter", "name_filter", "trait_filter")]
+[node name="Filters" type="HBoxContainer" parent="." node_paths=PackedStringArray("grid_container", "type_filter", "class_filter", "universe_filter", "rarity_filter", "evolved_filter", "name_filter", "trait_filter", "cost_filter")]
 offset_left = 236.0
 offset_top = 73.0
 offset_right = 335.0
@@ -145,6 +145,7 @@ rarity_filter = NodePath("Rarity")
 evolved_filter = NodePath("Evolved")
 name_filter = NodePath("Name")
 trait_filter = NodePath("Trait")
+cost_filter = NodePath("Cost")
 
 [node name="Type" type="OptionButton" parent="Filters"]
 layout_mode = 2
@@ -215,7 +216,7 @@ allow_reselect = true
 item_count = 3
 popup/item_0/text = "All"
 popup/item_1/text = "true"
-popup/item_1/id = 7
+popup/item_1/id = 1
 popup/item_2/text = "false"
 popup/item_2/id = 2
 
@@ -227,6 +228,9 @@ layout_mode = 2
 
 [node name="Cost" type="SpinBox" parent="Filters"]
 layout_mode = 2
+min_value = -1.0
+max_value = 20.0
+value = -1.0
 
 [connection signal="pressed" from="BackToGame" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="SaveDeck" to="SaveDeck" method="_on_pressed"]
