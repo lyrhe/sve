@@ -13,3 +13,8 @@ class_name Card extends Resource
 @export var type: String = ""
 
 @export var used: bool = false
+
+@export var card_class: String = ""
+@export var rarity: String = ""
+@export var universe: String = ""
+@export var card_trait: String = ""

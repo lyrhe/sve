@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cq52a6tjgqaf7"]
+[gd_scene load_steps=10 format=3 uid="uid://cq52a6tjgqaf7"]
 
 [ext_resource type="Texture2D" uid="uid://medvdwl4npyg" path="res://assets/board/background.png" id="1_av4i1"]
 [ext_resource type="Script" path="res://scenes/test/test.gd" id="1_ij842"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scenes/test/deckbuilding_area.gd" id="3_amdkf"]
 [ext_resource type="Texture2D" uid="uid://dfcn3oib1jy3w" path="res://assets/cards/BP01-002.png" id="4_ih7em"]
 [ext_resource type="Script" path="res://scenes/test/deck_building_area_2.gd" id="5_phx3d"]
+[ext_resource type="Script" path="res://scenes/test/filters.gd" id="7_i278y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xnjiw"]
 size = Vector2(1437.25, 852.5)
@@ -129,6 +130,103 @@ grow_vertical = 2
 custom_minimum_size = Vector2(350, 0)
 layout_mode = 2
 columns = 2
+
+[node name="Filters" type="HBoxContainer" parent="." node_paths=PackedStringArray("grid_container", "type_filter", "class_filter", "universe_filter", "rarity_filter", "evolved_filter", "name_filter", "trait_filter")]
+offset_left = 236.0
+offset_top = 73.0
+offset_right = 335.0
+offset_bottom = 113.0
+script = ExtResource("7_i278y")
+grid_container = NodePath("../DeckBuildingArea")
+type_filter = NodePath("Type")
+class_filter = NodePath("Class")
+universe_filter = NodePath("Universe")
+rarity_filter = NodePath("Rarity")
+evolved_filter = NodePath("Evolved")
+name_filter = NodePath("Name")
+trait_filter = NodePath("Trait")
+
+[node name="Type" type="OptionButton" parent="Filters"]
+layout_mode = 2
+selected = 0
+allow_reselect = true
+item_count = 4
+popup/item_0/text = "All"
+popup/item_1/text = "Follower"
+popup/item_1/id = 1
+popup/item_2/text = "Spell"
+popup/item_2/id = 2
+popup/item_3/text = "Amulet"
+popup/item_3/id = 3
+
+[node name="Class" type="OptionButton" parent="Filters"]
+layout_mode = 2
+selected = 0
+allow_reselect = true
+item_count = 8
+popup/item_0/text = "All"
+popup/item_1/text = "Forestcraft"
+popup/item_1/id = 1
+popup/item_2/text = "Swordcraft"
+popup/item_2/id = 2
+popup/item_3/text = "Runecraft"
+popup/item_3/id = 3
+popup/item_4/text = "Dragoncraft"
+popup/item_4/id = 4
+popup/item_5/text = "Abysscraft"
+popup/item_5/id = 5
+popup/item_6/text = "Havencraft"
+popup/item_6/id = 6
+popup/item_7/text = "Neutral"
+popup/item_7/id = 7
+
+[node name="Universe" type="OptionButton" parent="Filters"]
+layout_mode = 2
+selected = 0
+allow_reselect = true
+item_count = 4
+popup/item_0/text = "All"
+popup/item_1/text = "Shadowverse"
+popup/item_1/id = 1
+popup/item_2/text = "Umamusume"
+popup/item_2/id = 2
+popup/item_3/text = "Cinderella Girls"
+popup/item_3/id = 3
+
+[node name="Rarity" type="OptionButton" parent="Filters"]
+layout_mode = 2
+selected = 0
+allow_reselect = true
+item_count = 5
+popup/item_0/text = "All"
+popup/item_1/text = "Bronze"
+popup/item_1/id = 1
+popup/item_2/text = "Silver"
+popup/item_2/id = 2
+popup/item_3/text = "Gold"
+popup/item_3/id = 3
+popup/item_4/text = "Legendary"
+popup/item_4/id = 4
+
+[node name="Evolved" type="OptionButton" parent="Filters"]
+layout_mode = 2
+selected = 0
+allow_reselect = true
+item_count = 3
+popup/item_0/text = "All"
+popup/item_1/text = "true"
+popup/item_1/id = 7
+popup/item_2/text = "false"
+popup/item_2/id = 2
+
+[node name="Name" type="LineEdit" parent="Filters"]
+layout_mode = 2
+
+[node name="Trait" type="LineEdit" parent="Filters"]
+layout_mode = 2
+
+[node name="Cost" type="SpinBox" parent="Filters"]
+layout_mode = 2
 
 [connection signal="pressed" from="BackToGame" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="SaveDeck" to="SaveDeck" method="_on_pressed"]

@@ -24,6 +24,10 @@ func load_cards_list(deck_path, database_path) -> Array[Array]:
 				new_card.used = false
 			new_card.token = data.get("token", false)
 			new_card.type = data.get("type", "")
+			new_card.card_class = data.get("class", "")
+			new_card.rarity = data.get("rarity", "")
+			new_card.universe = data.get("universe", "")
+			new_card.card_trait = data.get("trait", "")
 			if new_card.evolved:
 				evolve_card_list.append(new_card)
 			else:
@@ -52,6 +56,10 @@ func load_card(card_id):
 		new_card.token = data.get("token", false)
 		new_card.card_id = data.get("code", "")
 		new_card.type = data.get("type", "")
+		new_card.card_class = data.get("class", "")
+		new_card.rarity = data.get("rarity", "")
+		new_card.universe = data.get("universe", "")
+		new_card.card_trait = data.get("trait", "")
 		return new_card
 		
 func get_base(card_id):
@@ -91,6 +99,10 @@ func load_deckbuilder(deck_path, database_path) -> Array[Card]:
 				new_card.used = false
 			new_card.token = data.get("token", false)
 			new_card.type = data.get("type", "")
+			new_card.card_class = data.get("class", "")
+			new_card.rarity = data.get("rarity", "")
+			new_card.universe = data.get("universe", "")
+			new_card.card_trait = data.get("trait", "")
 			card_list.append(new_card)
 
 	deck.close()

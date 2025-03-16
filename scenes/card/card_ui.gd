@@ -79,7 +79,6 @@ func add_counter():
 func _on_zone_entered(area2d: Area2D) -> void:
 	if not targets.has(area2d.get_parent()):
 		targets.append(area2d.get_parent() as Zone)
-		print(targets[-1])
 
 func _on_zone_exited(area2d: Area2D) -> void:
 	targets.erase(area2d.get_parent())
