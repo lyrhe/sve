@@ -9,6 +9,7 @@ Deckbuilder:
 - [ ] Optimiser le chargement de 1000+ cartes mdr
 - [x] ~~Filtre BP~~
 - [x] ~~Filtre cost~~
+- [ ] Trouver une solution pour les costs des cartes evo
 - [ ] Filtre cartes déjà présentes dans le deck
 - [ ] Sort cost/alphabetical/sets
 - [ ] Highlight cartes dans le deck
