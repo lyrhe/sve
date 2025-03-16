@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mhyasgde6nbg"
-path="res://.godot/imported/atk_def2.png-4de2069a99332d2d0ee815ca6d22418f.ctex"
+uid="uid://bd2bkjlkgo1oh"
+path="res://.godot/imported/evo_active.png-144d6be5ade2d905eb7dc0a4d2bcfd03.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/atk_def2.png"
-dest_files=["res://.godot/imported/atk_def2.png-4de2069a99332d2d0ee815ca6d22418f.ctex"]
+source_file="res://assets/evo/evo_active.png"
+dest_files=["res://.godot/imported/evo_active.png-144d6be5ade2d905eb7dc0a4d2bcfd03.ctex"]
 
 [params]
 

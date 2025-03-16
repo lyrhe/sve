@@ -1,12 +1,12 @@
-[gd_scene load_steps=45 format=3 uid="uid://bey238eb67ixe"]
+[gd_scene load_steps=44 format=3 uid="uid://bey238eb67ixe"]
 
 [ext_resource type="Texture2D" uid="uid://medvdwl4npyg" path="res://assets/board/background.png" id="1_3jafc"]
 [ext_resource type="Script" path="res://scenes/board/board.gd" id="1_4v4v6"]
-[ext_resource type="Texture2D" uid="uid://cveacjspsppj5" path="res://assets/board/board.jpg" id="1_mcum7"]
+[ext_resource type="Texture2D" uid="uid://d2736s846l1lq" path="res://assets/board/board_lowres.jpg" id="1_mcum7"]
 [ext_resource type="Texture2D" uid="uid://dfcn3oib1jy3w" path="res://assets/cards/BP01-002.png" id="2_g2yfd"]
 [ext_resource type="PackedScene" uid="uid://buyj2e04dnx7v" path="res://scenes/zones/zone.tscn" id="3_glxjj"]
 [ext_resource type="PackedScene" uid="uid://bnnuxmd5j2x66" path="res://scenes/zones/field/field.tscn" id="3_jxf1w"]
-[ext_resource type="Script" path="res://scenes/board/leader_defense.gd" id="4_iread"]
+[ext_resource type="Script" path="res://scenes/ui/leader_defense.gd" id="4_iread"]
 [ext_resource type="Script" path="res://scenes/zones/graveyard/graveyard.gd" id="5_6jc0e"]
 [ext_resource type="Script" path="res://scenes/zones/evolve/evolve.gd" id="6_sadg2"]
 [ext_resource type="Script" path="res://scenes/zones/banish/banish.gd" id="6_uk5ff"]
@@ -16,10 +16,10 @@
 [ext_resource type="PackedScene" uid="uid://cyjugb5mdjgte" path="res://scenes/hand/player_hand.tscn" id="12_n4sap"]
 [ext_resource type="Script" path="res://scenes/hand/player_hand.gd" id="13_nf4ej"]
 [ext_resource type="Script" path="res://scripts/load_deck.gd" id="13_pqh3y"]
-[ext_resource type="Texture2D" uid="uid://bd2bkjlkgo1oh" path="res://assets/zen_QxXO3obEHq.png" id="15_axi0y"]
-[ext_resource type="Texture2D" uid="uid://bl7j7frymc4k5" path="res://assets/zen_P4XymX0QeC.png" id="16_2so13"]
+[ext_resource type="Texture2D" uid="uid://bd2bkjlkgo1oh" path="res://assets/evo/evo_active.png" id="15_axi0y"]
+[ext_resource type="Texture2D" uid="uid://bl7j7frymc4k5" path="res://assets/evo/evo_inactive.png" id="16_2so13"]
 [ext_resource type="Texture2D" uid="uid://ceufll257mylo" path="res://assets/mana/unpressed/10_unpressed.png" id="20_lyjn4"]
-[ext_resource type="Script" path="res://scenes/board/mana.gd" id="20_yxb0k"]
+[ext_resource type="Script" path="res://scenes/ui/mana.gd" id="20_yxb0k"]
 [ext_resource type="Texture2D" uid="uid://c2u7wdlxikpx7" path="res://assets/mana/plus.png" id="21_2ffu8"]
 [ext_resource type="Texture2D" uid="uid://dnilaoc6mysa" path="res://assets/mana/pressed/10_pressed.png" id="21_2pmk7"]
 [ext_resource type="Texture2D" uid="uid://yjn6tjthd0hh" path="res://assets/mana/unpressed/9_unpressed.png" id="21_757pq"]
@@ -41,15 +41,8 @@
 [ext_resource type="Texture2D" uid="uid://ssvdalfoee8m" path="res://assets/mana/pressed/3_pressed.png" id="35_wu3cu"]
 [ext_resource type="Texture2D" uid="uid://cph6ge6ipyjdb" path="res://assets/mana/pressed/2_pressed.png" id="37_wceko"]
 [ext_resource type="Texture2D" uid="uid://c6a7fa42xtltl" path="res://assets/mana/pressed/1_pressed.png" id="39_gmdt7"]
-[ext_resource type="PackedScene" uid="uid://dg3i31xqlvfnb" path="res://cardmenu.tscn" id="43_l0abi"]
+[ext_resource type="PackedScene" uid="uid://dg3i31xqlvfnb" path="res://scenes/ui/cardmenu.tscn" id="43_l0abi"]
 [ext_resource type="Texture2D" uid="uid://dmpaq0cn8ajup" path="res://assets/mana/minus.png" id="43_wjb5o"]
-
-[sub_resource type="GDScript" id="GDScript_280n0"]
-script/source = "extends CanvasLayer
-
-func _ready() -> void:
-	pass
-"
 
 [node name="Board" type="Node2D" node_paths=PackedStringArray("zones")]
 script = ExtResource("1_4v4v6")
@@ -57,7 +50,6 @@ zones = [NodePath("Graveyard"), NodePath("Banish"), NodePath("Evolve"), NodePath
 
 [node name="BiggerFrame" type="CanvasLayer" parent="."]
 visible = false
-script = SubResource("GDScript_280n0")
 
 [node name="BiggerFrame" type="TextureRect" parent="BiggerFrame"]
 light_mask = 0
@@ -89,14 +81,15 @@ position = Vector2(998, 488)
 scale = Vector2(2.35573, 2.35573)
 texture = ExtResource("1_mcum7")
 
-[node name="Banish" parent="." instance=ExtResource("3_glxjj")]
+[node name="Banish" parent="." node_paths=PackedStringArray("bigger_frame") instance=ExtResource("3_glxjj")]
 offset_left = 363.0
 offset_top = 690.0
 offset_right = 363.0
 offset_bottom = 690.0
 script = ExtResource("6_uk5ff")
+bigger_frame = NodePath("../BiggerFrame")
 
-[node name="Deck" parent="." node_paths=PackedStringArray("player_hand", "graveyard") instance=ExtResource("3_glxjj")]
+[node name="Deck" parent="." node_paths=PackedStringArray("player_hand", "graveyard", "bigger_frame") instance=ExtResource("3_glxjj")]
 offset_left = 1586.0
 offset_top = 445.0
 offset_right = 1586.0
@@ -104,45 +97,52 @@ offset_bottom = 445.0
 script = ExtResource("9_xc5jk")
 player_hand = NodePath("../PlayerHand")
 graveyard = NodePath("../Graveyard")
+bigger_frame = NodePath("../BiggerFrame")
 
-[node name="Evolve" parent="." instance=ExtResource("3_glxjj")]
+[node name="Evolve" parent="." node_paths=PackedStringArray("bigger_frame") instance=ExtResource("3_glxjj")]
 offset_left = 365.0
 offset_top = 451.0
 offset_right = 365.0
 offset_bottom = 451.0
 script = ExtResource("6_sadg2")
+bigger_frame = NodePath("../BiggerFrame")
 
-[node name="ExArea" parent="." node_paths=PackedStringArray("evolve") instance=ExtResource("3_jxf1w")]
+[node name="ExArea" parent="." node_paths=PackedStringArray("evolve", "bigger_frame") instance=ExtResource("3_jxf1w")]
 offset_left = 996.0
 offset_top = 703.0
 offset_right = 996.0
 offset_bottom = 703.0
 script = ExtResource("11_03pux")
 evolve = NodePath("../Evolve")
+bigger_frame = NodePath("../BiggerFrame")
 
-[node name="Field" parent="." node_paths=PackedStringArray("board") instance=ExtResource("3_jxf1w")]
+[node name="Field" parent="." node_paths=PackedStringArray("board", "bigger_frame") instance=ExtResource("3_jxf1w")]
 offset_left = 998.0
 offset_top = 351.0
 offset_right = 998.0
 offset_bottom = 351.0
 board = NodePath("..")
+bigger_frame = NodePath("../BiggerFrame")
 
-[node name="Graveyard" parent="." instance=ExtResource("3_glxjj")]
+[node name="Graveyard" parent="." node_paths=PackedStringArray("bigger_frame") instance=ExtResource("3_glxjj")]
 offset_left = 1588.0
 offset_top = 690.0
 offset_right = 1588.0
 offset_bottom = 690.0
 script = ExtResource("5_6jc0e")
+bigger_frame = NodePath("../BiggerFrame")
 
-[node name="PlayerHand" parent="." instance=ExtResource("12_n4sap")]
+[node name="PlayerHand" parent="." node_paths=PackedStringArray("bigger_frame") instance=ExtResource("12_n4sap")]
 script = ExtResource("13_nf4ej")
+bigger_frame = NodePath("../BiggerFrame")
 
-[node name="TokensDrawer" parent="." instance=ExtResource("3_glxjj")]
+[node name="TokensDrawer" parent="." node_paths=PackedStringArray("bigger_frame") instance=ExtResource("3_glxjj")]
 offset_left = 2358.0
 offset_top = 252.0
 offset_right = 2358.0
 offset_bottom = 252.0
 script = ExtResource("6_wkweh")
+bigger_frame = NodePath("../BiggerFrame")
 
 [node name="Buttons" type="HBoxContainer" parent="."]
 offset_left = 313.0
@@ -188,6 +188,10 @@ text = "Mill
 layout_mode = 2
 text = "Start Turn"
 
+[node name="GoToDeckbuilder" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Deckbuilder"
+
 [node name="Popups" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -210,9 +214,9 @@ offset_right = 1123.06
 offset_bottom = 354.0
 
 [node name="EvoPoints" type="HBoxContainer" parent="."]
-offset_left = 813.0
+offset_left = 919.0
 offset_top = 17.0
-offset_right = 1232.0
+offset_right = 1338.0
 offset_bottom = 146.0
 scale = Vector2(0.5, 0.5)
 
@@ -333,6 +337,7 @@ texture_normal = ExtResource("43_wjb5o")
 [connection signal="pressed" from="Buttons/Shuffle" to="Deck" method="_on_shuffle_pressed"]
 [connection signal="pressed" from="Buttons/Mill" to="Deck" method="_on_mill_pressed"]
 [connection signal="pressed" from="Buttons/StartTurn" to="Mana" method="_on_start_turn_pressed"]
+[connection signal="pressed" from="Buttons/GoToDeckbuilder" to="." method="_on_go_to_deckbuilder_pressed"]
 [connection signal="canceled" from="Popups/SendTo" to="Deck" method="_on_send_to_canceled"]
 [connection signal="confirmed" from="Popups/SendTo" to="Deck" method="_on_send_to_confirmed"]
 [connection signal="pressed" from="Mana/Plus" to="Mana" method="_on_plus_pressed"]

@@ -39,6 +39,7 @@ func _spawn_card_ui(card: Card, parent: Node) -> void:
 	var card_ui = load("res://scenes/card/CardUi.tscn").instantiate()
 	card_ui.metadata = card
 	card_ui.reparent_requested.connect(_on_card_reparent_requested)
+	card_ui.bigger_frame = bigger_frame
 	if not card.evolved:
 		card_ui.is_changing_zone.connect(on_card_changing_zone)
 	parent.add_child(card_ui)

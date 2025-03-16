@@ -29,10 +29,12 @@ func _on_cards_child_exiting_tree(node: Node) -> void:
 	var token_replacement = node.duplicate()
 	cards_container.add_child.call_deferred(token_replacement)
 	cards_container.move_child.call_deferred(token_replacement, index)
+	token_replacement.bigger_frame = bigger_frame
 
 # Ajoute une CardUI à chaque Card du deck
 func spawn_cards(cards: Array[Card]):
 	for card in cards:
 		var new_child = CARD_UI_SCENE.instantiate();
 		new_child.metadata = card
+		new_child.bigger_frame = bigger_frame
 		cards_container.add_child.call_deferred(new_child)

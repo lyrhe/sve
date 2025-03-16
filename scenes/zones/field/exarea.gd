@@ -22,6 +22,7 @@ func add_card(card: CardUi):
 	# Transfère previous_parent et les metadata
 	new_child.previous_parent = card.get_parent()
 	new_child.metadata = card.metadata
+	new_child.bigger_frame = bigger_frame
 	# L'ajoute au container de la zone
 	cards_container.add_child(new_child)
 	# Préserve les changements de stats et les compteurs spéciaux

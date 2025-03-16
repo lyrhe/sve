@@ -10,6 +10,7 @@ const CARD_UI_SCENE = preload("res://scenes/card/CardUi.tscn")
 @export var cards_container: Container
 @onready var evolve_deck: Control = $"../Evolve/CanvasLayer/ScrollContainer/Cards"
 @export var texture: TextureRect
+@export var bigger_frame: CanvasLayer
 
 # Initialise un deserializer
 var deserializer = DeckDeserializer.new()
@@ -23,6 +24,7 @@ func add_card(card: CardUi):
 	# Transfère previous_parent et les metadata
 	new_child.previous_parent = card.get_parent()
 	new_child.metadata = card.metadata
+	new_child.bigger_frame = bigger_frame
 	# L'ajoute au container de la zone
 	cards_container.add_child(new_child)
 

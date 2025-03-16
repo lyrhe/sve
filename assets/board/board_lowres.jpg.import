@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbxcs63e6fu72"
-path="res://.godot/imported/board_upscayl_5x_ultramix_balanced.png-df9a5025b922b2eba885fb75822ffaa8.ctex"
+uid="uid://d2736s846l1lq"
+path="res://.godot/imported/board_lowres.jpg-1fc8baf46f1deb541a8a4a1b5ca98be4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/board/board_upscayl_5x_ultramix_balanced.png"
-dest_files=["res://.godot/imported/board_upscayl_5x_ultramix_balanced.png-df9a5025b922b2eba885fb75822ffaa8.ctex"]
+source_file="res://assets/board/board_lowres.jpg"
+dest_files=["res://.godot/imported/board_lowres.jpg-1fc8baf46f1deb541a8a4a1b5ca98be4.ctex"]
 
 [params]
 

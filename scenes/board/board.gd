@@ -16,3 +16,6 @@ func _on_zone_toggle(zone: Zone):
 
 func _on_spawn_menu(card_ui: CardUi):
 	$CardMenu.popup(card_ui)
+
+func _on_go_to_deckbuilder_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/test/test.tscn")

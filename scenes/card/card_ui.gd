@@ -13,10 +13,11 @@ signal on_spawn_menu(card_ui: CardUi)
 @onready var texture_rect: TextureRect = $TextureRect
 @onready var _zone_detector: Area2D = $ZoneDetector
 @onready var state_machine: CardStateMachine = $CardStateMachine
-@onready var previous_parent: Container = self.get_parent()
+@onready var previous_parent: Container = self.get_parent() if self.get_parent() is Container else null
 @onready var atk: Label = $atk_def/atk
 @onready var def: Label = $atk_def/def
 @onready var counters: Label = $counters
+@onready var bigger_frame: CanvasLayer
 
 # ajouts evolve
 @onready var deserializer = DeckDeserializer.new()
@@ -62,12 +63,12 @@ func _on_gui_input(event: InputEvent) -> void:
 
 #region Mouse events
 func _on_mouse_entered():
-	get_tree().root.get_child(0).get_child(0).visible = true
-	get_tree().root.get_child(0).get_child(0).get_child(0).texture = texture_rect.texture
+	bigger_frame.visible = true
+	bigger_frame.get_child(0).texture = texture_rect.texture
 	state_machine.on_mouse_entered()
 
 func _on_mouse_exited():
-	get_tree().root.get_child(0).get_child(0).visible = false
+	bigger_frame.visible = false
 	state_machine.on_mouse_exited()
 #endregion
 
@@ -78,6 +79,7 @@ func add_counter():
 func _on_zone_entered(area2d: Area2D) -> void:
 	if not targets.has(area2d.get_parent()):
 		targets.append(area2d.get_parent() as Zone)
+		print(targets[-1])
 
 func _on_zone_exited(area2d: Area2D) -> void:
 	targets.erase(area2d.get_parent())
