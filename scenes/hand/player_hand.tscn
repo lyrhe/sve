@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/zones/zone.gd" id="1_f8jmp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7bjo1"]
-size = Vector2(1922, 215)
+size = Vector2(1922, 136)
 
 [node name="PlayerHand" type="Control" node_paths=PackedStringArray("cards_container")]
 layout_mode = 3
@@ -29,7 +29,7 @@ alignment = 1
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(961, 981.5)
+position = Vector2(961, 1021)
 shape = SubResource("RectangleShape2D_7bjo1")
 
 [connection signal="child_entered_tree" from="PlayerHandLayer/PlayerHand" to="." method="_on_player_hand_child_entered_tree"]

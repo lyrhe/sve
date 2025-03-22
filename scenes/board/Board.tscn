@@ -46,7 +46,7 @@
 
 [node name="Board" type="Node2D" node_paths=PackedStringArray("zones")]
 script = ExtResource("1_4v4v6")
-zones = [NodePath("Graveyard"), NodePath("Banish"), NodePath("Evolve"), NodePath("Deck"), NodePath("TokensDrawer")]
+zones = [NodePath("Banish"), NodePath("Deck"), NodePath("Evolve"), NodePath("Graveyard")]
 
 [node name="BiggerFrame" type="CanvasLayer" parent="."]
 visible = false
@@ -214,9 +214,9 @@ offset_right = 1123.06
 offset_bottom = 354.0
 
 [node name="EvoPoints" type="HBoxContainer" parent="."]
-offset_left = 919.0
+offset_left = 1056.0
 offset_top = 17.0
-offset_right = 1338.0
+offset_right = 1475.0
 offset_bottom = 146.0
 scale = Vector2(0.5, 0.5)
 

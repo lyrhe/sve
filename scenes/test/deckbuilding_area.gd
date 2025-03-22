@@ -8,7 +8,7 @@ func _ready():
 	display_cards()
 
 func load_card_database():
-	cards.load_cards(deserializer.load_deckbuilder("res://assets/cards_list_demo.txt", "res://assets/cards_database/total.json"))
+	cards.load_cards(deserializer.load_deckbuilder("res://assets/cards_list.txt", "res://assets/cards_database/total.json"))
 	
 func spawn_cardui(card: Card):
 	var card_ui = load("res://scenes/card/CardUi.tscn").instantiate()

@@ -64,6 +64,8 @@ offset_left = 7.0
 offset_top = 135.0
 offset_right = 47.0
 offset_bottom = 158.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
 script = ExtResource("5_cwo1p")
 
 [node name="def" type="Label" parent="atk_def"]
@@ -72,6 +74,8 @@ offset_left = 102.0
 offset_top = 135.0
 offset_right = 142.0
 offset_bottom = 158.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
 script = ExtResource("5_cwo1p")
 
 [node name="counters" type="Label" parent="."]

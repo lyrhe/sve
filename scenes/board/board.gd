@@ -19,3 +19,6 @@ func _on_spawn_menu(card_ui: CardUi):
 
 func _on_go_to_deckbuilder_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/test/test.tscn")
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/p2p.tscn")

@@ -29,6 +29,7 @@ func load_cards_list(deck_path, database_path) -> Array[Array]:
 			new_card.universe = data.get("universe", "")
 			new_card.card_trait = data.get("trait", "")
 			new_card.card_name = data.get("name", "")
+			new_card.card_set = data.get("card_set", "")
 			if new_card.evolved:
 				evolve_card_list.append(new_card)
 			else:
@@ -62,6 +63,7 @@ func load_card(card_id):
 		new_card.universe = data.get("universe", "")
 		new_card.card_trait = data.get("trait", "")
 		new_card.card_name = data.get("name", "")
+		new_card.card_set = data.get("card_set", "")
 		return new_card
 		
 func get_base(card_id):
@@ -106,6 +108,7 @@ func load_deckbuilder(deck_path, database_path) -> Array[Card]:
 			new_card.universe = data.get("universe", "")
 			new_card.card_trait = data.get("trait", "")
 			new_card.card_name = data.get("name", "")
+			new_card.card_set = data.get("card_set", "")
 			card_list.append(new_card)
 
 	deck.close()
