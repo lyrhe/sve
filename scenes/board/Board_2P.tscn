@@ -1,24 +1,24 @@
 [gd_scene load_steps=44 format=3 uid="uid://ddi4jal65x7lc"]
 
-[ext_resource type="Script" path="res://scenes/board/board.gd" id="1_bicho"]
+[ext_resource type="Script" uid="uid://dkbvthglejgnk" path="res://scenes/board/board.gd" id="1_bicho"]
 [ext_resource type="Texture2D" uid="uid://cbxcs63e6fu72" path="res://assets/board/board_upscaled.png" id="2_1uspc"]
 [ext_resource type="Texture2D" uid="uid://dfcn3oib1jy3w" path="res://assets/cards/BP01-002.png" id="3_nbtfh"]
-[ext_resource type="Script" path="res://scenes/ui/leader_defense.gd" id="4_1u8gl"]
+[ext_resource type="Script" uid="uid://bqnghn3jusquo" path="res://scenes/ui/leader_defense.gd" id="4_1u8gl"]
 [ext_resource type="Texture2D" uid="uid://medvdwl4npyg" path="res://assets/board/background.png" id="5_vay82"]
 [ext_resource type="PackedScene" uid="uid://buyj2e04dnx7v" path="res://scenes/zones/zone.tscn" id="6_g143w"]
-[ext_resource type="Script" path="res://scenes/zones/banish/banish.gd" id="7_srshv"]
-[ext_resource type="Script" path="res://scenes/zones/deck.gd" id="8_lnulj"]
-[ext_resource type="Script" path="res://scenes/zones/evolve/evolve.gd" id="9_lwf7o"]
+[ext_resource type="Script" uid="uid://ebfi6mp0aluu" path="res://scenes/zones/banish/banish.gd" id="7_srshv"]
+[ext_resource type="Script" uid="uid://daup0v63yelyl" path="res://scenes/zones/deck.gd" id="8_lnulj"]
+[ext_resource type="Script" uid="uid://bg8uj8lk24245" path="res://scenes/zones/evolve/evolve.gd" id="9_lwf7o"]
 [ext_resource type="PackedScene" uid="uid://bnnuxmd5j2x66" path="res://scenes/zones/field/field.tscn" id="10_d2tdg"]
-[ext_resource type="Script" path="res://scenes/zones/field/exarea.gd" id="11_3h40p"]
-[ext_resource type="Script" path="res://scenes/zones/graveyard/graveyard.gd" id="12_fqqkv"]
+[ext_resource type="Script" uid="uid://cetswi71df7iu" path="res://scenes/zones/field/exarea.gd" id="11_3h40p"]
+[ext_resource type="Script" uid="uid://bax4fm0ntiesq" path="res://scenes/zones/graveyard/graveyard.gd" id="12_fqqkv"]
 [ext_resource type="PackedScene" uid="uid://cyjugb5mdjgte" path="res://scenes/hand/player_hand.tscn" id="13_q4ng2"]
-[ext_resource type="Script" path="res://scenes/hand/player_hand.gd" id="14_k2few"]
-[ext_resource type="Script" path="res://scenes/zones/tokensdrawer.gd" id="15_4l2lb"]
-[ext_resource type="Script" path="res://scripts/load_deck.gd" id="16_mb72w"]
+[ext_resource type="Script" uid="uid://bkr5fg2fjrjto" path="res://scenes/hand/player_hand.gd" id="14_k2few"]
+[ext_resource type="Script" uid="uid://g3pxsdolkhtg" path="res://scenes/zones/tokensdrawer.gd" id="15_4l2lb"]
+[ext_resource type="Script" uid="uid://646a5cnntny8" path="res://scripts/load_deck.gd" id="16_mb72w"]
 [ext_resource type="Texture2D" uid="uid://bd2bkjlkgo1oh" path="res://assets/evo/evo_active.png" id="17_si51m"]
 [ext_resource type="Texture2D" uid="uid://bl7j7frymc4k5" path="res://assets/evo/evo_inactive.png" id="18_vim23"]
-[ext_resource type="Script" path="res://scenes/ui/mana.gd" id="19_3rmht"]
+[ext_resource type="Script" uid="uid://hhg3yfpvoswm" path="res://scenes/ui/mana.gd" id="19_3rmht"]
 [ext_resource type="Texture2D" uid="uid://c2u7wdlxikpx7" path="res://assets/mana/plus.png" id="20_i6m8a"]
 [ext_resource type="Texture2D" uid="uid://ceufll257mylo" path="res://assets/mana/unpressed/10_unpressed.png" id="21_y1erc"]
 [ext_resource type="Texture2D" uid="uid://dnilaoc6mysa" path="res://assets/mana/pressed/10_pressed.png" id="22_7bmw2"]
@@ -368,36 +368,32 @@ offset_bottom = 567.0
 text = "Defense : 20"
 script = ExtResource("4_1u8gl")
 
-[node name="Banish" parent="BoardP2" node_paths=PackedStringArray("bigger_frame") instance=ExtResource("6_g143w")]
+[node name="Banish" parent="BoardP2" instance=ExtResource("6_g143w")]
 offset_left = 1294.0
 offset_top = 103.0
 offset_right = 1294.0
 offset_bottom = 103.0
 scale = Vector2(0.6, 0.6)
 script = ExtResource("7_srshv")
-bigger_frame = NodePath("")
 
-[node name="Deck" parent="BoardP2" node_paths=PackedStringArray("player_hand", "graveyard", "bigger_frame") instance=ExtResource("6_g143w")]
+[node name="Deck" parent="BoardP2" node_paths=PackedStringArray("graveyard") instance=ExtResource("6_g143w")]
 offset_left = 567.0
 offset_top = 245.0
 offset_right = 567.0
 offset_bottom = 245.0
 scale = Vector2(0.6, 0.6)
 script = ExtResource("8_lnulj")
-player_hand = NodePath("")
 graveyard = NodePath("../Graveyard")
-bigger_frame = NodePath("")
 
-[node name="Evolve" parent="BoardP2" node_paths=PackedStringArray("bigger_frame") instance=ExtResource("6_g143w")]
+[node name="Evolve" parent="BoardP2" instance=ExtResource("6_g143w")]
 offset_left = 1295.0
 offset_top = 246.0
 offset_right = 1295.0
 offset_bottom = 246.0
 scale = Vector2(0.6, 0.6)
 script = ExtResource("9_lwf7o")
-bigger_frame = NodePath("")
 
-[node name="ExArea" parent="BoardP2" node_paths=PackedStringArray("evolve", "bigger_frame") instance=ExtResource("10_d2tdg")]
+[node name="ExArea" parent="BoardP2" node_paths=PackedStringArray("evolve") instance=ExtResource("10_d2tdg")]
 offset_left = 948.0
 offset_top = 115.0
 offset_right = 948.0
@@ -405,25 +401,22 @@ offset_bottom = 115.0
 scale = Vector2(0.65, 0.65)
 script = ExtResource("11_3h40p")
 evolve = NodePath("../Evolve")
-bigger_frame = NodePath("")
 
-[node name="Field" parent="BoardP2" node_paths=PackedStringArray("board", "bigger_frame") instance=ExtResource("10_d2tdg")]
+[node name="Field" parent="BoardP2" node_paths=PackedStringArray("board") instance=ExtResource("10_d2tdg")]
 offset_left = 949.0
 offset_top = 327.0
 offset_right = 949.0
 offset_bottom = 327.0
 scale = Vector2(0.65, 0.65)
 board = NodePath("..")
-bigger_frame = NodePath("")
 
-[node name="Graveyard" parent="BoardP2" node_paths=PackedStringArray("bigger_frame") instance=ExtResource("6_g143w")]
+[node name="Graveyard" parent="BoardP2" instance=ExtResource("6_g143w")]
 offset_left = 566.0
 offset_top = 102.0
 offset_right = 566.0
 offset_bottom = 102.0
 scale = Vector2(0.6, 0.6)
 script = ExtResource("12_fqqkv")
-bigger_frame = NodePath("")
 
 [node name="EvoPoints" type="VBoxContainer" parent="BoardP2"]
 offset_left = 1527.0
