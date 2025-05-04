@@ -5,22 +5,31 @@ Board:
 - [ ] Garder les changements de stats lors d'une evo
 - [ ] Les stats ont l'air de ponctuellement repasser à 0 sans update le display
 
+- [ ] Trouver comment trier les tokens
+
+Menu principal:
+- [ ] Créer la scène
+- [ ] Lobby
+- [ ] Deckbuilder
+- [ ] Update database
+- [ ] Quit
+
 Deckbuilder:
 - [ ] Optimiser le chargement de 1000+ cartes mdr
 - [x] ~~Filtre BP~~
 - [x] ~~Filtre cost~~
+- [ ] Scroll en cliquant
 - [ ] Trouver une solution pour les costs des cartes evo
 - [ ] Filtre cartes déjà présentes dans le deck
 - [ ] Sort cost/alphabetical/sets
 - [ ] Highlight cartes dans le deck
 - [ ] Double click pour ajouter une carte au deck
+- [ ] Revoir UI
+  - [ ] Bordures pour zone cartes et zone deck
+- [ ] Lien vers la FAQ
 
-Todo:
-- [ ] Deckbuilder
+Update database:
+- [ ] Reprendre script python
+
+Divers:
 - [ ] Thème
-- [ ] UI
-- [ ] Clean up
-- [ ] Online
-- [ ] Lien vers la FAQ ?
-- [ ] Afficher le nom du container
-- [ ] Trier tokens
