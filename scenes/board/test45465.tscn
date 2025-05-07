@@ -1,12 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://cq52a6tjgqaf7"]
+[gd_scene load_steps=10 format=3 uid="uid://bwrnuoy5jik3x"]
 
 [ext_resource type="Texture2D" uid="uid://medvdwl4npyg" path="res://assets/board/background.png" id="1_av4i1"]
-[ext_resource type="Script" uid="uid://dx2ao65f6b7yc" path="res://scenes/test/test.gd" id="1_ij842"]
-[ext_resource type="Script" uid="uid://couufathvjuix" path="res://scenes/test/save_deck.gd" id="2_qo3rl"]
-[ext_resource type="Script" uid="uid://cn60arohq613w" path="res://scenes/test/deckbuilding_area.gd" id="3_amdkf"]
+[ext_resource type="Script" path="res://scenes/deckbuilder/test.gd" id="1_ij842"]
+[ext_resource type="Script" path="res://scenes/deckbuilder/save_deck.gd" id="2_qo3rl"]
+[ext_resource type="Script" path="res://scenes/deckbuilder/deckbuilding_area.gd" id="3_amdkf"]
 [ext_resource type="Texture2D" uid="uid://dfcn3oib1jy3w" path="res://assets/cards/BP01-002.png" id="4_ih7em"]
-[ext_resource type="Script" uid="uid://d2q1e4vfu8ihy" path="res://scenes/test/deck_building_area_2.gd" id="5_phx3d"]
-[ext_resource type="Script" uid="uid://i17xit24e81a" path="res://scenes/test/filters.gd" id="7_i278y"]
+[ext_resource type="Script" path="res://scenes/deckbuilder/deck_building_area_2.gd" id="5_phx3d"]
+[ext_resource type="Script" path="res://scenes/deckbuilder/filters.gd" id="7_i278y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xnjiw"]
 size = Vector2(1437.25, 852.5)
@@ -155,6 +155,7 @@ selected = 0
 allow_reselect = true
 item_count = 4
 popup/item_0/text = "All"
+popup/item_0/id = 0
 popup/item_1/text = "Follower"
 popup/item_1/id = 1
 popup/item_2/text = "Spell"
@@ -168,6 +169,7 @@ selected = 0
 allow_reselect = true
 item_count = 8
 popup/item_0/text = "All"
+popup/item_0/id = 0
 popup/item_1/text = "Forestcraft"
 popup/item_1/id = 1
 popup/item_2/text = "Swordcraft"
@@ -189,6 +191,7 @@ selected = 0
 allow_reselect = true
 item_count = 4
 popup/item_0/text = "All"
+popup/item_0/id = 0
 popup/item_1/text = "Shadowverse"
 popup/item_1/id = 1
 popup/item_2/text = "Umamusume"
@@ -202,6 +205,7 @@ selected = 0
 allow_reselect = true
 item_count = 5
 popup/item_0/text = "All"
+popup/item_0/id = 0
 popup/item_1/text = "Bronze"
 popup/item_1/id = 1
 popup/item_2/text = "Silver"
@@ -217,6 +221,7 @@ selected = 0
 allow_reselect = true
 item_count = 3
 popup/item_0/text = "All"
+popup/item_0/id = 0
 popup/item_1/text = "true"
 popup/item_1/id = 1
 popup/item_2/text = "false"
@@ -228,6 +233,7 @@ selected = 0
 allow_reselect = true
 item_count = 17
 popup/item_0/text = "All"
+popup/item_0/id = 0
 popup/item_1/text = "SD01"
 popup/item_1/id = 1
 popup/item_2/text = "SD02"
@@ -267,6 +273,7 @@ selected = 0
 allow_reselect = true
 item_count = 3
 popup/item_0/text = "Sets"
+popup/item_0/id = 0
 popup/item_1/text = "Cost"
 popup/item_1/id = 1
 popup/item_2/text = "Alphabetical"

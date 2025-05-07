@@ -11,6 +11,7 @@ extends HBoxContainer
 @export var trait_filter : LineEdit
 @export var cost_filter : SpinBox
 @export var sort_filter : OptionButton
+@export var effect_filter : LineEdit
 
 var selected_type: String = "All"
 var selected_class: String = "All"
@@ -20,6 +21,7 @@ var selected_evolved: String = "All"
 var selected_set: String = "All"
 var name_query: String = ""
 var trait_query: String = ""
+var effect_query: String = ""
 var selected_cost: float = 0
 var selected_sort: String = "Sets"
 
@@ -34,6 +36,7 @@ func _ready():
 	trait_filter.text_changed.connect(_on_text_filter_changed)
 	cost_filter.value_changed.connect(_on_filter_changed)
 	sort_filter.item_selected.connect(_on_sort_changed)
+	#effect_filter.text_changed.connect(_on_text_filter_changed)
 	_apply_filters()
 
 func _on_filter_changed(_index: int):
@@ -49,6 +52,7 @@ func _on_filter_changed(_index: int):
 func _on_text_filter_changed(new_text: String):
 	trait_query = trait_filter.text.to_lower().strip_edges()
 	name_query = name_filter.text.to_lower().strip_edges()
+	effect_query = effect_filter.text.to_lower().strip_edges()
 	_apply_filters()
 
 func _on_sort_changed(_index: int = 0):
@@ -61,13 +65,36 @@ func _apply_filters():
 		var matches_class = (selected_class == "All" or child.metadata.card_class == selected_class)
 		var matches_universe = (selected_universe == "All" or child.metadata.universe == selected_universe)
 		var matches_rarity = (selected_rarity == "All" or child.metadata.rarity == selected_rarity)
-		var matches_evolved = (selected_evolved == "All" or (selected_evolved == "true" and child.metadata.evolved) or (selected_evolved == "false" and not child.metadata.evolved))
+		var matches_evolved = (selected_evolved == "All" or (selected_evolved == "Evolved" and child.metadata.evolved) or (selected_evolved == "Base" and not child.metadata.evolved))
 		var matches_name = (name_query.is_empty() or child.metadata.card_name.to_lower().contains(name_query))
 		var matches_trait = (trait_query.is_empty() or child.metadata.card_trait.to_lower().contains(trait_query))
 		var matches_set = (selected_set == "All" or child.metadata.card_set == selected_set)
 		var matches_cost = (selected_cost == -1 or child.metadata.cost == selected_cost)
-		child.visible = matches_type and matches_class and matches_universe and matches_rarity and matches_trait and matches_name and matches_evolved and matches_set and matches_cost
+		var matches_effect = (effect_query.is_empty() or child.metadata.effect.to_lower().contains(effect_query))
+		child.visible = matches_type and matches_class and matches_universe and matches_rarity and matches_trait and matches_name and matches_evolved and matches_set and matches_cost and matches_effect
 
 func _apply_sorting():
-	var children =  grid_container.cards_container.get_children()
-	children.sort_custom(func(a, b): return a.metadata("cost", 0) < b.metadata("cost", 0))
+	var children = grid_container.cards_container.get_children()
+	var sort_mode = $Sort.get_selected_id() 
+	match sort_mode:
+		0:  # sets
+			pass
+		1:  # ascending -> name
+			children.sort_custom(func(a, b):
+				return a.metadata.cost < b.metadata.cost or (
+			a.metadata.cost == b.metadata.cost and a.metadata.card_name < b.metadata.card_name
+		)
+	)
+		2:  # descending -> name
+			children.sort_custom(func(a, b):
+				return a.metadata.cost > b.metadata.cost or (
+			a.metadata.cost == b.metadata.cost and a.metadata.card_name < b.metadata.card_name
+		)
+	)
+		3:  # a-z
+			children.sort_custom(func(a, b): return a.metadata.card_name < b.metadata.card_name)
+		4:  # z-a
+			children.sort_custom(func(a, b): return a.metadata.card_name > b.metadata.card_name)
+
+	for child in children:
+		grid_container.cards_container.move_child(child, grid_container.cards_container.get_child_count())

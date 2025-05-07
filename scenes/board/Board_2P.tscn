@@ -1,9 +1,10 @@
-[gd_scene load_steps=44 format=3 uid="uid://ddi4jal65x7lc"]
+[gd_scene load_steps=45 format=3 uid="uid://ddi4jal65x7lc"]
 
 [ext_resource type="Script" uid="uid://dkbvthglejgnk" path="res://scenes/board/board.gd" id="1_bicho"]
 [ext_resource type="Texture2D" uid="uid://cbxcs63e6fu72" path="res://assets/board/board_upscaled.png" id="2_1uspc"]
 [ext_resource type="Texture2D" uid="uid://dfcn3oib1jy3w" path="res://assets/cards/BP01-002.png" id="3_nbtfh"]
 [ext_resource type="Script" uid="uid://bqnghn3jusquo" path="res://scenes/ui/leader_defense.gd" id="4_1u8gl"]
+[ext_resource type="StyleBox" uid="uid://clqp5v48agjhn" path="res://new_style_box_flat.tres" id="5_eiw2i"]
 [ext_resource type="Texture2D" uid="uid://medvdwl4npyg" path="res://assets/board/background.png" id="5_vay82"]
 [ext_resource type="PackedScene" uid="uid://buyj2e04dnx7v" path="res://scenes/zones/zone.tscn" id="6_g143w"]
 [ext_resource type="Script" uid="uid://ebfi6mp0aluu" path="res://scenes/zones/banish/banish.gd" id="7_srshv"]
@@ -73,6 +74,20 @@ offset_right = 492.0
 offset_bottom = 677.0
 texture = ExtResource("3_nbtfh")
 expand_mode = 1
+
+[node name="ColorRect2" type="Panel" parent="Board1P/BiggerFrame"]
+offset_top = 1.0
+offset_right = 408.0
+offset_bottom = 1083.0
+theme_override_styles/panel = ExtResource("5_eiw2i")
+
+[node name="TextEdit" type="TextEdit" parent="Board1P/BiggerFrame"]
+offset_left = 10.0
+offset_top = 575.0
+offset_right = 387.0
+offset_bottom = 964.0
+text = "Test"
+placeholder_text = "vazevaze"
 
 [node name="LeaderDefense" type="Label" parent="Board1P"]
 z_index = 1

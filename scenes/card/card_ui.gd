@@ -1,8 +1,6 @@
 class_name CardUi extends Control
 
-const CARDS_GRAPHICS_PATH = "res://assets/cards"
-
-# test github 
+const CARDS_GRAPHICS_PATH = "user://cards"
 
 signal reparent_requested(which_card_ui: CardUi)
 signal update_texture()
@@ -28,14 +26,24 @@ var targets: Array[Zone] = []
 
 func _ready() -> void:
 	state_machine.init(self)
-	texture_rect.texture = load(CARDS_GRAPHICS_PATH + "/" + self.metadata.card_id + ".png")
+	var path = CARDS_GRAPHICS_PATH + "/" + self.metadata.card_id + "EN.png"
+	if not FileAccess.file_exists(path):
+		push_warning("Image not found: " + path)
+		return
+	var image = Image.new()
+	var err = image.load(path)
+	if err != OK:
+		push_error("Failed to load image. Error: " + str(err))
+		return
+	var texture = ImageTexture.create_from_image(image)
+	texture_rect.texture = texture
 	if not self.metadata.used or self.get_parent() is HBoxContainer:
 		texture_rect.set_material(null)
 	if not self.metadata.type == "Follower":
 		$atk_def.visible = false
-	self.atk.text = str(self.metadata.attack)
-	self.def.text = str(self.metadata.defense)
-	
+	atk.text = str(self.metadata.attack)
+	def.text = str(self.metadata.defense)
+
 func update_atk_def():
 	print(self.metadata.attack)
 	self.atk.text = str(self.metadata.attack)
@@ -65,6 +73,9 @@ func _on_gui_input(event: InputEvent) -> void:
 func _on_mouse_entered():
 	bigger_frame.visible = true
 	bigger_frame.get_child(0).texture = texture_rect.texture
+	var card_name = self.metadata.card_name
+	var card_effect = "Salut, ça va ? On récupère pas encore les effets des cartes."
+	bigger_frame.get_child(2).text = "%s\n------\n%s" % [card_name, card_effect]
 	state_machine.on_mouse_entered()
 
 func _on_mouse_exited():

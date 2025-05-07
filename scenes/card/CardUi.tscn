@@ -16,7 +16,7 @@
 shader = ExtResource("2_78j77")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mhcq0"]
-size = Vector2(52, 81)
+size = Vector2(55, 79)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x8uyx"]
 size = Vector2(180, 263)
@@ -30,7 +30,7 @@ anchor_right = 0.049
 anchor_bottom = 0.13
 offset_left = -0.0800018
 offset_top = 0.160004
-offset_right = 0.919998
+offset_right = 0.920006
 offset_bottom = 0.600006
 grow_horizontal = 2
 grow_vertical = 2
@@ -97,7 +97,7 @@ script = ExtResource("5_uoxpq")
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZoneDetector"]
-position = Vector2(98.168, 137.296)
+position = Vector2(95.5, 141.5)
 shape = SubResource("RectangleShape2D_mhcq0")
 
 [node name="CardCollision" type="Area2D" parent="."]

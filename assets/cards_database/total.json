@@ -12315,7 +12315,7 @@
 		"token": false
 	},
 	"BP06-001": {
-		"name": "Lymaga, mdr",
+		"name": "Lymaga, Forest Champion",
 		"cost": "6",
 		"attack": "4",
 		"defense": "4",
@@ -12839,7 +12839,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-037": {
+	"BP06-036": {
 		"name": "Mysteria, Magic Founder",
 		"cost": "3",
 		"attack": "2",
@@ -12854,7 +12854,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-038": {
+	"BP06-037": {
 		"name": "Mysteria, Magic Founder (Evolved)",
 		"cost": 0,
 		"attack": "3",
@@ -12869,7 +12869,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-039": {
+	"BP06-038": {
 		"name": "Curse Crafter",
 		"cost": "4",
 		"attack": "2",
@@ -12884,7 +12884,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-040": {
+	"BP06-039": {
 		"name": "Curse Crafter (Evolved)",
 		"cost": 0,
 		"attack": "3",
@@ -12899,7 +12899,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-041": {
+	"BP06-040": {
 		"name": "Hulking Giant",
 		"cost": "5",
 		"attack": "5",
@@ -12914,7 +12914,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-042": {
+	"BP06-041": {
 		"name": "Shikigami Summons",
 		"cost": "2",
 		"attack": "0",
@@ -12929,7 +12929,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-044": {
+	"BP06-042": {
 		"name": "Demoncaller",
 		"cost": "3",
 		"attack": "3",
@@ -12944,7 +12944,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-045": {
+	"BP06-043": {
 		"name": "Demoncaller (Evolved)",
 		"cost": 0,
 		"attack": "4",
@@ -12959,7 +12959,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-046": {
+	"BP06-044": {
 		"name": "Traditional Sorcerer",
 		"cost": "2",
 		"attack": "1",
@@ -12974,7 +12974,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-047": {
+	"BP06-045": {
 		"name": "Crimson Meteor Storm",
 		"cost": "7",
 		"attack": "0",
@@ -12989,7 +12989,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-048": {
+	"BP06-046": {
 		"name": "Talisman Disciple",
 		"cost": "1",
 		"attack": "1",
@@ -13004,7 +13004,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-049": {
+	"BP06-047": {
 		"name": "Charming Gentlemouse",
 		"cost": "2",
 		"attack": "2",
@@ -13019,7 +13019,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-050": {
+	"BP06-048": {
 		"name": "Charming Gentlemouse (Evolved)",
 		"cost": 0,
 		"attack": "3",
@@ -13034,7 +13034,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-051": {
+	"BP06-049": {
 		"name": "Passionate Potioneer",
 		"cost": "2",
 		"attack": "2",
@@ -13049,7 +13049,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-052": {
+	"BP06-050": {
 		"name": "Golem's Rampage",
 		"cost": "2",
 		"attack": "0",
@@ -13064,7 +13064,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-053": {
+	"BP06-051": {
 		"name": "Mirror of Truth",
 		"cost": "3",
 		"attack": "0",
@@ -13079,7 +13079,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-054": {
+	"BP06-052": {
 		"name": "Garyu, Supreme Dragonkin",
 		"cost": "5",
 		"attack": "3",
@@ -13094,7 +13094,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-055": {
+	"BP06-053": {
 		"name": "Garyu, Supreme Dragonkin (Evolved)",
 		"cost": 0,
 		"attack": "4",
@@ -13109,7 +13109,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-056": {
+	"BP06-054": {
 		"name": "Whitefrost Dragonewt Filene",
 		"cost": "1",
 		"attack": "1",
@@ -13124,7 +13124,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-058": {
+	"BP06-055": {
 		"name": "Phoenix Empress",
 		"cost": "5",
 		"attack": "5",
@@ -13139,7 +13139,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-059": {
+	"BP06-056": {
 		"name": "Wyrm God of the Skies",
 		"cost": "4",
 		"attack": "4",
@@ -13154,7 +13154,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-060": {
+	"BP06-057": {
 		"name": "Wyrm God of the Skies (Evolved)",
 		"cost": 0,
 		"attack": "5",
@@ -13169,7 +13169,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-061": {
+	"BP06-058": {
 		"name": "Whitefrost Whisper",
 		"cost": "2",
 		"attack": "0",
@@ -13184,7 +13184,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-063": {
+	"BP06-059": {
 		"name": "Ice Dancing Dragonewt",
 		"cost": "2",
 		"attack": "2",
@@ -13199,7 +13199,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-064": {
+	"BP06-060": {
 		"name": "Ice Dancing Dragonewt (Evolved)",
 		"cost": 0,
 		"attack": "3",
@@ -13214,7 +13214,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-065": {
+	"BP06-061": {
 		"name": "Jadelong Tactician",
 		"cost": "5",
 		"attack": "3",
@@ -13229,7 +13229,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-066": {
+	"BP06-062": {
 		"name": "Aquascale Stalwart",
 		"cost": "2",
 		"attack": "1",
@@ -13244,7 +13244,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-067": {
+	"BP06-063": {
 		"name": "Swordwhip Dragoon",
 		"cost": "2",
 		"attack": "1",
@@ -13259,7 +13259,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-068": {
+	"BP06-064": {
 		"name": "Dragonblader",
 		"cost": "4",
 		"attack": "5",
@@ -13274,7 +13274,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-069": {
+	"BP06-065": {
 		"name": "Dragonblader (Evolved)",
 		"cost": 0,
 		"attack": "6",
@@ -13289,7 +13289,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-070": {
+	"BP06-066": {
 		"name": "Trident Merman",
 		"cost": "5",
 		"attack": "4",
@@ -13304,7 +13304,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-071": {
+	"BP06-067": {
 		"name": "Dragon Chef",
 		"cost": "3",
 		"attack": "3",
@@ -13319,7 +13319,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-072": {
+	"BP06-068": {
 		"name": "Flamewinged Might",
 		"cost": "1",
 		"attack": "0",
@@ -13334,7 +13334,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-073": {
+	"BP06-069": {
 		"name": "Ginsetsu, Great Fox",
 		"cost": "6",
 		"attack": "1",
@@ -13349,7 +13349,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-074": {
+	"BP06-070": {
 		"name": "Ginsetsu, Great Fox (Evolved)",
 		"cost": 0,
 		"attack": "1",
@@ -13364,7 +13364,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-075": {
+	"BP06-071": {
 		"name": "Aragavy the Berserker",
 		"cost": "3",
 		"attack": "4",
@@ -13379,7 +13379,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-076": {
+	"BP06-072": {
 		"name": "Shuten-Doji",
 		"cost": "3",
 		"attack": "1",
@@ -13394,7 +13394,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-077": {
+	"BP06-073": {
 		"name": "Shuten-Doji (Evolved)",
 		"cost": 0,
 		"attack": "2",
@@ -13409,7 +13409,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-078": {
+	"BP06-074": {
 		"name": "Bear Pelt Warrior",
 		"cost": "4",
 		"attack": "5",
@@ -13424,7 +13424,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-079": {
+	"BP06-075": {
 		"name": "Yuzuki, Righteous Demon",
 		"cost": "6",
 		"attack": "5",
@@ -13439,7 +13439,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-080": {
+	"BP06-076": {
 		"name": "Kasha",
 		"cost": "2",
 		"attack": "3",
@@ -13454,7 +13454,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-081": {
+	"BP06-077": {
 		"name": "Cougar Pelt Warrior",
 		"cost": "3",
 		"attack": "3",
@@ -13469,7 +13469,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-082": {
+	"BP06-078": {
 		"name": "Cougar Pelt Warrior (Evolved)",
 		"cost": 0,
 		"attack": "4",
@@ -13484,7 +13484,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-083": {
+	"BP06-079": {
 		"name": "Unleash the Nightmare",
 		"cost": "4",
 		"attack": "0",
@@ -13499,7 +13499,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-084": {
+	"BP06-080": {
 		"name": "Zashiki-Warashi",
 		"cost": "2",
 		"attack": "2",
@@ -13514,7 +13514,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-085": {
+	"BP06-081": {
 		"name": "Zashiki-Warashi (Evolved)",
 		"cost": 0,
 		"attack": "3",
@@ -13529,7 +13529,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-086": {
+	"BP06-082": {
 		"name": "Antelope Pelt Warrior",
 		"cost": "2",
 		"attack": "3",
@@ -13544,7 +13544,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-087": {
+	"BP06-083": {
 		"name": "Rookie Succubus",
 		"cost": "2",
 		"attack": "1",
@@ -13559,7 +13559,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-088": {
+	"BP06-084": {
 		"name": "Demonic Procession",
 		"cost": "1",
 		"attack": "0",
@@ -13574,7 +13574,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-089": {
+	"BP06-085": {
 		"name": "Berserker's Pelt",
 		"cost": "2",
 		"attack": "0",
@@ -13589,7 +13589,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-090": {
+	"BP06-086": {
 		"name": "Wilbert, Grand Knight",
 		"cost": "5",
 		"attack": "4",
@@ -13604,7 +13604,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-091": {
+	"BP06-087": {
 		"name": "Karula, Arts Master",
 		"cost": "3",
 		"attack": "3",
@@ -13619,7 +13619,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-092": {
+	"BP06-088": {
 		"name": "Karula, Arts Master (Evolved)",
 		"cost": 0,
 		"attack": "4",
@@ -13634,7 +13634,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-093": {
+	"BP06-089": {
 		"name": "Saintly Leader",
 		"cost": "3",
 		"attack": "2",
@@ -13649,7 +13649,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-094": {
+	"BP06-090": {
 		"name": "Phantom Blade Wielder",
 		"cost": "2",
 		"attack": "2",
@@ -13664,7 +13664,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-095": {
+	"BP06-091": {
 		"name": "Phantom Blade Wielder (Evolved)",
 		"cost": 0,
 		"attack": "3",
@@ -13679,7 +13679,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-096": {
+	"BP06-092": {
 		"name": "Manifest Devotion",
 		"cost": "5",
 		"attack": "0",
@@ -13694,7 +13694,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-097": {
+	"BP06-093": {
 		"name": "Holy Lancer",
 		"cost": "5",
 		"attack": "3",
@@ -13709,7 +13709,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-098": {
+	"BP06-094": {
 		"name": "Holy Lancer (Evolved)",
 		"cost": 0,
 		"attack": "4",
@@ -13724,7 +13724,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-099": {
+	"BP06-095": {
 		"name": "Boost Kicker",
 		"cost": "2",
 		"attack": "2",
@@ -13739,7 +13739,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-100": {
+	"BP06-096": {
 		"name": "Feather Sanctuary",
 		"cost": "5",
 		"attack": "0",
@@ -13754,7 +13754,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-101": {
+	"BP06-097": {
 		"name": "Winged Staff Priestess",
 		"cost": "2",
 		"attack": "2",
@@ -13769,7 +13769,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-102": {
+	"BP06-098": {
 		"name": "Gravity Grappler",
 		"cost": "3",
 		"attack": "3",
@@ -13784,7 +13784,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-103": {
+	"BP06-099": {
 		"name": "Barrage Brawler",
 		"cost": "1",
 		"attack": "0",
@@ -13799,7 +13799,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-104": {
+	"BP06-100": {
 		"name": "Barrage Brawler (Evolved)",
 		"cost": 0,
 		"attack": "1",
@@ -13814,7 +13814,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-105": {
+	"BP06-101": {
 		"name": "Holy Counterattack",
 		"cost": "1",
 		"attack": "0",
@@ -13829,7 +13829,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-106": {
+	"BP06-102": {
 		"name": "Focus",
 		"cost": "0",
 		"attack": "0",
@@ -13844,7 +13844,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-107": {
+	"BP06-103": {
 		"name": "Mammoth God's Colosseum",
 		"cost": "7",
 		"attack": "7",
@@ -13859,7 +13859,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-108": {
+	"BP06-104": {
 		"name": "Badb Catha",
 		"cost": "3",
 		"attack": "2",
@@ -13874,7 +13874,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-109": {
+	"BP06-105": {
 		"name": "Badb Catha (Evolved)",
 		"cost": 0,
 		"attack": "4",
@@ -13889,7 +13889,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-110": {
+	"BP06-106": {
 		"name": "Mithra, Daybreak Deity",
 		"cost": "6",
 		"attack": "5",
@@ -13904,7 +13904,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-111": {
+	"BP06-107": {
 		"name": "Mithra, Daybreak Deity (Evolved)",
 		"cost": 0,
 		"attack": "6",
@@ -13919,7 +13919,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-112": {
+	"BP06-108": {
 		"name": "Fall from Grace",
 		"cost": "3",
 		"attack": "0",
@@ -13934,7 +13934,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-113": {
+	"BP06-109": {
 		"name": "Colosseum on High",
 		"cost": "6",
 		"attack": "0",
@@ -13949,7 +13949,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-114": {
+	"BP06-110": {
 		"name": "Chaht, Ringside Announcer",
 		"cost": "3",
 		"attack": "3",
@@ -13964,7 +13964,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-115": {
+	"BP06-111": {
 		"name": "Chaht, Ringside Announcer (Evolved)",
 		"cost": 0,
 		"attack": "4",
@@ -13979,7 +13979,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-116": {
+	"BP06-112": {
 		"name": "Clash of Heroes",
 		"cost": "1",
 		"attack": "0",
@@ -13994,7 +13994,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-117": {
+	"BP06-113": {
 		"name": "Biofabrication",
 		"cost": "1",
 		"attack": "0",
@@ -14009,7 +14009,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-118": {
+	"BP06-114": {
 		"name": "Sweet-Tooth Sleuth",
 		"cost": "3",
 		"attack": "3",
@@ -14024,7 +14024,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-119": {
+	"BP06-115": {
 		"name": "Bazooka Goblins",
 		"cost": "4",
 		"attack": "3",
@@ -14039,7 +14039,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-120": {
+	"BP06-116": {
 		"name": "Bazooka Goblins (Evolved)",
 		"cost": 0,
 		"attack": "5",
@@ -14054,7 +14054,7 @@
 		"card_set": "BP06",
 		"token": false
 	},
-	"BP06-121": {
+	"BP06-117": {
 		"name": "Sentry Gate",
 		"cost": 2,
 		"attack": "0",
