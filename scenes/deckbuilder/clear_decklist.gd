@@ -1,7 +1,9 @@
 extends Button
 
+@export var deck: GridContainer
+@export var decklist: Label
+
 func _on_pressed() -> void:
-	for child in $"../../DeckBuildingArea2/CanvasLayer/ScrollContainer/Cards".get_children():
-		print(child)
+	for child in deck.get_children():
 		child.queue_free()
-	$"../../DeckBuildingArea2/Decklist".text = ""
+	decklist.text = ""

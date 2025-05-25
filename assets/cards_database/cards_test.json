@@ -1,0 +1,6917 @@
+[
+  {
+	"id": "BP01-001EN",
+	"name": "Rose Queen",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Verdant"
+	],
+	"statistics": {
+	  "cost": 8,
+	  "attack": 7,
+	  "defense": 7
+	},
+	"effect": "[fanfare] Select any number of Pixie followers in your EX area and transform them into Thorn Burst tokens.\n[act][engage]: Recover X play points. X equals the number of Thorn Burst tokens in your EX area.",
+	"set": "BP01",
+	"rarity": "Legendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-02",
+	"related_cards": [
+	  "BP01-T01EN"
+	]
+  },
+  {
+	"id": "BP01-002EN",
+	"name": "Ancient Elf",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Elf"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 2,
+	  "defense": 2
+	},
+	"effect": "[evolve][cost01]: Evolve this follower.\nWard.\n[fanfare] Return another card on your field to its owner's hand: Give this follower [attack]+1/[defense]+1.",
+	"set": "BP01",
+	"rarity": "Legendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-03",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-003EN",
+	"name": "Ancient Elf",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Elf"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "Ward.\non evolve, return another card on your field to its owner's hand: Give this follower [attack]+1/[defense]+1.",
+	"set": "BP01",
+	"rarity": "Legendary",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-04",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-004EN",
+	"name": "Rhinoceroach",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Insect"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 1,
+	  "defense": 1
+	},
+	"effect": "[evolve][cost00]: Evolve this follower.\nRush.\n[fanfare] Give this follower [attack]+X. X equals the number of cards you've played this turn, excluding this card.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-05",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-005EN",
+	"name": "Rhinoceroach",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Insect"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 1,
+	  "defense": 1
+	},
+	"effect": "on evolve: Choose one of the following effects. (1) Give this follower Storm. (2) Select an enemy follower on the field and deal it X damage. X equals this follower's attack.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-06",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-006EN",
+	"name": "Robin Hood",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Hunter"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": 4,
+	  "defense": 5
+	},
+	"effect": "[fanfare] Select an enemy follower on the field and deal it 4 damage.\n[act][cost01], [engage]: Select an enemy follower on the field and deal it 4 damage.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-007EN",
+	"name": "Silver Bolt",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Elf"
+	],
+	"statistics": {
+	  "cost": 7,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[quick]\nSelect an enemy leader or enemy follower on the field. Draw a card and then deal X damage to the selected enemy. X equals the number of cards in your hand.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-008EN",
+	"name": "Homecoming",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Elf"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Select an enemy follower on the field. Its controller puts it on the top or bottom of its owner's deck. Combo (5): Each opponent puts each follower from their field on the top or bottom of its owner's deck instead. (The controllers determine the placement. Tokens put into a player's deck are removed from the game.)",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-009EN",
+	"name": "Elven Princess Mage",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Elf",
+	  "Princess"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "[evolve][cost01]: Evolve this follower.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-010EN",
+	"name": "Elven Princess Mage",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Elf",
+	  "Princess"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 4,
+	  "defense": 4
+	},
+	"effect": "on evolve: Put 2 Fairy Wisp tokens into your EX area.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-011EN",
+	"name": "Blessed Fairy Dancer",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Pixie"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 2,
+	  "defense": 3
+	},
+	"effect": "[fanfare] Give [attack]+1/[defense]+1 to each other Pixie follower on your field and in your EX area.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-012EN",
+	"name": "Elf Child May",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Elf"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": 1,
+	  "defense": 1
+	},
+	"effect": "[fanfare] Select an enemy follower on the field and deal it 1 damage.\nWhen this card is returned to hand from your field, select an enemy follower on the field and deal it 1 damage.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-013EN",
+	"name": "Fairy Beast",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Pixie",
+	  "Beast"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": 5,
+	  "defense": 5
+	},
+	"effect": "[act] Banish a Pixie follower in your EX area: Give your leader [defense]+3 and draw a card. This ability can be activated once per turn.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-014EN",
+	"name": "Noble Fairy",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Pixie",
+	  "Princess"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "Ward.\n[fanfare] Combo (3): Select an enemy follower on the field. Destroy it and summon a Fairy token on that follower's field.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-015EN",
+	"name": "Nature's Guidance",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Pixie"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Select a card on your field. Return it to its owner's hand and draw a card.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-016EN",
+	"name": "Harvest Festival",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Amulet"
+	],
+	"traits": [
+	  "Elf"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[act][cost01], [engage], put this card into its owner's cemetery: Give your leader [defense]+1.\nWhen this card leaves the field, draw a card.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-017EN",
+	"name": "Elf Metallurgist",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Elf"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 3,
+	  "defense": 2
+	},
+	"effect": "[fanfare] Select an enemy follower on the field and deal it 1 damage. Combo (3): Deal 3 damage instead.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-018EN",
+	"name": "Archer",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Hunter"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 1,
+	  "defense": 4
+	},
+	"effect": "[evolve][cost01]: Evolve this follower.\nWhenever another follower is put onto your field, select an enemy follower on the field and deal it 1 damage.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-019EN",
+	"name": "Archer",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Hunter"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 1,
+	  "defense": 4
+	},
+	"effect": "Whenever another follower is put onto your field, select up to 2 enemy followers on the field and deal them 1 damage.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-020EN",
+	"name": "Fairy Whisperer",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Elf"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 1,
+	  "defense": 1
+	},
+	"effect": "[fanfare] Summon a Fairy token. Put a Fairy token into your EX area.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-021EN",
+	"name": "Okami",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Beast"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 5,
+	  "defense": 5
+	},
+	"effect": "Whenever another follower is put onto your field, give this follower [attack]+1/[defense]+1.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-022EN",
+	"name": "Mana Elk",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Beast"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 5,
+	  "defense": 5
+	},
+	"effect": "Whenever one of your Pixie followers attacks, select an enemy leader or enemy follower on the field and deal it 1 damage.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-023EN",
+	"name": "Fairy Circle",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Pixie"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Put 3 Fairy tokens into your EX area.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-024EN",
+	"name": "Woodkin Curse",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Fae-Touched"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[quick]\nSelect an enemy follower on the field. It cannot deal damage this turn.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-025EN",
+	"name": "Woodland Refuge",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Amulet"
+	],
+	"traits": [
+	  "Fae-Touched"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[fanfare] Select a Pixie follower on your field and give it [attack]+1.\n[act][cost01], [engage]: Return this card to its owner's hand.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-026EN",
+	"name": "Sea Queen Otohime",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Commander",
+	  "Princess"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 3,
+	  "defense": 4
+	},
+	"effect": "[evolve][cost02]: Evolve this follower.\n[fanfare] Summon an Otohime's Bodyguard token.",
+	"set": "BP01",
+	"rarity": "Legendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-027EN",
+	"name": "Sea Queen Otohime",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Commander",
+	  "Princess"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 4,
+	  "defense": 5
+	},
+	"effect": "on evolve: Summon 3 Otohime's Bodyguard tokens. If your field becomes full from this effect, put any remaining tokens into your EX area.",
+	"set": "BP01",
+	"rarity": "Legendary",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-028EN",
+	"name": "Aurelia, Regal Saber",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Commander",
+	  "Princess"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": 4,
+	  "defense": 6
+	},
+	"effect": "Rush. Assail. Ward.\n[fanfare] Select an enemy leader. If there are at least 3 cards on their field, give this follower [attack]+2/[defense]+2 and Aura.",
+	"set": "BP01",
+	"rarity": "Legendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-029EN",
+	"name": "Shadowed Assassin",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Assassin"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 4,
+	  "defense": 4
+	},
+	"effect": "[evolve][cost02]: Evolve this follower.\n[fanfare] Select an enemy follower on the field and engage it.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-030EN",
+	"name": "Shadowed Assassin",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Assassin"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 5,
+	  "defense": 5
+	},
+	"effect": "on evolve: Select an engaged enemy follower and destroy it.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-031EN",
+	"name": "Frontguard General",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Commander"
+	],
+	"statistics": {
+	  "cost": 7,
+	  "attack": 6,
+	  "defense": 8
+	},
+	"effect": "Ward.\n[lastwords] Summon 2 Steelclad Knight tokens and give them Ward. You may engage any number of them.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-032EN",
+	"name": "Alwida's Command",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Thief"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Summon a Viking, Steelclad Knight, and Knight token.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-033EN",
+	"name": "Royal Banner",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Amulet"
+	],
+	"traits": [
+	  "Commander"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[fanfare] Give each [swordcraft] follower on your field [attack]+1/[defense]+1.\nWhenever a [swordcraft] follower is put onto your field, give it [attack]+1/[defense]+1.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-034EN",
+	"name": "Maid Leader",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Officer",
+	  "Maid"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": 1,
+	  "defense": 1
+	},
+	"effect": "[evolve][cost02]: Evolve this follower.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-035EN",
+	"name": "Maid Leader",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Officer",
+	  "Maid"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 2,
+	  "defense": 2
+	},
+	"effect": "on evolve: Search your deck for a follower with [evolve], reveal it, and add it to your hand.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-036EN",
+	"name": "Gemstaff Commander",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Commander"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 3,
+	  "defense": 2
+	},
+	"effect": "[fanfare] Search your deck for a [swordcraft] follower, reveal it, and add it to your hand.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-037EN",
+	"name": "Sage Commander",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Commander"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": 5,
+	  "defense": 5
+	},
+	"effect": "[fanfare] Give each other follower on your field [attack]+1/[defense]+1.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-038EN",
+	"name": "Swordsman",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Officer"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": 2,
+	  "defense": 1
+	},
+	"effect": "[fanfare] Select an enemy follower on the field and engage it.\n[act][engage]: Select an enemy follower on the field and engage it.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-039EN",
+	"name": "Pompous Princess",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Commander",
+	  "Princess"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "[fanfare] Look at the top 5 cards of your deck. You may put a follower that costs 1 play point from among them onto your field. Put the remaining cards on the bottom of your deck in any order.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-040EN",
+	"name": "Ninja Master",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Officer",
+	  "Ninja"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 4,
+	  "defense": 4
+	},
+	"effect": "[fanfare] Search your deck for a Ninja card, reveal it, and add it to your hand.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-041EN",
+	"name": "Arthurian Light",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Amulet"
+	],
+	"traits": [
+	  "Commander"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[act][cost01], [engage]: Summon a Knight token and give it Storm.\n[act][cost02], [engage]: Select an enemy follower on the field and engage it.\n[act][cost03], [engage]: Draw a card.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-042EN",
+	"name": "Ninja Trainee",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Officer",
+	  "Ninja"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": 2,
+	  "defense": 2
+	},
+	"effect": "",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-043EN",
+	"name": "Fervid Soldier",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Officer"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 2,
+	  "defense": 2
+	},
+	"effect": "[evolve][cost02]: Evolve this follower.\nWhenever another follower is put onto your field, give this follower [attack]+1.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-044EN",
+	"name": "Fervid Soldier",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Officer"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 4,
+	  "defense": 4
+	},
+	"effect": "Whenever another follower is put onto your field, give this follower [attack]+1.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-045EN",
+	"name": "Luminous Knight",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Commander"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 3,
+	  "defense": 1
+	},
+	"effect": "[fanfare] Select another follower on your field and give it [attack]+1.\n[lastwords] Select a follower on your field and give it [attack]+1.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-046EN",
+	"name": "Veteran Lancer",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Officer"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 2,
+	  "defense": 3
+	},
+	"effect": "Ward.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-047EN",
+	"name": "Navy Lieutenant",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Commander"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 2,
+	  "defense": 3
+	},
+	"effect": "[fanfare] Select another follower on your field and give it Assail.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-048EN",
+	"name": "Novice Trooper",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Officer"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "Storm.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-049EN",
+	"name": "Forge Weaponry",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Officer"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[quick]\nSelect a follower on your field. Give it [attack]+1/[defense]+1 and draw a card.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-050EN",
+	"name": "Onslaught",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Officer"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Select an enemy follower on the field. Deal it 5 damage and put a Knight token into your EX area.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-051EN",
+	"name": "Arch Summoner Erasmus",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Mage"
+	],
+	"statistics": {
+	  "cost": 7,
+	  "attack": 6,
+	  "defense": 8
+	},
+	"effect": "[fanfare] Earth Rite: Select an enemy follower on the field. Deal 6 damage to it and 2 damage to its leader.\n[act][engage], Earth Rite: Select an enemy follower on the field. Deal 6 damage to it and 2 damage to its leader.",
+	"set": "BP01",
+	"rarity": "Legendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-052EN",
+	"name": "Merlin",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Mage"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 3,
+	  "defense": 2
+	},
+	"effect": "[evolve][cost02]: Evolve this follower.\n[fanfare] Search your deck for a spell, reveal it, and add it to your hand.",
+	"set": "BP01",
+	"rarity": "Legendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-053EN",
+	"name": "Merlin",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Mage"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 4,
+	  "defense": 3
+	},
+	"effect": "on evolve: Select a spell that costs 3 play points or less in your cemetery and play it for 0 play points.",
+	"set": "BP01",
+	"rarity": "Legendary",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-054EN",
+	"name": "Ancient Alchemist",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Alchemist"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 2,
+	  "defense": 5
+	},
+	"effect": "[evolve][cost03]: Evolve this follower.\n[fanfare] Earth Rite: Put 2 Guardform Golem tokens into your EX area.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-055EN",
+	"name": "Ancient Alchemist",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Alchemist"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 3,
+	  "defense": 6
+	},
+	"effect": "While this card is on your field, your Golem followers cost 1 less to play.\nWhenever a Golem follower is put onto your field, select an enemy leader or enemy follower on the field and deal it 3 damage.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-056EN",
+	"name": "Arcane Enlightenment",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Mage"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[quick]\nPut the top card of your deck into your EX area. Repeat until your EX area is full.\nAt the start of your next end phase, banish each card in your EX area.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-057EN",
+	"name": "Dimension Shift",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Mage"
+	],
+	"statistics": {
+	  "cost": 12,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "When playing this card, banish 10 spells in your cemetery: This card costs 7 play points to play.\nTake another turn after this one.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-058EN",
+	"name": "Juno's Secret Laboratory",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Amulet"
+	],
+	"traits": [
+	  "Alchemist"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[fanfare] Summon a Guardform Golem or Strikeform Golem token.\n[act][engage]: Summon a Magic Sediment token.\n[act][engage], Earth Rite: Summon a Guardform Golem or Strikeform Golem token.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-059EN",
+	"name": "Spectral Wizard",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Mage"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 2,
+	  "defense": 2
+	},
+	"effect": "[evolve][cost02]: Evolve this follower.\n[fanfare] Look at the top card of your deck. If it's a spell, you may reveal it and add it to your hand.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-060EN",
+	"name": "Spectral Wizard",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Mage"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "on evolve, discard a spell: Select an enemy follower on the field and deal it 4 damage.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-061EN",
+	"name": "Flame Destroyer",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Arcanaform"
+	],
+	"statistics": {
+	  "cost": 9,
+	  "attack": 7,
+	  "defense": 7
+	},
+	"effect": "Spellchain (5): This card costs 3 less to play. SC (10): It costs 6 less instead. SC (15): It costs 9 less instead.\nRush.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-062EN",
+	"name": "Dragonbond Mage",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Mage"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 3,
+	  "defense": 4
+	},
+	"effect": "Whenever you play a spell, place 1 spell counter on this card.\n[act] Remove 3 spell counters from this card: Select an enemy follower on the field and deal it 5 damage.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-063EN",
+	"name": "Golem Protection",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Alchemist"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Summon 2 Guardform Golem tokens.\nEarth Rite: Give each Golem follower on your field [attack]+1/[defense]+1.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-064EN",
+	"name": "Alchemical Lore",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Mage"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Deal 4 damage to each enemy follower on the field.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-065EN",
+	"name": "Fate's Hand",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Mage"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[quick]\nDraw 2 cards. Spellchain (10): Recover 1 play point.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-066EN",
+	"name": "Price of Magic",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Amulet"
+	],
+	"traits": [
+	  "Earth Sigil"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Stack.\n[fanfare] Select an enemy follower with 4 defense or less on the field and banish it.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-067EN",
+	"name": "Runic Guardian",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Alchemist"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 3,
+	  "defense": 4
+	},
+	"effect": "Ward.\n[fanfare] Choose one of the following effects. (1) Earth Rite: Give this follower [attack]+1/[defense]+2. (2) Summon a Magic Sediment token.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-068EN",
+	"name": "Crafty Warlock",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Alchemist"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 2,
+	  "defense": 2
+	},
+	"effect": "[evolve][cost01]: Evolve this follower.\n[lastwords] Summon a Magic Sediment token.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-069EN",
+	"name": "Crafty Warlock",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Alchemist"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "[lastwords] Summon a Magic Sediment token. Add 1 to a Stack on your field.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-070EN",
+	"name": "Lightning Shooter",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Mage"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "[fanfare] Select an enemy follower on the field and deal it 2 damage. Spellchain (5): Deal 4 damage instead. SC (10): Deal 2 damage to that follower's leader.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-071EN",
+	"name": "Wind Blast",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Mage"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Select an enemy follower on the field and deal it 2 damage. Spellchain (10): Deal 4 damage instead.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-072EN",
+	"name": "Sorcery Cache",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Mage"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[quick]\nLook at the top 4 cards of your deck. You may reveal a spell from among them and add it to your hand. You may also put a spell into your cemetery. Put the remaining cards on the bottom of your deck in any order.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-073EN",
+	"name": "Fiery Embrace",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Mage"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[quick]\nSelect an enemy follower on the field and destroy it. Spellchain (10): Deal 3 damage to that follower's leader.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-074EN",
+	"name": "Alchemist's Workshop",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Amulet"
+	],
+	"traits": [
+	  "Earth Sigil"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Stack.\n[fanfare] Summon a Strikeform Golem token.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-075EN",
+	"name": "Teachings of Creation",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Amulet"
+	],
+	"traits": [
+	  "Earth Sigil"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Stack.\n[fanfare] Draw a card.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-076EN",
+	"name": "Dark Dragoon Forte",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Dragonheart"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 5,
+	  "defense": 1
+	},
+	"effect": "[evolve][cost02]: Evolve this follower.\nStorm.",
+	"set": "BP01",
+	"rarity": "Legendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-077EN",
+	"name": "Dark Dragoon Forte",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Dragonheart"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 7,
+	  "defense": 3
+	},
+	"effect": "Storm. Aura.",
+	"set": "BP01",
+	"rarity": "Legendary",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-078EN",
+	"name": "Zirnitra",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Dragonewt"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 3,
+	  "defense": 2
+	},
+	"effect": "[fanfare] Put a Dragon token into your EX area.\n[act][cost02], [engage]: Select a Dragon token in your EX area. Put it onto your field and give it Rush. If Overflow is active for you, recover 2 play points.",
+	"set": "BP01",
+	"rarity": "Legendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-079EN",
+	"name": "Aiela, Dragon Knight",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Dragonheart"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 3,
+	  "defense": 2
+	},
+	"effect": "Assail.\n[lastwords] Increase your maximum play points by 1.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-080EN",
+	"name": "Genesis Dragon",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Wyrmkin"
+	],
+	"statistics": {
+	  "cost": 9,
+	  "attack": 10,
+	  "defense": 12
+	},
+	"effect": "Storm.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-081EN",
+	"name": "Shapeshifting Mage",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Dragonewt"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 2,
+	  "defense": 2
+	},
+	"effect": "[evolve][cost01]: Evolve this follower.\n[fanfare] If Overflow is active for you, give this follower [attack]+3/[defense]+3.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-082EN",
+	"name": "Shapeshifting Mage",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Dragonewt"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 2,
+	  "defense": 2
+	},
+	"effect": "Assail. Bane.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-083EN",
+	"name": "Phoenix Roost",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Amulet"
+	],
+	"traits": [
+	  "Phoenix"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "At the start of each player's main phase, that player looks at the top card of their deck. If it's a follower, they may put it onto their field.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-084EN",
+	"name": "Wyvern Cavalier",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Dragonheart"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": 5,
+	  "defense": 5
+	},
+	"effect": "[fanfare] Put the top card of your deck into your EX area. It costs 2 less to play.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-085EN",
+	"name": "Dragonewt Scholar",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Dragonewt"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 2,
+	  "defense": 2
+	},
+	"effect": "Intimidate.\nStrike: Draw a card, then discard a card.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-086EN",
+	"name": "Shenlong",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Wyrmkin"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": 4,
+	  "defense": 5
+	},
+	"effect": "[evolve][cost02]: Evolve this follower.\nWard.\n[fanfare] Draw 2 cards, then discard a card.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-087EN",
+	"name": "Shenlong",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Wyrmkin"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 5,
+	  "defense": 6
+	},
+	"effect": "Ward.\non evolve: Give your leader [defense]+5.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-088EN",
+	"name": "Imprisoned Dragon",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Wyrmkin"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 4,
+	  "defense": 4
+	},
+	"effect": "Ward.\nThis follower can't attack enemies.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-089EN",
+	"name": "Conflagration",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Wyrmkin"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Deal 5 damage to each follower on the field.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-090EN",
+	"name": "Serpent Wrath",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Wyrmkin"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[quick]\nSelect an enemy follower on the field. Deal it 5 damage and, if Overflow is active for you, draw a card.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-091EN",
+	"name": "Wyrm Spire",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Amulet"
+	],
+	"traits": [
+	  "Dragonewt"
+	],
+	"statistics": {
+	  "cost": 6,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "While this card is on your field, your Dragon tokens have Rush.\n[act][engage]: Select a follower on the field and destroy it. Its controller summons a Dragon token.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-092EN",
+	"name": "Ivory Dragon",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Wyrmkin"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": 1,
+	  "defense": 1
+	},
+	"effect": "[evolve][cost00]: Evolve this follower.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-093EN",
+	"name": "Ivory Dragon",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Wyrmkin"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 2,
+	  "defense": 2
+	},
+	"effect": "on evolve: If Overflow is active for you, draw a card.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-094EN",
+	"name": "Fire Lizard",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Wyrmkin"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 3,
+	  "defense": 2
+	},
+	"effect": "[fanfare] Select an enemy leader or enemy follower on the field and deal it 1 damage.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-095EN",
+	"name": "Ace Dragoon",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Dragonheart"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 0,
+	  "defense": 2
+	},
+	"effect": "Rush.\n[fanfare] Select another follower on the field and give this follower [attack]+X. X equals the selected follower's attack.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-096EN",
+	"name": "Mist Dragon",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Wyrmkin"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 4,
+	  "defense": 4
+	},
+	"effect": "Intimidate.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-097EN",
+	"name": "Dread Dragon",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Wyrmkin"
+	],
+	"statistics": {
+	  "cost": 7,
+	  "attack": 7,
+	  "defense": 7
+	},
+	"effect": "[fanfare] Select an enemy follower on the field and deal it 7 damage.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-098EN",
+	"name": "Blazing Breath",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Wyrmkin"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[quick]\nSelect an enemy follower on the field and deal it 2 damage. If Overflow is active for you, deal 4 damage instead.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-099EN",
+	"name": "Dragon Wings",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Wyrmkin"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Deal 2 damage to each follower on the field. If Overflow is active for you, deal 3 damage instead.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-100EN",
+	"name": "Dragon Emissary",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Wyrmkin"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Look at the top 5 cards of your deck. You may reveal a [dragoncraft] card that costs at least 5 play points from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-101EN",
+	"name": "Cerberus",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Demon"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "[evolve][cost02]: Evolve this follower.\n[fanfare] Put a Mimi or Coco token into your EX area. Necrocharge (10): Put both into your EX area instead.",
+	"set": "BP01",
+	"rarity": "Legendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-102EN",
+	"name": "Cerberus",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Demon"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 5,
+	  "defense": 5
+	},
+	"effect": "on evolve: Put a Mimi and Coco token into your EX area.",
+	"set": "BP01",
+	"rarity": "Legendary",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-103EN",
+	"name": "Lord Atomy",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Departed"
+	],
+	"statistics": {
+	  "cost": 9,
+	  "attack": 6,
+	  "defense": 6
+	},
+	"effect": "When playing this card, put 4 reserved [abysscraft] cards from your field into their owners' cemeteries, or banish 4 [abysscraft] cards in your EX area: This card costs 9 less to play.",
+	"set": "BP01",
+	"rarity": "Legendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-104EN",
+	"name": "Medusa",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Demon"
+	],
+	"statistics": {
+	  "cost": 6,
+	  "attack": 6,
+	  "defense": 6
+	},
+	"effect": "If Sanguine is active for you, this card costs 1 less to play.\nNecrocharge (10): This card costs 1 less to play.\nBane.\n[act][engage]: Select an enemy follower on the field and destroy it.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-105EN",
+	"name": "Righteous Devil",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Demon"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 2,
+	  "defense": 4
+	},
+	"effect": "[evolve] Give your leader [defense]-3: Evolve this follower.\nBane.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-106EN",
+	"name": "Righteous Devil",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Demon"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 3,
+	  "defense": 5
+	},
+	"effect": "Assail. Bane.\nWhenever an enemy follower is destroyed, deal 1 damage to its leader and give your leader [defense]+1.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-107EN",
+	"name": "Mordecai the Duelist",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Departed"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": 5,
+	  "defense": 5
+	},
+	"effect": "[lastwords] Give your leader [defense]-3: Put this follower onto its owner's field.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-108EN",
+	"name": "Dire Bond",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Amulet"
+	],
+	"traits": [
+	  "Demon"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[fanfare] Deal 1 damage to your leader. Draw a card.\n[act][cost02], [engage], put this card into its owner's cemetery: Deal 1 damage to your leader. Draw a card.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-109EN",
+	"name": "Hell's Unleasher",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Demon"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 2,
+	  "defense": 2
+	},
+	"effect": "[act][engage], put this card into its owner's cemetery: Select a follower that costs at least 3 play points in your cemetery and add it to your hand.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-110EN",
+	"name": "Crazed Executioner",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Cutthroat"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "[evolve][cost01]: Evolve this follower.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-111EN",
+	"name": "Crazed Executioner",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Cutthroat"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "on evolve: Deal 2 damage to your leader. Select an opponent. They reveal their hand. Select a card in their hand. The opponent discards that card.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-112EN",
+	"name": "Dark Summoner",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Demon"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 3,
+	  "defense": 2
+	},
+	"effect": "[fanfare] If Sanguine is active for you, give this follower [attack]+1/[defense]+1 and Rush.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-113EN",
+	"name": "Dark General",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Demon"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 5,
+	  "defense": 5
+	},
+	"effect": "[fanfare] If Sanguine is active for you, give this follower Storm.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-114EN",
+	"name": "Phantom Howl",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Departed"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Summon 4 Ghost tokens.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-115EN",
+	"name": "Death's Breath",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Departed"
+	],
+	"statistics": {
+	  "cost": 6,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Select a follower that costs 8 play points or less in your cemetery. Put it onto your field and give it Ward.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-116EN",
+	"name": "Soul Conversion",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Departed"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[quick]\nSelect a follower on your field. Destroy it and draw 2 cards.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-117EN",
+	"name": "Skeleton Fighter",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Departed"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": 2,
+	  "defense": 2
+	},
+	"effect": "[fanfare] If Sanguine is active for you, give this follower [attack]+1/[defense]+1.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-118EN",
+	"name": "Ambling Wraith",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Departed"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": 2,
+	  "defense": 1
+	},
+	"effect": "[fanfare] Deal 1 damage to each leader.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-119EN",
+	"name": "Spectre",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Departed"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 2,
+	  "defense": 1
+	},
+	"effect": "Bane.\n[fanfare] Give your leader [defense]-2: Give this follower Rush. Put the top card of your deck into your cemetery.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-120EN",
+	"name": "Spartoi Sergeant",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Departed"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 2,
+	  "defense": 3
+	},
+	"effect": "[fanfare] Put the top 2 cards of your deck into your cemetery.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-121EN",
+	"name": "Rabbit Necromancer",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Necromancer"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "[lastwords] Deal 2 damage to each leader.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-122EN",
+	"name": "Wardrobe Raider",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Demon"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "[evolve][cost00]: Evolve this follower.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-123EN",
+	"name": "Wardrobe Raider",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Demon"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "on evolve, put a follower from your field into its owner's cemetery: Select an enemy follower on the field and destroy it.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-124EN",
+	"name": "Undead King",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Departed"
+	],
+	"statistics": {
+	  "cost": 6,
+	  "attack": 6,
+	  "defense": 6
+	},
+	"effect": "[fanfare] Select up to 2 followers in your cemetery and add them to your hand.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-125EN",
+	"name": "Razory Claw",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Demon"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[quick]\nDeal 2 damage to your leader.\nSelect an enemy leader or enemy follower on the field and deal it 3 damage.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-126EN",
+	"name": "Moon Al-mi'raj",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Beast"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": 4,
+	  "defense": 5
+	},
+	"effect": "Storm.\nFollower Strike: Give this follower [attack]+2.\nAt the start of your end phase, give this follower [defense]+2.",
+	"set": "BP01",
+	"rarity": "Legendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-127EN",
+	"name": "Jeanne d'Arc",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Luminary"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 3,
+	  "defense": 4
+	},
+	"effect": "[evolve][cost02]: Evolve this follower.\n[fanfare] Deal 2 damage to each enemy follower on the field.",
+	"set": "BP01",
+	"rarity": "Legendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-128EN",
+	"name": "Jeanne d'Arc",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Luminary"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 4,
+	  "defense": 5
+	},
+	"effect": "on evolve: Deal 2 damage to each enemy follower on the field. Give each other follower on your field [defense]+2.",
+	"set": "BP01",
+	"rarity": "Legendary",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-129EN",
+	"name": "Arch Priestess Laelia",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Faith"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 0,
+	  "defense": 6
+	},
+	"effect": "[evolve][cost01]: Evolve this follower.\nWhile this card is on your field, your followers deal damage equal to their defense.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-130EN",
+	"name": "Arch Priestess Laelia",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Faith"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 0,
+	  "defense": 6
+	},
+	"effect": "While this card is on your field, your followers deal damage equal to their defense.\nAt the start of your end phase, give this follower [defense]+2.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-131EN",
+	"name": "Themis's Decree",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Faith"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Destroy each follower on the field.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-132EN",
+	"name": "Chorus of Prayer",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Faith"
+	],
+	"statistics": {
+	  "cost": 7,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Select up to 3 amulets that cost 5 play points or less in your cemetery and put them onto your field.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-133EN",
+	"name": "Sacred Plea",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Amulet"
+	],
+	"traits": [
+	  "Faith"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[act][engage], put this card into its owner's cemetery: Draw a card.\n[act][cost02], [engage], put this card into its owner's cemetery: Draw 2 cards.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-134EN",
+	"name": "Temple Defender",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Faith"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "Ward.\nReduce damage dealt to this follower by 1.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-135EN",
+	"name": "Prism Priestess",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Faith"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": 1,
+	  "defense": 1
+	},
+	"effect": "[evolve][cost02]: Evolve this follower.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-136EN",
+	"name": "Prism Priestess",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Faith"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 2,
+	  "defense": 2
+	},
+	"effect": "on evolve: Search your deck for an amulet, reveal it, and add it to your hand.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-137EN",
+	"name": "Cleric Lancer",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Faith"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 1,
+	  "defense": 5
+	},
+	"effect": "Ward.\nDuring each opponent's turn, this follower deals 4 more damage.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-138EN",
+	"name": "Shrine Knight Maiden",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Faith"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": 5,
+	  "defense": 5
+	},
+	"effect": "Ward. Aura.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-139EN",
+	"name": "Blackened Scripture",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Zealot"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[quick]\nSelect an enemy follower with 3 defense or less on the field and banish it.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-140EN",
+	"name": "Dark Offering",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Zealot"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[quick]\nSelect a card on your field. Destroy it, give your leader [defense]+3, and draw a card.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-141EN",
+	"name": "Holy Sentinel",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Amulet"
+	],
+	"traits": [
+	  "Faith",
+	  "Beast"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Once on each of your turns, when another amulet you control leaves the field, summon a Holy Tiger token and give it Ward.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-142EN",
+	"name": "Cruel Priestess",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Zealot"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "[fanfare] Select an amulet that costs 5 play points or less in your cemetery and put it onto your field.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-143EN",
+	"name": "Sister Initiate",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Faith"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 3,
+	  "defense": 2
+	},
+	"effect": "[fanfare] If there is an amulet on your field, give your leader [defense]+2.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-144EN",
+	"name": "Mainyu",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Zealot"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 2,
+	  "defense": 2
+	},
+	"effect": "[evolve][cost01]: Evolve this follower.\nAura.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-145EN",
+	"name": "Mainyu",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Zealot"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "Aura.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-146EN",
+	"name": "Snake Priestess",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Zealot"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": 1,
+	  "defense": 3
+	},
+	"effect": "Ward.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-147EN",
+	"name": "Curate",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Faith"
+	],
+	"statistics": {
+	  "cost": 6,
+	  "attack": 5,
+	  "defense": 5
+	},
+	"effect": "[fanfare] Give your leader [defense]+5. Draw a card.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-148EN",
+	"name": "Hallowed Dogma",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Faith"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[quick]\nLook at the top 5 cards of your deck. You may reveal an amulet from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-149EN",
+	"name": "Guardian Sun",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Amulet"
+	],
+	"traits": [
+	  "Faith"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[fanfare] Select a follower on your field and give it Ward.\n[act][cost02], [engage], put this card into its owner's cemetery: Select a follower with Ward on your field and give it [attack]+2/[defense]+2.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-150EN",
+	"name": "Death Sentence",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Amulet"
+	],
+	"traits": [
+	  "Zealot"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "This card is put onto the field engaged.\n[act][engage], put this card into its owner's cemetery: Select an enemy follower on the field and destroy it.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-151EN",
+	"name": "Gabriel",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Angel"
+	],
+	"statistics": {
+	  "cost": 6,
+	  "attack": 4,
+	  "defense": 3
+	},
+	"effect": "Ward.\n[fanfare] Select another follower on your field. Give it [attack]+4/[defense]+3 and Assail.",
+	"set": "BP01",
+	"rarity": "Legendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-152EN",
+	"name": "Lucifer",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Angel",
+	  "Fallen Angel"
+	],
+	"statistics": {
+	  "cost": 7,
+	  "attack": 6,
+	  "defense": 7
+	},
+	"effect": "[evolve][cost00]: Evolve this follower.\nWard.\nAt the start of your end phase, give your leader [defense]+4.",
+	"set": "BP01",
+	"rarity": "Legendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-153EN",
+	"name": "Lucifer",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Angel",
+	  "Fallen Angel"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 8,
+	  "defense": 7
+	},
+	"effect": "Bane.\nAt the start of your end phase, deal 4 damage to each enemy leader.",
+	"set": "BP01",
+	"rarity": "Legendary",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-154EN",
+	"name": "Flame and Glass",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Archfiend"
+	],
+	"statistics": {
+	  "cost": 10,
+	  "attack": 7,
+	  "defense": 7
+	},
+	"effect": "Storm.\nStrike: Deal 3 damage to each enemy follower on the field. If there is a Harnessed Flame and Harnessed Glass in your cemetery, deal 7 damage instead.",
+	"set": "BP01",
+	"rarity": "Legendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-155EN",
+	"name": "Urd",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Deity"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 2,
+	  "defense": 2
+	},
+	"effect": "[evolve][cost01]: Evolve this follower.\n[fanfare] Select an enemy follower on the field and put it into its owner's EX area. (Evolved followers put into the EX area are removed from the game.)",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-156EN",
+	"name": "Urd",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Deity"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "on evolve: Select a card in an opponent's EX area and banish it.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-157EN",
+	"name": "Wind God",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Deity"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 1,
+	  "defense": 5
+	},
+	"effect": "[fanfare] Select a follower on your field and give it [attack]+1.\nAt the start of your end phase, give each follower on your field [attack]+1.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-158EN",
+	"name": "Gilgamesh",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Deity"
+	],
+	"statistics": {
+	  "cost": 7,
+	  "attack": 6,
+	  "defense": 6
+	},
+	"effect": "Storm.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-159EN",
+	"name": "Bellringer Angel",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Angel"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": 0,
+	  "defense": 2
+	},
+	"effect": "[evolve][cost02]: Evolve this follower.\nWard.\n[lastwords] Draw a card.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-160EN",
+	"name": "Bellringer Angel",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Angel"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 0,
+	  "defense": 2
+	},
+	"effect": "Ward.\non evolve: Select an enemy follower on the field and deal it 2 damage.\n[lastwords] Draw a card.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-161EN",
+	"name": "Altered Fate",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Deity"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Each player returns their hand to their deck, shuffles it, and draws X cards. X equals the number of cards they returned to their deck. You draw 1 more card.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-162EN",
+	"name": "Path to Purgatory",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Amulet"
+	],
+	"traits": [
+	  "Archfiend"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[fanfare] Draw 3 cards. Deal 3 damage to your leader.\nAt the start of your end phase, if your leader's [defense] is 6 or less, [engage], put this card into its owner's cemetery: Deal 6 damage to each enemy follower on the field.",
+	"set": "BP01",
+	"rarity": "Gold",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-163EN",
+	"name": "Lizardman",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Mercenary"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 4,
+	  "defense": 3
+	},
+	"effect": "Assail.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-164EN",
+	"name": "Goblinmount Demon",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Goblinoid"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": 6,
+	  "defense": 6
+	},
+	"effect": "[evolve][cost00]: Evolve this follower. \nWard.\n[fanfare] Deal 2 damage to each other follower on your field.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-165EN",
+	"name": "Goblinmount Demon",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Goblinoid"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 7,
+	  "defense": 7
+	},
+	"effect": "Ward.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-166EN",
+	"name": "Harnessed Flame",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Fiend"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 3,
+	  "defense": 2
+	},
+	"effect": "[act][cost01], put this card and a Harnessed Glass from your field into their owners' cemeteries: Search your deck for a Flame and Glass and put it onto your field.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-167EN",
+	"name": "Harnessed Glass",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Fiend"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 2,
+	  "defense": 3
+	},
+	"effect": "[fanfare] Draw a card. Put a card from your hand on the bottom of your deck.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-168EN",
+	"name": "Demonic Strike",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Fiend"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Select an enemy leader or enemy follower on the field and deal it 3 damage.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-169EN",
+	"name": "Execution",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Fiend"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[quick]\nSelect an enemy card on the field and destroy it.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-170EN",
+	"name": "Trail of Light",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Lightborne"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "When this card is discarded, draw a card.\n----------\nDraw a card.",
+	"set": "BP01",
+	"rarity": "Silver",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-171EN",
+	"name": "Goblin",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Goblinoid"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": 2,
+	  "defense": 2
+	},
+	"effect": "[evolve][cost04]: Evolve this follower.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-172EN",
+	"name": "Goblin",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Goblinoid"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 4,
+	  "defense": 4
+	},
+	"effect": "",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-173EN",
+	"name": "Fighter",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Mercenary"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 2,
+	  "defense": 3
+	},
+	"effect": "",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-174EN",
+	"name": "Goliath",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Gigant"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 3,
+	  "defense": 4
+	},
+	"effect": "[evolve][cost02]: Evolve this follower.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-175EN",
+	"name": "Goliath",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Gigant"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 5,
+	  "defense": 6
+	},
+	"effect": "",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-176EN",
+	"name": "Angelic Sword Maiden",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Angel"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": 4,
+	  "defense": 6
+	},
+	"effect": "Ward.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-177EN",
+	"name": "Healing Angel",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Angel"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 2,
+	  "defense": 4
+	},
+	"effect": "[evolve][cost01]: Evolve this follower.\n[fanfare] Give your leader [defense]+1.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-178EN",
+	"name": "Healing Angel",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Angel"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 3,
+	  "defense": 5
+	},
+	"effect": "on evolve: Give your leader [defense]+2.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-179EN",
+	"name": "Angelic Snipe",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Angel"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[quick]\nSelect an enemy follower on the field and deal it 2 damage.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-180EN",
+	"name": "Angelic Barrage",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Angel"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[quick]\nDeal 1 damage to each enemy follower on the field.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-LD01EN",
+	"name": "Arisa",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Leader"
+	],
+	"traits": [
+	  "-"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-LD02EN",
+	"name": "Aria, Dancing Fairy",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Leader"
+	],
+	"traits": [
+	  "-"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-LD03EN",
+	"name": "Erika",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Leader"
+	],
+	"traits": [
+	  "-"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-LD04EN",
+	"name": "Aurelia, Blooming Blade",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Leader"
+	],
+	"traits": [
+	  "-"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-LD05EN",
+	"name": "Isabelle",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Leader"
+	],
+	"traits": [
+	  "-"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-LD06EN",
+	"name": "Erasmus, Magical Sage",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Leader"
+	],
+	"traits": [
+	  "-"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-LD07EN",
+	"name": "Rowen",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Leader"
+	],
+	"traits": [
+	  "-"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-LD08EN",
+	"name": "Zirnitra, Zealous Wings",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Leader"
+	],
+	"traits": [
+	  "-"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-LD09EN",
+	"name": "Luna",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Leader"
+	],
+	"traits": [
+	  "-"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-LD10EN",
+	"name": "Urias",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Leader"
+	],
+	"traits": [
+	  "-"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-LD11EN",
+	"name": "Eris",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Leader"
+	],
+	"traits": [
+	  "-"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-LD12EN",
+	"name": "Ramina, Crescent Beast",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Leader"
+	],
+	"traits": [
+	  "-"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P01EN",
+	"name": "Homecoming",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Elf"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Select an enemy follower on the field. Its controller puts it on the top or bottom of its owner's deck. Combo (5): Each opponent puts each follower from their field on the top or bottom of its owner's deck instead. (The controllers determine the placement. Tokens put into a player's deck are removed from the game.)",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P02EN",
+	"name": "Elf Child May",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Elf"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": 1,
+	  "defense": 1
+	},
+	"effect": "[fanfare] Select an enemy follower on the field and deal it 1 damage.\nWhen this card is returned to hand from your field, select an enemy follower on the field and deal it 1 damage.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P03EN",
+	"name": "Archer",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Hunter"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 1,
+	  "defense": 4
+	},
+	"effect": "[evolve][cost01]: Evolve this follower.\nWhenever another follower is put onto your field, select an enemy follower on the field and deal it 1 damage.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P04EN",
+	"name": "Archer",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Hunter"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 1,
+	  "defense": 4
+	},
+	"effect": "Whenever another follower is put onto your field, select up to 2 enemy followers on the field and deal them 1 damage.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P05EN",
+	"name": "Fairy Circle",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Pixie"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Put 3 Fairy tokens into your EX area.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P06EN",
+	"name": "Alwida's Command",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Thief"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Summon a Viking, Steelclad Knight, and Knight token.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P07EN",
+	"name": "Maid Leader",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Officer",
+	  "Maid"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": 1,
+	  "defense": 1
+	},
+	"effect": "[evolve][cost02]: Evolve this follower.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P08EN",
+	"name": "Maid Leader",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Officer",
+	  "Maid"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 2,
+	  "defense": 2
+	},
+	"effect": "on evolve: Search your deck for a follower with [evolve], reveal it, and add it to your hand.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P09EN",
+	"name": "Sage Commander",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Commander"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": 5,
+	  "defense": 5
+	},
+	"effect": "[fanfare] Give each other follower on your field [attack]+1/[defense]+1.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P10EN",
+	"name": "Novice Trooper",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Officer"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "Storm.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P11EN",
+	"name": "Dimension Shift",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Mage"
+	],
+	"statistics": {
+	  "cost": 12,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "When playing this card, banish 10 spells in your cemetery: This card costs 7 play points to play.\nTake another turn after this one.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P12EN",
+	"name": "Spectral Wizard",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Mage"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 2,
+	  "defense": 2
+	},
+	"effect": "[evolve][cost02]: Evolve this follower.\n[fanfare] Look at the top card of your deck. If it's a spell, you may reveal it and add it to your hand.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P13EN",
+	"name": "Spectral Wizard",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Mage"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "on evolve, discard a spell: Select an enemy follower on the field and deal it 4 damage.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P14EN",
+	"name": "Price of Magic",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Amulet"
+	],
+	"traits": [
+	  "Earth Sigil"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Stack.\n[fanfare] Select an enemy follower with 4 defense or less on the field and banish it.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P15EN",
+	"name": "Sorcery Cache",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Mage"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[quick]\nLook at the top 4 cards of your deck. You may reveal a spell from among them and add it into your hand. You may also put a spell into your cemetery. Put the remaining cards on the bottom of your deck in any order.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P16EN",
+	"name": "Aiela, Dragon Knight",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Dragonheart"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 3,
+	  "defense": 2
+	},
+	"effect": "Piercing Attack.\n[lastwords] Increase your maximum play points by 1.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P17EN",
+	"name": "Shenlong",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Wyrmkin"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": 4,
+	  "defense": 5
+	},
+	"effect": "[evolve][cost02]: Evolve this follower.\nWard.\n[fanfare] Draw 2 cards, then discard a card.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P18EN",
+	"name": "Shenlong",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Wyrmkin"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 5,
+	  "defense": 6
+	},
+	"effect": "Ward.\non evolve: Give your leader [defense]+5.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P19EN",
+	"name": "Wyrm Spire",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Amulet"
+	],
+	"traits": [
+	  "Dragonewt"
+	],
+	"statistics": {
+	  "cost": 6,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "While this card is on your field, your Dragon tokens have Rush.\n[act][engage]: Select a follower on the field and destroy it. Its controller summons a Dragon token.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P20EN",
+	"name": "Blazing Breath",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Wyrmkin"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[quick]\nSelect an enemy follower on the field and deal it 2 damage. If Overflow is active for you, deal 4 damage instead.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P21EN",
+	"name": "Mordecai the Duelist",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Departed"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": 5,
+	  "defense": 5
+	},
+	"effect": "[lastwords] Give your leader [defense]-3: Put this follower onto its owner's field.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P22EN",
+	"name": "Crazed Executioner",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Cutthroat"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "[evolve][cost01]: Evolve this follower.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P23EN",
+	"name": "Crazed Executioner",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Cutthroat"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "on evolve: Deal 2 damage to your leader. Select an opponent. They reveal their hand. Select a card in their hand. The opponent discards that card.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P24EN",
+	"name": "Dark General",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Demon"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 5,
+	  "defense": 5
+	},
+	"effect": "[fanfare] If Sanguine is active for you, give this follower Storm.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P25EN",
+	"name": "Rabbit Necromancer",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Necromancer"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "[lastwords] Deal 2 damage to each leader.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P26EN",
+	"name": "Themis's Decree",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Faith"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Destroy each follower on the field.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P27EN",
+	"name": "Prism Priestess",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Faith"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": 1,
+	  "defense": 1
+	},
+	"effect": "[evolve][cost02]: Evolve this follower.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P28EN",
+	"name": "Prism Priestess",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Faith"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 2,
+	  "defense": 2
+	},
+	"effect": "on evolve: Search your deck for an amulet, reveal it, and add it to your hand.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P29EN",
+	"name": "Blackened Scripture",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Spell"
+	],
+	"traits": [
+	  "Zealot"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[quick]\nSelect an enemy follower with 3 defense or less on the field and banish it.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P30EN",
+	"name": "Death Sentence",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Amulet"
+	],
+	"traits": [
+	  "Zealot"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "This card is put onto the field engaged.\n[act][engage], put this card into its owner's cemetery: Select an enemy follower on the field and destroy it.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P31EN",
+	"name": "Wind God",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Deity"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 1,
+	  "defense": 5
+	},
+	"effect": "[fanfare] Select a follower on your field and give it [attack]+1.\nAt the start of your end phase, give each follower on your field [attack]+1.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P32EN",
+	"name": "Bellringer Angel",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Angel"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": 0,
+	  "defense": 2
+	},
+	"effect": "[evolve][cost02]: Evolve this follower.\nWard.\n[lastwords] Draw a card.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P33EN",
+	"name": "Bellringer Angel",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Angel"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 0,
+	  "defense": 2
+	},
+	"effect": "Ward.\non evolve: Select an enemy follower on the field and deal it 2 damage.\n[lastwords] Draw a card.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P34EN",
+	"name": "Harnessed Flame",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Fiend"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 3,
+	  "defense": 2
+	},
+	"effect": "[act][cost01], put this card and a Harnessed Glass from your field into their owners' cemeteries: Search your deck for a Flame and Glass and put it onto your field.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-P35EN",
+	"name": "Harnessed Glass",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Fiend"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 2,
+	  "defense": 3
+	},
+	"effect": "[fanfare] Draw a card. Put a card from your hand on the bottom of your deck.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-SL01EN",
+	"name": "Rose Queen",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Verdant"
+	],
+	"statistics": {
+	  "cost": 8,
+	  "attack": 7,
+	  "defense": 7
+	},
+	"effect": "[fanfare] Select any number of Pixie followers in your EX area and transform them into Thorn Burst tokens.\n[act][engage]: Recover X play points. X equals the number of Thorn Burst tokens in your EX area.",
+	"set": "BP01",
+	"rarity": "SuperLegendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-SL02EN",
+	"name": "Ancient Elf",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Elf"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 2,
+	  "defense": 2
+	},
+	"effect": "[evolve][cost01]: Evolve this follower.\nWard.\n[fanfare] Return another card on your field to its owner's hand: Give this follower [attack]+1/[defense]+1.",
+	"set": "BP01",
+	"rarity": "SuperLegendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-SL03EN",
+	"name": "Ancient Elf",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Elf"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "Ward.\non evolve, return another card on your field to its owner's hand: Give this follower [attack]+1/[defense]+1.",
+	"set": "BP01",
+	"rarity": "SuperLegendary",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-SL04EN",
+	"name": "Sea Queen Otohime",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Commander",
+	  "Princess"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 3,
+	  "defense": 4
+	},
+	"effect": "[evolve][cost02]: Evolve this follower.\n[fanfare] Summon an Otohime's Bodyguard token.",
+	"set": "BP01",
+	"rarity": "SuperLegendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-SL05EN",
+	"name": "Sea Queen Otohime",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Commander",
+	  "Princess"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 4,
+	  "defense": 5
+	},
+	"effect": "on evolve: Summon 3 Otohime's Bodyguard tokens. If your field becomes full from this effect, put any remaining tokens into your EX area.",
+	"set": "BP01",
+	"rarity": "SuperLegendary",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-SL06EN",
+	"name": "Aurelia, Regal Saber",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Commander",
+	  "Princess"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": 4,
+	  "defense": 6
+	},
+	"effect": "Rush. Assail. Ward.\n[fanfare] Select an enemy leader. If there are at least 3 cards on their field, give this follower [attack]+2/[defense]+2 and Aura.",
+	"set": "BP01",
+	"rarity": "SuperLegendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-SL07EN",
+	"name": "Arch Summoner Erasmus",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Mage"
+	],
+	"statistics": {
+	  "cost": 7,
+	  "attack": 6,
+	  "defense": 8
+	},
+	"effect": "[fanfare] Earth Rite: Select an enemy follower on the field. Deal 6 damage to it and 2 damage to its leader.\n[act][engage], Earth Rite: Select an enemy follower on the field. Deal 6 damage to it and 2 damage to its leader.",
+	"set": "BP01",
+	"rarity": "SuperLegendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-SL08EN",
+	"name": "Merlin",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Mage"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 3,
+	  "defense": 2
+	},
+	"effect": "[evolve][cost02]: Evolve this follower.\n[fanfare] Search your deck for a spell, reveal it, and add it to your hand.",
+	"set": "BP01",
+	"rarity": "SuperLegendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-SL09EN",
+	"name": "Merlin",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Mage"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 4,
+	  "defense": 3
+	},
+	"effect": "on evolve: Select a spell that costs 3 play points or less in your cemetery and play it for 0 play points.",
+	"set": "BP01",
+	"rarity": "SuperLegendary",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-SL10EN",
+	"name": "Dark Dragoon Forte",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Dragonheart"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 5,
+	  "defense": 1
+	},
+	"effect": "[evolve][cost02]: Evolve this follower.\nStorm.",
+	"set": "BP01",
+	"rarity": "SuperLegendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-SL11EN",
+	"name": "Dark Dragoon Forte",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Dragonheart"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 7,
+	  "defense": 3
+	},
+	"effect": "Storm. Aura.",
+	"set": "BP01",
+	"rarity": "SuperLegendary",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-SL12EN",
+	"name": "Zirnitra",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Dragonewt"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 3,
+	  "defense": 2
+	},
+	"effect": "[fanfare] Put a Dragon token into your EX area.\n[act][cost02], [engage]: Select a Dragon token in your EX area. Put it onto your field and give it Rush. If Overflow is active for you, recover 2 play points.",
+	"set": "BP01",
+	"rarity": "SuperLegendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-SL13EN",
+	"name": "Cerberus",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Demon"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 3,
+	  "defense": 3
+	},
+	"effect": "[evolve][cost02]: Evolve this follower.\n[fanfare] Put a Mimi or Coco token into your EX area. Necrocharge (10): Put both into your EX area instead.",
+	"set": "BP01",
+	"rarity": "SuperLegendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-SL14EN",
+	"name": "Cerberus",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Demon"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 5,
+	  "defense": 5
+	},
+	"effect": "on evolve: Put a Mimi and Coco token into your EX area.",
+	"set": "BP01",
+	"rarity": "SuperLegendary",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-SL15EN",
+	"name": "Lord Atomy",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Departed"
+	],
+	"statistics": {
+	  "cost": 9,
+	  "attack": 6,
+	  "defense": 6
+	},
+	"effect": "When playing this card, put 4 reserved [abysscraft] cards from your field into their owners' cemeteries, or banish 4 [abysscraft] cards in your EX area: This card costs 9 less to play.",
+	"set": "BP01",
+	"rarity": "SuperLegendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-SL16EN",
+	"name": "Moon Al-mi'raj",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Beast"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": 4,
+	  "defense": 5
+	},
+	"effect": "Storm.\nFollower Strike: Give this follower [attack]+2.\nAt the start of your end phase, give this follower [defense]+2.",
+	"set": "BP01",
+	"rarity": "SuperLegendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-SL17EN",
+	"name": "Jeanne d'Arc",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Luminary"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 3,
+	  "defense": 4
+	},
+	"effect": "[evolve][cost02]: Evolve this follower.\n[fanfare] Deal 2 damage to each enemy follower on the field.",
+	"set": "BP01",
+	"rarity": "SuperLegendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-SL18EN",
+	"name": "Jeanne d'Arc",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Luminary"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 4,
+	  "defense": 5
+	},
+	"effect": "on evolve: Deal 2 damage to each enemy follower on the field. Give each other follower on your field [defense]+2.",
+	"set": "BP01",
+	"rarity": "SuperLegendary",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-SL19EN",
+	"name": "Gabriel",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Angel"
+	],
+	"statistics": {
+	  "cost": 6,
+	  "attack": 4,
+	  "defense": 3
+	},
+	"effect": "Ward.\n[fanfare] Select another follower on your field. Give it [attack]+4/[defense]+3 and Assail.",
+	"set": "BP01",
+	"rarity": "SuperLegendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-SL20EN",
+	"name": "Lucifer",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Angel",
+	  "Fallen Angel"
+	],
+	"statistics": {
+	  "cost": 7,
+	  "attack": 6,
+	  "defense": 7
+	},
+	"effect": "[evolve][cost00]: Evolve this follower.\nWard.\nAt the start of your end phase, give your leader [defense]+4.",
+	"set": "BP01",
+	"rarity": "SuperLegendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-SL21EN",
+	"name": "Lucifer",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Angel",
+	  "Fallen Angel"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 8,
+	  "defense": 7
+	},
+	"effect": "Bane.\nAt the start of your end phase, deal 4 damage to each enemy leader.",
+	"set": "BP01",
+	"rarity": "SuperLegendary",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-SL22EN",
+	"name": "Flame and Glass",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Archfiend"
+	],
+	"statistics": {
+	  "cost": 10,
+	  "attack": 7,
+	  "defense": 7
+	},
+	"effect": "Storm.\nStrike: Deal 3 damage to each enemy follower on the field. If there is a Harnessed Flame and Harnessed Glass in your cemetery, deal 7 damage instead.",
+	"set": "BP01",
+	"rarity": "SuperLegendary",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-T01EN",
+	"name": "Thorn Burst",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Spell",
+	  "Token"
+	],
+	"traits": [
+	  "Verdant"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Select an enemy leader or enemy follower on the field. Deal it 3 damage and draw a card.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": true,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-T02EN",
+	"name": "Fairy Wisp",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Token"
+	],
+	"traits": [
+	  "Pixie"
+	],
+	"statistics": {
+	  "cost": 0,
+	  "attack": 1,
+	  "defense": 1
+	},
+	"effect": "",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": true,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-T03EN",
+	"name": "Fairy",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Token"
+	],
+	"traits": [
+	  "Pixie"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": 1,
+	  "defense": 1
+	},
+	"effect": "",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": true,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-T04EN",
+	"name": "Otohime's Bodyguard",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Token"
+	],
+	"traits": [
+	  "Officer"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": 1,
+	  "defense": 2
+	},
+	"effect": "Ward.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": true,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-T05EN",
+	"name": "Knight",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Token"
+	],
+	"traits": [
+	  "Officer"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": 1,
+	  "defense": 1
+	},
+	"effect": "",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": true,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-T06EN",
+	"name": "Viking",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Token"
+	],
+	"traits": [
+	  "Thief"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 3,
+	  "defense": 2
+	},
+	"effect": "Storm.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": true,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-T07EN",
+	"name": "Steelclad Knight",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Token"
+	],
+	"traits": [
+	  "Officer"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 2,
+	  "defense": 2
+	},
+	"effect": "",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": true,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-T08EN",
+	"name": "Strikeform Golem",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Token"
+	],
+	"traits": [
+	  "Golem"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 3,
+	  "defense": 2
+	},
+	"effect": "Rush.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": true,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-T09EN",
+	"name": "Guardform Golem",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Token"
+	],
+	"traits": [
+	  "Golem"
+	],
+	"statistics": {
+	  "cost": 2,
+	  "attack": 2,
+	  "defense": 3
+	},
+	"effect": "Ward.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": true,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-T10EN",
+	"name": "Magic Sediment",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Amulet",
+	  "Token"
+	],
+	"traits": [
+	  "Earth Sigil"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Stack. (Amulets with Stack are put onto the field with 1 Stack counter and have the following abilities.\nWhen this card would leave the field, remove 1 Stack counter from it instead. When this card's Stack count reaches 0, destroy it.\n[act][engage]: Select another amulet with Stack on your field and transfer all this card's Stack counters to that card.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": true,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-T11EN",
+	"name": "Dragon",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Token"
+	],
+	"traits": [
+	  "Wyrmkin"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 5,
+	  "defense": 5
+	},
+	"effect": "",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": true,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-T12EN",
+	"name": "Mimi",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Spell",
+	  "Token"
+	],
+	"traits": [
+	  "Demon"
+	],
+	"statistics": {
+	  "cost": 0,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Select an enemy follower on the field and deal it 2 damage.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": true,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-T13EN",
+	"name": "Coco",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Spell",
+	  "Token"
+	],
+	"traits": [
+	  "Demon"
+	],
+	"statistics": {
+	  "cost": 0,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "Select a follower on your field and give it [attack]+2.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": true,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-T14EN",
+	"name": "Ghost",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Token"
+	],
+	"traits": [
+	  "Departed"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": 1,
+	  "defense": 1
+	},
+	"effect": "Storm.\nAt the start of your end phase, banish this card.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": true,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-T15EN",
+	"name": "Forest Bat",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Token"
+	],
+	"traits": [
+	  "Vampire"
+	],
+	"statistics": {
+	  "cost": 1,
+	  "attack": 1,
+	  "defense": 1
+	},
+	"effect": "",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": true,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-T16EN",
+	"name": "Holy Falcon",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Token"
+	],
+	"traits": [
+	  "Avian"
+	],
+	"statistics": {
+	  "cost": 3,
+	  "attack": 2,
+	  "defense": 2
+	},
+	"effect": "Storm.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": true,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-T17EN",
+	"name": "Holy Tiger",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Token"
+	],
+	"traits": [
+	  "Beast"
+	],
+	"statistics": {
+	  "cost": 4,
+	  "attack": 4,
+	  "defense": 4
+	},
+	"effect": "Rush.",
+	"set": "BP01",
+	"rarity": "Bronze",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": true,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-U01EN",
+	"name": "Rose Queen",
+	"class": "Forestcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Verdant"
+	],
+	"statistics": {
+	  "cost": 8,
+	  "attack": 7,
+	  "defense": 7
+	},
+	"effect": "[fanfare] Select any number of Pixie followers in your EX area and transform them into Thorn Burst tokens.\n[act][engage]: Recover X play points. X equals the number of Thorn Burst tokens in your EX area.",
+	"set": "BP01",
+	"rarity": "Ultimate",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-U02EN",
+	"name": "Sea Queen Otohime",
+	"class": "Swordcraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Commander",
+	  "Princess"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 4,
+	  "defense": 5
+	},
+	"effect": "on evolve: Summon 3 Otohime's Bodyguard tokens. If your field becomes full from this effect, put any remaining tokens into your EX area.",
+	"set": "BP01",
+	"rarity": "Ultimate",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-U03EN",
+	"name": "Juno's Secret Laboratory",
+	"class": "Runecraft",
+	"format": "Standard",
+	"types": [
+	  "Amulet"
+	],
+	"traits": [
+	  "Alchemist"
+	],
+	"statistics": {
+	  "cost": 5,
+	  "attack": null,
+	  "defense": null
+	},
+	"effect": "[fanfare] Summon a Guardform Golem or Strikeform Golem token.\n[act][engage]: Summon a Magic Sediment token.\n[act][engage], Earth Rite: Summon a Guardform Golem or Strikeform Golem token.",
+	"set": "BP01",
+	"rarity": "Ultimate",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-U04EN",
+	"name": "Dark Dragoon Forte",
+	"class": "Dragoncraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Dragonheart"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 7,
+	  "defense": 3
+	},
+	"effect": "Storm. Aura.",
+	"set": "BP01",
+	"rarity": "Ultimate",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-U05EN",
+	"name": "Medusa",
+	"class": "Abysscraft",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Demon"
+	],
+	"statistics": {
+	  "cost": 6,
+	  "attack": 6,
+	  "defense": 6
+	},
+	"effect": "If Sanguine is active for you, this card costs 1 less to play.\nNecrocharge (10): This card costs 1 less to play.\nBane.\n[act][engage]: Select an enemy follower on the field and destroy it.",
+	"set": "BP01",
+	"rarity": "Ultimate",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-U06EN",
+	"name": "Jeanne d'Arc",
+	"class": "Havencraft",
+	"format": "Standard",
+	"types": [
+	  "Follower",
+	  "Evolved"
+	],
+	"traits": [
+	  "Luminary"
+	],
+	"statistics": {
+	  "cost": null,
+	  "attack": 4,
+	  "defense": 5
+	},
+	"effect": "on evolve: Deal 2 damage to each enemy follower on the field. Give each other follower on your field [defense]+2.",
+	"set": "BP01",
+	"rarity": "Ultimate",
+	"universe": "Shadowverse",
+	"is_evolved": true,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  },
+  {
+	"id": "BP01-U07EN",
+	"name": "Gabriel",
+	"class": "Neutral",
+	"format": "Standard",
+	"types": [
+	  "Follower"
+	],
+	"traits": [
+	  "Angel"
+	],
+	"statistics": {
+	  "cost": 6,
+	  "attack": 4,
+	  "defense": 3
+	},
+	"effect": "Ward.\n[fanfare] Select another follower on your field. Give it [attack]+4/[defense]+3 and Assail.",
+	"set": "BP01",
+	"rarity": "Ultimate",
+	"universe": "Shadowverse",
+	"is_evolved": false,
+	"is_token": false,
+	"release_date": "2022-07-07",
+	"related_cards": []
+  }
+]

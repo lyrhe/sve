@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cbxcs63e6fu72" path="res://assets/board/board_upscaled.png" id="2_1uspc"]
 [ext_resource type="Texture2D" uid="uid://dfcn3oib1jy3w" path="res://assets/cards/BP01-002.png" id="3_nbtfh"]
 [ext_resource type="Script" uid="uid://bqnghn3jusquo" path="res://scenes/ui/leader_defense.gd" id="4_1u8gl"]
-[ext_resource type="StyleBox" uid="uid://clqp5v48agjhn" path="res://new_style_box_flat.tres" id="5_eiw2i"]
+[ext_resource type="StyleBox" uid="uid://clqp5v48agjhn" path="res://themes/new_style_box_flat.tres" id="5_eiw2i"]
 [ext_resource type="Texture2D" uid="uid://medvdwl4npyg" path="res://assets/board/background.png" id="5_vay82"]
 [ext_resource type="PackedScene" uid="uid://buyj2e04dnx7v" path="res://scenes/zones/zone.tscn" id="6_g143w"]
 [ext_resource type="Script" uid="uid://ebfi6mp0aluu" path="res://scenes/zones/banish/banish.gd" id="7_srshv"]

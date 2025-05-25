@@ -1,8 +1,8 @@
 extends Button
 
+@export var deck_canvas: CanvasLayer
+@export var decklist: Label
+
 func _on_pressed() -> void:
-	print("zob")
-	$"../../DeckBuildingArea2/CanvasLayer".visible = not $"../../DeckBuildingArea2/CanvasLayer".visible
-	print("Pictures are now visible: ", $"../../DeckBuildingArea2/CanvasLayer".visible)
-	$"../../DeckBuildingArea2/Decklist".visible = not $"../../DeckBuildingArea2/Decklist".visible
-	print("Text is now visible: ", $"../../DeckBuildingArea2/Decklist".visible)
+	deck_canvas.visible = not deck_canvas.visible
+	decklist.visible = not decklist.visible

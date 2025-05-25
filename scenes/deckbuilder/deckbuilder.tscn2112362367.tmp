@@ -1,15 +1,15 @@
 [gd_scene load_steps=19 format=3 uid="uid://dwf00t10bxnqh"]
 
+[ext_resource type="Script" uid="uid://bnnssbfkli05n" path="res://scenes/deckbuilder/deckbuilder.gd" id="1_2pngm"]
 [ext_resource type="Theme" uid="uid://cwip20l6nai6q" path="res://themes/new_theme.tres" id="1_becqi"]
 [ext_resource type="Script" uid="uid://couufathvjuix" path="res://scenes/deckbuilder/save_deck.gd" id="2_6a0t7"]
 [ext_resource type="Script" uid="uid://646a5cnntny8" path="res://scripts/load_deck.gd" id="3_2pngm"]
 [ext_resource type="Script" uid="uid://b4jm81jmwysg" path="res://scenes/deckbuilder/clear_decklist.gd" id="3_8y510"]
-[ext_resource type="Script" uid="uid://cxx8xw262rn7b" path="res://scenes/deckbuilder/buttons.gd" id="3_jqggu"]
 [ext_resource type="Texture2D" uid="uid://medvdwl4npyg" path="res://assets/board/background.png" id="3_psocx"]
 [ext_resource type="Script" uid="uid://b73sg0d0b2agc" path="res://scenes/deckbuilder/switch_display.gd" id="4_2pngm"]
 [ext_resource type="Texture2D" uid="uid://dfcn3oib1jy3w" path="res://assets/cards/BP01-002.png" id="4_b27ei"]
 [ext_resource type="Script" uid="uid://i17xit24e81a" path="res://scenes/deckbuilder/filters.gd" id="5_f75wv"]
-[ext_resource type="Theme" uid="uid://dbwa7ib6eyltu" path="res://themes/filter_base.tres" id="8_f75wv"]
+[ext_resource type="Theme" uid="uid://dbwa7ib6eyltu" path="res://filter_base.tres" id="8_f75wv"]
 [ext_resource type="Theme" uid="uid://movbgi8my0iq" path="res://themes/test.tres" id="8_jqggu"]
 [ext_resource type="Script" uid="uid://cn60arohq613w" path="res://scenes/deckbuilder/deckbuilding_area.gd" id="9_tjjh1"]
 [ext_resource type="Script" uid="uid://bi744aod5s8sl" path="res://scenes/deckbuilder/text_edit.gd" id="10_8y510"]
@@ -30,6 +30,7 @@ size = Vector2(1062.41, 858)
 size = Vector2(398.5, 1016)
 
 [node name="Deckbuilder" type="Node2D"]
+script = ExtResource("1_2pngm")
 
 [node name="Buttons" type="HBoxContainer" parent="."]
 offset_left = 423.0
@@ -37,11 +38,10 @@ offset_top = 38.0
 offset_right = 913.0
 offset_bottom = 78.0
 theme = ExtResource("1_becqi")
-script = ExtResource("3_jqggu")
 
-[node name="BackToMainMenu" type="Button" parent="Buttons"]
+[node name="BackToGame" type="Button" parent="Buttons"]
 layout_mode = 2
-text = "Main menu"
+text = "Go to game"
 
 [node name="SaveDeck" type="Button" parent="Buttons" node_paths=PackedStringArray("deck_container")]
 layout_mode = 2
@@ -67,7 +67,7 @@ layout_mode = 2
 text = "Clear decklist"
 script = ExtResource("3_8y510")
 deck = NodePath("../../DeckBuildingArea2/CanvasLayer/ScrollContainer/Cards")
-decklist = NodePath("../../DeckBuildingArea2/Decklist")
+decklist = NodePath("../../DeckBuildingArea2/Label")
 
 [node name="SwitchDisplay" type="Button" parent="Buttons" node_paths=PackedStringArray("deck_canvas", "decklist")]
 layout_mode = 2
@@ -235,7 +235,8 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 selected = 0
-item_count = 7
+allow_reselect = true
+item_count = 5
 popup/item_0/text = "Sets"
 popup/item_0/id = 0
 popup/item_1/text = "Cost (asc)"
@@ -246,10 +247,6 @@ popup/item_3/text = "A-Z"
 popup/item_3/id = 3
 popup/item_4/text = "Z-A"
 popup/item_4/id = 4
-popup/item_5/text = "Attack (asc)"
-popup/item_5/id = 5
-popup/item_6/text = "Defense (asc)"
-popup/item_6/id = 6
 
 [node name="Name" type="LineEdit" parent="Filters"]
 layout_mode = 2
@@ -301,7 +298,7 @@ offset_right = 405.0
 offset_bottom = 1074.0
 theme = ExtResource("1_becqi")
 bbcode_enabled = true
-text = "[img]res://assets/textbox_icons/icon_fanfare.png[/img] rervzervze"
+text = "[img]res://resources/icon_fanfare.png[/img] rervzervze"
 autowrap_mode = 2
 script = ExtResource("10_8y510")
 filters = NodePath("../../Filters")
@@ -450,7 +447,7 @@ offset_bottom = 548.0
 text = " "
 script = ExtResource("11_ydt1e")
 
-[connection signal="pressed" from="Buttons/BackToMainMenu" to="Buttons" method="_on_back_to_main_menu_pressed"]
+[connection signal="pressed" from="Buttons/BackToGame" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Buttons/SaveDeck" to="Buttons/SaveDeck" method="_on_pressed"]
 [connection signal="file_selected" from="Buttons/SaveDeck/FileDialog" to="Buttons/SaveDeck" method="_on_file_dialog_file_selected"]
 [connection signal="pressed" from="Buttons/LoadDeck" to="Buttons/LoadDeck" method="_on_pressed"]

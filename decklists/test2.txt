@@ -1,0 +1,65 @@
+[
+	{
+		"class": "Forestcraft",
+		"effect": "[Fanfare] Select any number of Pixie followers in your EX area and transform them into Thorn Burst tokens.\n[Act][Engage]: Recover X play points. X equals the number of Thorn Burst tokens in your EX area.",
+		"id": "BP01-001EN",
+		"is_evolved": false,
+		"is_token": false,
+		"name": "Rose Queen",
+		"rarity": "Legendary",
+		"rarity_index": 2,
+		"set": "BP01",
+		"statistics": {
+			"attack": 7,
+			"cost": 8,
+			"defense": 7
+		},
+		"traits": [
+			"Verdant"
+		],
+		"types": "Follower",
+		"universe": "Shadowverse"
+	},
+	{
+		"class": "Forestcraft",
+		"effect": "[Fanfare] Select any number of Pixie followers in your EX area and transform them into Thorn Burst tokens.\n[Act][Engage]: Recover X play points. X equals the number of Thorn Burst tokens in your EX area.",
+		"id": "BP01-001EN",
+		"is_evolved": false,
+		"is_token": false,
+		"name": "Rose Queen",
+		"rarity": "Legendary",
+		"rarity_index": 2,
+		"set": "BP01",
+		"statistics": {
+			"attack": 7,
+			"cost": 8,
+			"defense": 7
+		},
+		"traits": [
+			"Verdant"
+		],
+		"types": "Follower",
+		"universe": "Shadowverse"
+	},
+	{
+		"class": "Forestcraft",
+		"effect": "[Fanfare] Select any number of Pixie followers in your EX area and transform them into Thorn Burst tokens.\n[Act][Engage]: Recover X play points. X equals the number of Thorn Burst tokens in your EX area.",
+		"id": "BP01-001EN",
+		"is_evolved": false,
+		"is_token": false,
+		"name": "Rose Queen",
+		"rarity": "Legendary",
+		"rarity_index": 2,
+		"set": "BP01",
+		"statistics": {
+			"attack": 7,
+			"cost": 8,
+			"defense": 7
+		},
+		"traits": [
+			"Verdant"
+		],
+		"types": "Follower",
+		"universe": "Shadowverse"
+	}
+]

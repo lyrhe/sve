@@ -50,7 +50,8 @@ func _on_drop_zone_input_event(_viewport: Node, event: InputEvent, _shape_idx: i
 
 func _update_texture() -> void:
 	if cards_container.get_child_count() > 0:
-		self.texture.texture = load("res://assets/cards/" + cards_container.get_child(-1).metadata.card_id + ".png")
+		print("user://cards/" + cards_container.get_child(-1).metadata.card_id + ".png")
+		self.texture.texture = load("user://cards/" + cards_container.get_child(-1).metadata.card_id + ".png")
 	else:
 		self.texture.texture = load("res://assets/card_back.jpg")
 		

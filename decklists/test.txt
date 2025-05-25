@@ -1,0 +1,62 @@
+[
+	{
+		"class": "Forestcraft",
+		"effect": "[Evolve][Cost : 00]: Evolve this follower.\nRush.\n[Fanfare] Give this follower [Attack]+X. X equals the number of cards you've played this turn, excluding this card.",
+		"id": "BP01-004EN",
+		"is_evolved": false,
+		"is_token": false,
+		"name": "Rhinoceroach",
+		"rarity": "Gold",
+		"set": "BP01",
+		"statistics": {
+			"attack": 1,
+			"cost": 2,
+			"defense": 1
+		},
+		"traits": [
+			"Insect"
+		],
+		"types": "Follower",
+		"universe": "Shadowverse"
+	},
+	{
+		"class": "Forestcraft",
+		"effect": "[Evolve][Cost : 00]: Evolve this follower.\nRush.\n[Fanfare] Give this follower [Attack]+X. X equals the number of cards you've played this turn, excluding this card.",
+		"id": "BP01-004EN",
+		"is_evolved": false,
+		"is_token": false,
+		"name": "Rhinoceroach",
+		"rarity": "Gold",
+		"set": "BP01",
+		"statistics": {
+			"attack": 1,
+			"cost": 2,
+			"defense": 1
+		},
+		"traits": [
+			"Insect"
+		],
+		"types": "Follower",
+		"universe": "Shadowverse"
+	},
+	{
+		"class": "Forestcraft",
+		"effect": "Ward.\nOn Evolve, return another card on your field to its owner's hand: Give this follower [Attack]+1/[Defense]+1.",
+		"id": "BP01-003EN",
+		"is_evolved": true,
+		"is_token": false,
+		"name": "Ancient Elf",
+		"rarity": "Legendary",
+		"set": "BP01",
+		"statistics": {
+			"attack": 3,
+			"cost": 0,
+			"defense": 3
+		},
+		"traits": [
+			"Elf"
+		],
+		"types": "Follower",
+		"universe": "Shadowverse"
+	}
+]

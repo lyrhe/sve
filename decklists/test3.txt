@@ -1,0 +1,338 @@
+[
+	{
+		"class": "Forestcraft",
+		"effect": "[Evolve][Cost : 01]: Evolve this follower.\nWard.\n[Fanfare] Return another card on your field to its owner's hand: Give this follower [Attack]+1/[Defense]+1.",
+		"id": "BP01-002EN",
+		"is_evolved": false,
+		"is_token": false,
+		"name": "Ancient Elf",
+		"rarity": "Legendary",
+		"rarity_index": 1,
+		"set": "BP01",
+		"statistics": {
+			"attack": 2,
+			"cost": 2,
+			"defense": 2
+		},
+		"traits": [
+			"Elf"
+		],
+		"types": "Follower",
+		"universe": "Shadowverse"
+	},
+	{
+		"class": "Forestcraft",
+		"effect": "[Evolve][Cost : 01]: Evolve this follower.\nWard.\n[Fanfare] Return another card on your field to its owner's hand: Give this follower [Attack]+1/[Defense]+1.",
+		"id": "BP01-002EN",
+		"is_evolved": false,
+		"is_token": false,
+		"name": "Ancient Elf",
+		"rarity": "Legendary",
+		"rarity_index": 1,
+		"set": "BP01",
+		"statistics": {
+			"attack": 2,
+			"cost": 2,
+			"defense": 2
+		},
+		"traits": [
+			"Elf"
+		],
+		"types": "Follower",
+		"universe": "Shadowverse"
+	},
+	{
+		"class": "Forestcraft",
+		"effect": "[Evolve][Cost : 01]: Evolve this follower.\nWard.\n[Fanfare] Return another card on your field to its owner's hand: Give this follower [Attack]+1/[Defense]+1.",
+		"id": "BP01-002EN",
+		"is_evolved": false,
+		"is_token": false,
+		"name": "Ancient Elf",
+		"rarity": "Legendary",
+		"rarity_index": 1,
+		"set": "BP01",
+		"statistics": {
+			"attack": 2,
+			"cost": 2,
+			"defense": 2
+		},
+		"traits": [
+			"Elf"
+		],
+		"types": "Follower",
+		"universe": "Shadowverse"
+	},
+	{
+		"class": "Forestcraft",
+		"effect": "[Fanfare] Select any number of Pixie followers in your EX area and transform them into Thorn Burst tokens.\n[Act][Engage]: Recover X play points. X equals the number of Thorn Burst tokens in your EX area.",
+		"id": "BP01-001EN",
+		"is_evolved": false,
+		"is_token": false,
+		"name": "Rose Queen",
+		"rarity": "Legendary",
+		"rarity_index": 1,
+		"set": "BP01",
+		"statistics": {
+			"attack": 7,
+			"cost": 8,
+			"defense": 7
+		},
+		"traits": [
+			"Verdant"
+		],
+		"types": "Follower",
+		"universe": "Shadowverse"
+	},
+	{
+		"class": "Forestcraft",
+		"effect": "[Fanfare] Select any number of Pixie followers in your EX area and transform them into Thorn Burst tokens.\n[Act][Engage]: Recover X play points. X equals the number of Thorn Burst tokens in your EX area.",
+		"id": "BP01-001EN",
+		"is_evolved": false,
+		"is_token": false,
+		"name": "Rose Queen",
+		"rarity": "Legendary",
+		"rarity_index": 1,
+		"set": "BP01",
+		"statistics": {
+			"attack": 7,
+			"cost": 8,
+			"defense": 7
+		},
+		"traits": [
+			"Verdant"
+		],
+		"types": "Follower",
+		"universe": "Shadowverse"
+	},
+	{
+		"class": "Forestcraft",
+		"effect": "[Fanfare] Select any number of Pixie followers in your EX area and transform them into Thorn Burst tokens.\n[Act][Engage]: Recover X play points. X equals the number of Thorn Burst tokens in your EX area.",
+		"id": "BP01-001EN",
+		"is_evolved": false,
+		"is_token": false,
+		"name": "Rose Queen",
+		"rarity": "Legendary",
+		"rarity_index": 1,
+		"set": "BP01",
+		"statistics": {
+			"attack": 7,
+			"cost": 8,
+			"defense": 7
+		},
+		"traits": [
+			"Verdant"
+		],
+		"types": "Follower",
+		"universe": "Shadowverse"
+	},
+	{
+		"class": "Forestcraft",
+		"effect": "[Fanfare] Select any number of Pixie followers in your EX area and transform them into Thorn Burst tokens.\n[Act][Engage]: Recover X play points. X equals the number of Thorn Burst tokens in your EX area.",
+		"id": "BP01-001EN",
+		"is_evolved": false,
+		"is_token": false,
+		"name": "Rose Queen",
+		"rarity": "Legendary",
+		"rarity_index": 2,
+		"set": "BP01",
+		"statistics": {
+			"attack": 7,
+			"cost": 8,
+			"defense": 7
+		},
+		"traits": [
+			"Verdant"
+		],
+		"types": "Follower",
+		"universe": "Shadowverse"
+	},
+	{
+		"class": "Forestcraft",
+		"effect": "[Fanfare] Select any number of Pixie followers in your EX area and transform them into Thorn Burst tokens.\n[Act][Engage]: Recover X play points. X equals the number of Thorn Burst tokens in your EX area.",
+		"id": "BP01-001EN",
+		"is_evolved": false,
+		"is_token": false,
+		"name": "Rose Queen",
+		"rarity": "Legendary",
+		"rarity_index": 2,
+		"set": "BP01",
+		"statistics": {
+			"attack": 7,
+			"cost": 8,
+			"defense": 7
+		},
+		"traits": [
+			"Verdant"
+		],
+		"types": "Follower",
+		"universe": "Shadowverse"
+	},
+	{
+		"class": "Forestcraft",
+		"effect": "[Fanfare] Select any number of Pixie followers in your EX area and transform them into Thorn Burst tokens.\n[Act][Engage]: Recover X play points. X equals the number of Thorn Burst tokens in your EX area.",
+		"id": "BP01-001EN",
+		"is_evolved": false,
+		"is_token": false,
+		"name": "Rose Queen",
+		"rarity": "Legendary",
+		"rarity_index": 2,
+		"set": "BP01",
+		"statistics": {
+			"attack": 7,
+			"cost": 8,
+			"defense": 7
+		},
+		"traits": [
+			"Verdant"
+		],
+		"types": "Follower",
+		"universe": "Shadowverse"
+	},
+	{
+		"class": "Forestcraft",
+		"effect": "[Fanfare] Select any number of Pixie followers in your EX area and transform them into Thorn Burst tokens.\n[Act][Engage]: Recover X play points. X equals the number of Thorn Burst tokens in your EX area.",
+		"id": "BP01-001EN",
+		"is_evolved": false,
+		"is_token": false,
+		"name": "Rose Queen",
+		"rarity": "Legendary",
+		"rarity_index": 0,
+		"set": "BP01",
+		"statistics": {
+			"attack": 7,
+			"cost": 8,
+			"defense": 7
+		},
+		"traits": [
+			"Verdant"
+		],
+		"types": "Follower",
+		"universe": "Shadowverse"
+	},
+	{
+		"class": "Forestcraft",
+		"effect": "Ward.\nOn Evolve, return another card on your field to its owner's hand: Give this follower [Attack]+1/[Defense]+1.",
+		"id": "BP01-003EN",
+		"is_evolved": true,
+		"is_token": false,
+		"name": "Ancient Elf",
+		"rarity": "Legendary",
+		"rarity_index": 1,
+		"set": "BP01",
+		"statistics": {
+			"attack": 3,
+			"cost": 0,
+			"defense": 3
+		},
+		"traits": [
+			"Elf"
+		],
+		"types": "Follower",
+		"universe": "Shadowverse"
+	},
+	{
+		"class": "Forestcraft",
+		"effect": "Ward.\nOn Evolve, return another card on your field to its owner's hand: Give this follower [Attack]+1/[Defense]+1.",
+		"id": "BP01-003EN",
+		"is_evolved": true,
+		"is_token": false,
+		"name": "Ancient Elf",
+		"rarity": "Legendary",
+		"rarity_index": 1,
+		"set": "BP01",
+		"statistics": {
+			"attack": 3,
+			"cost": 0,
+			"defense": 3
+		},
+		"traits": [
+			"Elf"
+		],
+		"types": "Follower",
+		"universe": "Shadowverse"
+	},
+	{
+		"class": "Forestcraft",
+		"effect": "Ward.\nOn Evolve, return another card on your field to its owner's hand: Give this follower [Attack]+1/[Defense]+1.",
+		"id": "BP01-003EN",
+		"is_evolved": true,
+		"is_token": false,
+		"name": "Ancient Elf",
+		"rarity": "Legendary",
+		"rarity_index": 1,
+		"set": "BP01",
+		"statistics": {
+			"attack": 3,
+			"cost": 0,
+			"defense": 3
+		},
+		"traits": [
+			"Elf"
+		],
+		"types": "Follower",
+		"universe": "Shadowverse"
+	},
+	{
+		"class": "Forestcraft",
+		"effect": "On Evolve: Choose one of the following effects. (1) Give this follower Storm. (2) Select an enemy follower on the field and deal it X damage. X equals this follower's attack.",
+		"id": "BP01-005EN",
+		"is_evolved": true,
+		"is_token": false,
+		"name": "Rhinoceroach",
+		"rarity": "Gold",
+		"rarity_index": 0,
+		"set": "BP01",
+		"statistics": {
+			"attack": 1,
+			"cost": 0,
+			"defense": 1
+		},
+		"traits": [
+			"Insect"
+		],
+		"types": "Follower",
+		"universe": "Shadowverse"
+	},
+	{
+		"class": "Forestcraft",
+		"effect": "On Evolve: Choose one of the following effects. (1) Give this follower Storm. (2) Select an enemy follower on the field and deal it X damage. X equals this follower's attack.",
+		"id": "BP01-005EN",
+		"is_evolved": true,
+		"is_token": false,
+		"name": "Rhinoceroach",
+		"rarity": "Gold",
+		"rarity_index": 0,
+		"set": "BP01",
+		"statistics": {
+			"attack": 1,
+			"cost": 0,
+			"defense": 1
+		},
+		"traits": [
+			"Insect"
+		],
+		"types": "Follower",
+		"universe": "Shadowverse"
+	},
+	{
+		"class": "Forestcraft",
+		"effect": "On Evolve: Choose one of the following effects. (1) Give this follower Storm. (2) Select an enemy follower on the field and deal it X damage. X equals this follower's attack.",
+		"id": "BP01-005EN",
+		"is_evolved": true,
+		"is_token": false,
+		"name": "Rhinoceroach",
+		"rarity": "Gold",
+		"rarity_index": 0,
+		"set": "BP01",
+		"statistics": {
+			"attack": 1,
+			"cost": 0,
+			"defense": 1
+		},
+		"traits": [
+			"Insect"
+		],
+		"types": "Follower",
+		"universe": "Shadowverse"
+	}
+]
